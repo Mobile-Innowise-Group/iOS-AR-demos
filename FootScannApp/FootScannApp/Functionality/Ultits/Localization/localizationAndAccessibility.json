@@ -1,0 +1,426 @@
+{
+    "signInScreen-title": {
+        "text": "Welcome!",
+        "accessibilityText": "Welcome!"
+    },
+    "signInScreen-email-description": {
+        "text": "Please insert your email address,\n you will get a verification code to your phone.",
+        "accessibilityText": "Please insert your email address, you will get a verification code to your phone."
+    },
+    "signInScreen-phone-description": {
+        "text": "Please insert your phone number,\n you will get a verification code to your phone.",
+        "accessibilityText": "Please insert your phone number, you will get a verification code to your phone."
+    },
+    "signInScreen-email-inputPlaceholder": {
+        "text": "Your email",
+        "accessibilityText": "Your email"
+    },
+    "signInScreen-phone-inputPlaceholder": {
+        "text": "Enter your phone number",
+        "accessibilityText": "Enter your phone number"
+    },
+    "signInScreen-email-inputTitle": {
+        "text": "Email address",
+        "accessibilityText": "Email address"
+    },
+    "signInScreen-phone-inputTitle": {
+        "text": "Phone number",
+        "accessibilityText": "Phone number"
+    },
+    "signInScreen-email-input-validationError": {
+        "text": "Invalid email adress",
+        "accessibilityText": "Invalid email adress"
+    },
+    "signInScreen-phone-input-validationError": {
+        "text": "Invalid phone number",
+        "accessibilityText": "Invalid phone number"
+    },
+    "prescanScreen-button-title": {
+        "text": "GOT IT",
+        "accessibilityText": "Got it"
+    },
+    "prescanScreen-title": {
+        "text": "Hello!",
+        "accessibilityText": "Hello!"
+    },
+    "prescanScreen-description": {
+        "text": "Watch the video to start scanning your feet!",
+        "accessibilityText": "Watch the video to start scanning your feet!"
+    },
+    "scanPreapringView-description": {
+        "text": "Place your phone \n on the floor facing up",
+        "accessibilityText": "Place your phone on the floor facing up"
+    },
+    "scanPreapringView-button-title": {
+        "text": "START SCANN",
+        "accessibilityText": "Start scann"
+    },
+    "scan-cameraErrorMessage-notAuthorized": {
+        "text": "To take a 3D scan, go to your privacy settings. Tap Camera and turn on for Capture",
+        "accessibilityText": "To take a 3D scan, go to your privacy settings. Tap Camera and turn on for Capture"
+    },
+    "scan-placeLeftFoot-title": {
+        "text": "Place your left foot",
+        "accessibilityText": "Place your left foot. \n Scanning will start once the camera detects your foot"
+    },
+    "scan-placeRightFoot-title": {
+        "text": "Place your right foot",
+        "accessibilityText": "Take your socks off and place your right foot. Scanning will start once the camera detects your foot"
+    },
+    "scan-voiceHower-placeLeftFoot-title": {
+        "text": "Place your left foot",
+        "accessibilityText": "Place your left foot."
+    },
+    "scan-voiceHowerplaceRightFoot-title": {
+        "text": "Place your right foot",
+        "accessibilityText": "Take your socks off and place your right foot."
+    },
+    "scan-detectFoot-voice-title": {
+        "text": "",
+        "accessibilityText": "Scanning will start once the camera detects your foot"
+    },
+    "scan-review-title": {
+        "text": "Review your ",
+        "accessibilityText": "Review your "
+    },
+    "scan-reviewSecond-title": {
+        "text": "\nSeems clear from heel to toe?",
+        "accessibilityText": ""
+    },
+    "scan-rightFoot-title": {
+        "text": "right foot",
+        "accessibilityText": "right foot"
+    },
+    "scan-rightFoot-continueButton-title": {
+        "text": "YES, REVIEW LEFT FOOT",
+        "accessibilityText": "REVIEW LEFT FOOT"
+    },
+    "scan-leftFoot-title": {
+        "text": "left foot",
+        "accessibilityText": "left foot"
+    },
+    "scan-leftFoot-continueButton-title": {
+        "text": "YES, LOOKS GOOD",
+        "accessibilityText": "LOOKS GOOD"
+    },
+    "preview-description": {
+        "text": "Make sure it looks clear without interruptions",
+        "accessibilityText": "Make sure it looks clear without interruptions"
+    },
+    "preview-retakeButton-title": {
+        "text": "RETAKE",
+        "accessibilityText": "RETAKE"
+    },
+    "measureScreen-description": {
+        "text": "Measure your foot with a tape measure",
+        "accessibilityText": "Measure your foot with a tape measure"
+    },
+    "measureScreen-inAppRulerButton-title": {
+        "text": "In App Ruler",
+        "accessibilityText": "In App Ruler"
+    },
+    "measureScreen-footWidth-title": {
+        "text": "Foot width",
+        "accessibilityText": "Foot width"
+    },
+    "measureScreen-footLength-title": {
+        "text": "Foot length",
+        "accessibilityText": "Foot length"
+    },
+    "measureScreen-footLength-right-description": {
+        "text": "What is the length of your right foot from heel to toe?",
+        "accessibilityText": "What is the length of your right foot from heel to toe?"
+    },
+    "measureScreen-footWidth-right-description": {
+        "text": "What is the width of your right foot from side to side?",
+        "accessibilityText": "What is the width of your right foot from side to side?"
+    },
+    "measureScreen-footLength-left-description": {
+        "text": "What is the length of your left foot from heel to toe?",
+        "accessibilityText": "What is the length of your left foot from heel to toe?"
+    },
+    "measureScreen-footWidth-left-description": {
+        "text": "What is the width of your left foot from side to side?",
+        "accessibilityText": "What is the width of your left foot from side to side?"
+    },
+    "measureScreen-footWidthPlaceholder-text": {
+        "text": "Enter foot width in cm",
+        "accessibilityText": "Enter foot width in centimeters"
+    },
+    "measureScreen-footLengthPlaceholder-text": {
+        "text": "Enter foot length in cm",
+        "accessibilityText": "Enter foot length in centimeters"
+    },
+    "statusScreen-successTitle": {
+        "text": "Thanks!",
+        "accessibilityText": "Thanks!"
+    },
+    "statusScreen-errorTitle": {
+        "text": "Error!",
+        "accessibilityText": "Error!"
+    },
+    "statusScreen-successDescription": {
+        "text": "We’ve got your scans",
+        "accessibilityText": "We’ve got your scans"
+    },
+    "statusScreen-errorDescription": {
+        "text": "Something went wrong! Try again.",
+        "accessibilityText": "Something went wrong! Try again."
+    },
+    "statusScreen-successButton-title": {
+        "text": "Start again",
+        "accessibilityText": "Start again"
+    },
+    "statusScreen-errorButton-title": {
+        "text": "RETURN",
+        "accessibilityText": "RETURN"
+    },
+    "clearTextFieldButton-title": {
+        "text": "",
+        "accessibilityText": "Clear text field"
+    },
+    "backButton-title": {
+        "text": "back",
+        "accessibilityText": "back"
+    },
+    "doneButton-title": {
+        "text": "Done",
+        "accessibilityText": "Done"
+    },
+    "scanning-title": {
+        "text": "Captured",
+        "accessibilityText": "Captured"
+    },
+    "scanning-finished": {
+        "text": "Scan finished",
+        "accessibilityText": "Scan finished"
+    },
+    "scanning-inProcess": {
+        "text": "Scanning",
+        "accessibilityText": "Scanning"
+    },
+    "countdown-begins": {
+        "text": "Countdown begins",
+        "accessibilityText": "Countdown begins"
+    },
+    "centimiter-title": {
+        "text": "Centimeter",
+        "accessibilityText": "Centimeter"
+    },
+    "centimiters-title": {
+        "text": "Centimeters",
+        "accessibilityText": "Centimeters"
+    },
+    "resetButton-title": {
+        "text": "Reset",
+        "accessibilityText": "Reset"
+    },
+    "arMeasureScreen-addPointButton-title": {
+        "text": "Add a point",
+        "accessibilityText": "Add a point"
+    },
+    "arMeasureScreen-statusLabelStart-title": {
+        "text": "Tap a start point",
+        "accessibilityText": "Tap a start point"
+    },
+    "arMeasureScreen-statusLabelEnd-title": {
+        "text": "Tap an end point",
+        "accessibilityText": "Tap an end point"
+    },
+    "arMeasureScreen-statusLabelError-title": {
+        "text": "Find better surface",
+        "accessibilityText": "Find better surface"
+    },
+    "wait-title": {
+        "text": "Please wait",
+        "accessibilityText": "Please wait"
+    },
+    "scanModelObject-title": {
+        "text": "3d scan model",
+        "accessibilityText": "3d scan model"
+    },
+    "textField-title": {
+        "text": "Text field",
+        "accessibilityText": "Text field"
+    },
+    "resendButton-title": {
+        "text": "Resend",
+        "accessibilityText": "Resend"
+    },
+    "resendCode-emailType-title": {
+        "text": "Didn't get the email? Tap here to resend",
+        "accessibilityText": "Didn't get the email? Tap here to resend"
+    },
+    "resendCode-phoneType-title": {
+        "text": "Didn’t get the code? Tap here to resend or try with email",
+        "accessibilityText": "Didn’t get the code? Tap here to resend or try with email"
+    },
+    "phoneVerefication-title": {
+        "text": "Please enter 4 digit number sent to your phone number",
+        "accessibilityText": "Please enter 4 digit number sent to your phone number"
+    },
+    "resendCode-attributed-title": {
+        "text": "resend",
+        "accessibilityText": "resend"
+    },
+    "checkEmail-descriptionStart": {
+        "text": "Click the link we sent to",
+        "accessibilityText": "Click the link we sent to"
+    },
+    "checkEmail-descriptionEnd": {
+        "text": " to sign in.",
+        "accessibilityText": " to sign in."
+    },
+    "continue": {
+        "text": "CONTINUE",
+        "accessibilityText": "CONTINUE"
+    },
+    "shutter-button": {
+        "text": "Shutter button",
+        "accessibilityText": "Shutter button"
+    },
+    "share-button": {
+        "text": "Share",
+        "accessibilityText": "Share"
+    },
+    "manualScan-description": {
+        "text": "Place your phone & then press the button",
+        "accessibilityText": "Place your phone on the floor and press the button"
+    },
+    "manualScan-firstStep-title": {
+        "text": "Oops.. we need your help",
+        "accessibilityText": "Oops.. we need your help"
+    },
+    "manualScan-firstStep-description": {
+        "text": "Pick up your phone & follow the instructions",
+        "accessibilityText": "Pick up your phone and follow the instructions"
+    },
+    "manualScan-secondStep-title": {
+        "text": "Let’s begin",
+        "accessibilityText": "Let’s begin"
+    },
+    "manualScan-secondStep-button-title": {
+        "text": "I’m ready",
+        "accessibilityText": "Continue"
+    },
+    "manualScan-secondStep-firstRule-title": {
+        "text": "Place your phone on the floor",
+        "accessibilityText": "Place your phone on the floor"
+    },
+    "manualScan-secondStep-firstRule-description": {
+        "text": "Facing up",
+        "accessibilityText": "Facing up"
+    },
+    "manualScan-secondStep-secondRule-title": {
+        "text": "Press the button",
+        "accessibilityText": "Press the button"
+    },
+    "manualScan-secondStep-secondRule-description": {
+        "text": "To start the manual scan.",
+        "accessibilityText": "To start the manual scan"
+    },
+    "manualScan-secondStep-thirdRule-title": {
+        "text": "Place your foot",
+        "accessibilityText": "Place your foot"
+    },
+    "manualScan-secondStep-thirdRule-description": {
+        "text": "A countdown will start and automaticly take the shot",
+        "accessibilityText": "A countdown will start and automaticly take the shot"
+    },
+    "signIn-byEmail-helper-description": {
+        "text": "Can’t find your order? Tap here \n to try with phone number",
+        "accessibilityText": "Can’t find your order? Tap here to try with phone number"
+    },
+    "signIn-byPhone-helper-description": {
+        "text": "Can’t find your order? Tap here \n to try with email",
+        "accessibilityText": "Can’t find your order? Tap here to try with email"
+    },
+    "signIn-byEmail-tryWithPhone-Attributed-text": {
+        "text": "try with phone number",
+        "accessibilityText": "try with phone number"
+    },
+    "signIn-byPhone-tryEmail-Attributed-text": {
+        "text": "try with email",
+        "accessibilityText": "try with email"
+    },
+    "signIn-otpVerification-codeError-text": {
+        "text": "The code you entered in incorrect.",
+        "accessibilityText": "The code you entered in incorrect."
+    },
+    "signIn-button-continue": {
+        "text": "CONTINUE",
+        "accessibilityText": "Continue"
+    },
+    "accountSelect-title": {
+        "text": "Hello! Whose feet will we scan first?",
+        "accessibilityText": "Hello! Whose feet will we scan first?"
+    },
+    "start-buttonTitle": {
+        "text": "START",
+        "accessibilityText": "START"
+    },
+    "selected-imageTitle": {
+        "text": "Selected",
+        "accessibilityText": "Selected, double tap to unselect"
+    },
+    "unselected-imageTitle": {
+        "text": "Unselected",
+        "accessibilityText": "Unselected, double tap to select"
+    },
+    "completed-imageTitle": {
+        "text": "Completed",
+        "accessibilityText": "Completed"
+    },
+    "poorLightning-title": {
+        "text": "Not enough light for correct foot detection!",
+        "accessibilityText": "Not enough light for correct foot detection!"
+    },
+    "serviceError-title": {
+        "text": "The service is currently unavailable.",
+        "accessibilityText": "The service is currently unavailable."
+    },
+    "serviceError-description": {
+        "text": "Sorry, try again later.",
+        "accessibilityText": "Sorry, try again later."
+    },
+    "serviceError-retryButton-title": {
+        "text": "Retry",
+        "accessibilityText": "Retry"
+    },
+    "popUp-closeButton-title": {
+        "text": "Close",
+        "accessibilityText": "Close"
+    },
+    "popUp-startOver-title": {
+        "text": "Do you want to start over?",
+        "accessibilityText": "Do you want to start over?"
+    },
+    "popUp-startOver-mainButton-title": {
+        "text": "NO, CONTINUE",
+        "accessibilityText": "No, continue"
+    },
+    "popUp-startOver-secondaryButton-title": {
+        "text": "Yes, start over",
+        "accessibilityText": "Yes, start over"
+    },
+    "popUp-light-title": {
+        "text": "It's too dark in here",
+        "accessibilityText": "It's too dark in here"
+    },
+    "popUp-light-subTitle": {
+        "text": "Go to a lighter area or turn on the light.",
+        "accessibilityText": "Go to a lighter area or turn on the light."
+    },
+    "popUp-download-title": {
+        "text": "Please, download full app to upload your scans",
+        "accessibilityText": "Please, download full app to upload your scans"
+    },
+    "popUp-download-mainButtonTitle": {
+        "text": "Download",
+        "accessibilityText": "Download"
+    },
+    "popUp-download-secondaryButtonTitle": {
+        "text": "Start over",
+        "accessibilityText": "Start over"
+    }
+}
