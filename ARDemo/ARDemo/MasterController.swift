@@ -14,8 +14,9 @@ final class MasterController: UITableViewController {
     }
 
     private let contents: Array<(title: String, builder: () -> UIViewController)> = [
-        ("Foot scan", RouteHelper.sh.buildSetup),
-        ("Object identifier", ViewController.init)
+        ("Foot scan", { RouteHelper.sh.buildSetup(startVC: SplashScreenViewController.init()) } ),
+        ("Object identifier", ViewController.init),
+        ("Hand scan", HandScanViewController.init)
     ]
 
     override func viewDidLoad() {

@@ -134,6 +134,9 @@
 		2BDF18AE290FA92A0006AFB7 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF18A6290FA92A0006AFB7 /* Lato-Black.ttf */; };
 		2BDF18AF290FA92A0006AFB7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF18A7290FA92A0006AFB7 /* Lato-Regular.ttf */; };
 		2BDF18B1290FAB330006AFB7 /* MasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF18B0290FAB330006AFB7 /* MasterController.swift */; };
+		9688F823291400B4006A23D5 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F822291400B4006A23D5 /* DistanceCalculator.swift */; };
+		9688F825291400C7006A23D5 /* HandScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F824291400C7006A23D5 /* HandScanViewController.swift */; };
+		9688F827291400DD006A23D5 /* LengthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F826291400DD006A23D5 /* LengthModel.swift */; };
 		C34D043302DF27472A22160E /* Pods_ARDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F490CC00A3DF5DC1BFEC03 /* Pods_ARDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -268,6 +271,9 @@
 		2BDF18A6290FA92A0006AFB7 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		2BDF18A7290FA92A0006AFB7 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		2BDF18B0290FAB330006AFB7 /* MasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterController.swift; sourceTree = "<group>"; };
+		9688F822291400B4006A23D5 /* DistanceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
+		9688F824291400C7006A23D5 /* HandScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandScanViewController.swift; sourceTree = "<group>"; };
+		9688F826291400DD006A23D5 /* LengthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthModel.swift; sourceTree = "<group>"; };
 		B2F490CC00A3DF5DC1BFEC03 /* Pods_ARDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D905F0724C335C0877C5992F /* Pods-ARDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARDemo.release.xcconfig"; path = "Target Support Files/Pods-ARDemo/Pods-ARDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -305,7 +311,10 @@
 		2BDF174C290FA7140006AFB7 /* ARDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9688F82829140114006A23D5 /* Helpers */,
+				9688F81E29140018006A23D5 /* HandScanFlow */,
 				2BDF178A290FA9070006AFB7 /* INFootScan */,
+				2BDF17E0290FA9070006AFB7 /* Extensions */,
 				2BDF174D290FA7140006AFB7 /* AppDelegate.swift */,
 				2BDF174F290FA7140006AFB7 /* SceneDelegate.swift */,
 				2BDF18B0290FAB330006AFB7 /* MasterController.swift */,
@@ -582,7 +591,6 @@
 		2BDF17DF290FA9070006AFB7 /* Ultits */ = {
 			isa = PBXGroup;
 			children = (
-				2BDF17E0290FA9070006AFB7 /* Extensions */,
 				2BDF17ED290FA9070006AFB7 /* CoreML */,
 				2BDF17EF290FA9070006AFB7 /* AppConstants.swift */,
 				2BDF17F0290FA9070006AFB7 /* Helpers */,
@@ -621,8 +629,6 @@
 		2BDF17F0290FA9070006AFB7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2BDF17F1290FA9070006AFB7 /* RouteHelper.swift */,
-				2BDF17F2290FA9070006AFB7 /* FileHelper.swift */,
 				2BDF17F3290FA9070006AFB7 /* ScanFlow */,
 				2BDF17F7290FA9070006AFB7 /* AppPresenter.swift */,
 				2BDF17F8290FA9070006AFB7 /* SpeakHelper.swift */,
@@ -764,6 +770,49 @@
 				D905F0724C335C0877C5992F /* Pods-ARDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9688F81E29140018006A23D5 /* HandScanFlow */ = {
+			isa = PBXGroup;
+			children = (
+				9688F82129140098006A23D5 /* Functionality */,
+				9688F82029140091006A23D5 /* UI */,
+				9688F81F29140086006A23D5 /* Models */,
+			);
+			path = HandScanFlow;
+			sourceTree = "<group>";
+		};
+		9688F81F29140086006A23D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9688F826291400DD006A23D5 /* LengthModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9688F82029140091006A23D5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9688F824291400C7006A23D5 /* HandScanViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9688F82129140098006A23D5 /* Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				9688F822291400B4006A23D5 /* DistanceCalculator.swift */,
+			);
+			path = Functionality;
+			sourceTree = "<group>";
+		};
+		9688F82829140114006A23D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2BDF17F2290FA9070006AFB7 /* FileHelper.swift */,
+				2BDF17F1290FA9070006AFB7 /* RouteHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -914,6 +963,7 @@
 				2BDF1849290FA9070006AFB7 /* ManualScaningOverlayContainerView.swift in Sources */,
 				2BDF1836290FA9070006AFB7 /* PointCloudCommandEncoder.swift in Sources */,
 				2BDF1883290FA9080006AFB7 /* Wireframe.swift in Sources */,
+				9688F823291400B4006A23D5 /* DistanceCalculator.swift in Sources */,
 				2BDF186A290FA9070006AFB7 /* TapGestureRecogniser + Extension.swift in Sources */,
 				2BDF185C290FA9070006AFB7 /* PopOverView.swift in Sources */,
 				2BDF182D290FA9070006AFB7 /* ManualScanPreparingView.swift in Sources */,
@@ -969,6 +1019,7 @@
 				2BDF188E290FA9080006AFB7 /* Utilities.swift in Sources */,
 				2BDF185B290FA9070006AFB7 /* TappableLabel.swift in Sources */,
 				2BDF1828290FA9070006AFB7 /* ScanningViewController.swift in Sources */,
+				9688F825291400C7006A23D5 /* HandScanViewController.swift in Sources */,
 				2BDF186B290FA9070006AFB7 /* CoreML + Extension.swift in Sources */,
 				2BDF1839290FA9070006AFB7 /* ScanningHapticFeedbackEngine.swift in Sources */,
 				2BDF1830290FA9070006AFB7 /* ScenePreviewViewController.swift in Sources */,
@@ -991,6 +1042,7 @@
 				2BDF1854290FA9070006AFB7 /* CloseButton.swift in Sources */,
 				2BDF186F290FA9070006AFB7 /* FootDetectionWithSocks.mlmodel in Sources */,
 				2BDF1891290FA9080006AFB7 /* TestRun.swift in Sources */,
+				9688F827291400DD006A23D5 /* LengthModel.swift in Sources */,
 				2BDF1893290FA9080006AFB7 /* ViewController+NavigationBar.swift in Sources */,
 				2BDF1829290FA9070006AFB7 /* ScanningView.swift in Sources */,
 				2BDF1838290FA9070006AFB7 /* SCMeshingHelper.swift in Sources */,
@@ -1142,11 +1194,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7YP67DVLV3;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J8VM9NVFDC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application uses the camera to demonstrate new AR technology.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1159,6 +1214,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uvolchyk.rickeriments.ARDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Ilya Maslov Wildcard";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1171,11 +1228,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7YP67DVLV3;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J8VM9NVFDC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application uses the camera to demonstrate new AR technology.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1188,6 +1248,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uvolchyk.rickeriments.ARDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Ilya Maslov Wildcard";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

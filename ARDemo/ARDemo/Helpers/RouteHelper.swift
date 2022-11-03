@@ -17,29 +17,14 @@ final class RouteHelper: NSObject {
     
     // MARK: - setup
 
-    func buildSetup() -> UINavigationController {
+    func buildSetup(startVC: UIViewController) -> UINavigationController {
         let navigationController = UINavigationController()
         navigationController.interactivePopGestureRecognizer?.isEnabled = false
         navigationController.navigationBar.isHidden = true
         self.navController = navigationController
-        let splashVC = SplashScreenViewController()
         
-        navigationController.viewControllers = [splashVC]
+        navigationController.viewControllers = [startVC]
         return navigationController
-    }
-    
-    func setup(window: UIWindow) {
-        UIApplication.shared.isIdleTimerDisabled = true
-        self.window = window
-        let navigationController = UINavigationController()
-        navigationController.interactivePopGestureRecognizer?.isEnabled = false
-        navigationController.navigationBar.isHidden = true
-        self.navController = navigationController
-        let splashVC = SplashScreenViewController()
-        
-        navigationController.viewControllers = [splashVC]
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
     }
     
     // MARK: - ActionMethods
