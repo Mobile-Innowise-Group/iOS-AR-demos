@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		962282BA28FFEFEF00A72C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962282B928FFEFEF00A72C97 /* AppDelegate.swift */; };
+		962282C328FFEFF000A72C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962282C228FFEFF000A72C97 /* Assets.xcassets */; };
+		962282C628FFEFF000A72C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962282C428FFEFF000A72C97 /* LaunchScreen.storyboard */; };
+		962282D028FFF0AA00A72C97 /* SceneKit+ARKIT+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962282CF28FFF0AA00A72C97 /* SceneKit+ARKIT+Ex.swift */; };
+		962282D228FFF0B500A72C97 /* Double+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962282D128FFF0B500A72C97 /* Double+EX.swift */; };
+		9643A16B2906DFBD005120DC /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9643A16A2906DFBD005120DC /* DistanceCalculator.swift */; };
+		964EA4B32906C90700FE07B1 /* RouteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964EA4B22906C90700FE07B1 /* RouteHelper.swift */; };
+		9663809D2906D00A00FC9821 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9663809C2906D00A00FC9821 /* AppConstants.swift */; };
+		96862EDB29003AE100E66DB7 /* HandScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96862EDA29003AE100E66DB7 /* HandScanViewController.swift */; };
+		9688F81D2913BC07006A23D5 /* LengthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F81C2913BC07006A23D5 /* LengthModel.swift */; };
+		B45012829FDABBABAAC070F1 /* Pods_HandScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BED4C5BC4BD868078395097 /* Pods_HandScan.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BED4C5BC4BD868078395097 /* Pods_HandScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		483AB3240CF20660ADC3CE51 /* Pods-GlovesHandScan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovesHandScan.release.xcconfig"; path = "Target Support Files/Pods-GlovesHandScan/Pods-GlovesHandScan.release.xcconfig"; sourceTree = "<group>"; };
+		962282B628FFEFEF00A72C97 /* HandScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		962282B928FFEFEF00A72C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		962282C228FFEFF000A72C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		962282C528FFEFF000A72C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		962282C728FFEFF000A72C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962282CF28FFF0AA00A72C97 /* SceneKit+ARKIT+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneKit+ARKIT+Ex.swift"; sourceTree = "<group>"; };
+		962282D128FFF0B500A72C97 /* Double+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+EX.swift"; sourceTree = "<group>"; };
+		9643A16A2906DFBD005120DC /* DistanceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
+		964EA4B22906C90700FE07B1 /* RouteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteHelper.swift; sourceTree = "<group>"; };
+		9663809C2906D00A00FC9821 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		96862EDA29003AE100E66DB7 /* HandScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandScanViewController.swift; sourceTree = "<group>"; };
+		9688F81C2913BC07006A23D5 /* LengthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthModel.swift; sourceTree = "<group>"; };
+		BB4BE24D140C921FD820FFBE /* Pods-GlovesHandScan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GlovesHandScan.debug.xcconfig"; path = "Target Support Files/Pods-GlovesHandScan/Pods-GlovesHandScan.debug.xcconfig"; sourceTree = "<group>"; };
+		F0CF8107BC018AD50B086D47 /* Pods-HandScan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandScan.release.xcconfig"; path = "Target Support Files/Pods-HandScan/Pods-HandScan.release.xcconfig"; sourceTree = "<group>"; };
+		F14ADD6859260A8461468413 /* Pods-HandScan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandScan.debug.xcconfig"; path = "Target Support Files/Pods-HandScan/Pods-HandScan.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		962282B328FFEFEF00A72C97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B45012829FDABBABAAC070F1 /* Pods_HandScan.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100B07341F9C2BD8A2569860 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F14ADD6859260A8461468413 /* Pods-HandScan.debug.xcconfig */,
+				F0CF8107BC018AD50B086D47 /* Pods-HandScan.release.xcconfig */,
+				BB4BE24D140C921FD820FFBE /* Pods-GlovesHandScan.debug.xcconfig */,
+				483AB3240CF20660ADC3CE51 /* Pods-GlovesHandScan.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		962282AD28FFEFEF00A72C97 = {
+			isa = PBXGroup;
+			children = (
+				962282B828FFEFEF00A72C97 /* HandScan */,
+				962282B728FFEFEF00A72C97 /* Products */,
+				100B07341F9C2BD8A2569860 /* Pods */,
+				DBF23B6BFACC1BCC3237CD81 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		962282B728FFEFEF00A72C97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				962282B628FFEFEF00A72C97 /* HandScan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		962282B828FFEFEF00A72C97 /* HandScan */ = {
+			isa = PBXGroup;
+			children = (
+				968C536E29092AA800B8B3D0 /* Functionality */,
+				968C536D29092A9100B8B3D0 /* UI */,
+				966380A02906D19200FC9821 /* Models */,
+				964EA4B52906CC7800FE07B1 /* Resources */,
+				964EA4B12906C82100FE07B1 /* Extensions */,
+				964EA4B02906C7D800FE07B1 /* Utilits */,
+			);
+			path = HandScan;
+			sourceTree = "<group>";
+		};
+		964EA4B02906C7D800FE07B1 /* Utilits */ = {
+			isa = PBXGroup;
+			children = (
+				964EA4B22906C90700FE07B1 /* RouteHelper.swift */,
+				9663809C2906D00A00FC9821 /* AppConstants.swift */,
+			);
+			path = Utilits;
+			sourceTree = "<group>";
+		};
+		964EA4B12906C82100FE07B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				962282CF28FFF0AA00A72C97 /* SceneKit+ARKIT+Ex.swift */,
+				962282D128FFF0B500A72C97 /* Double+EX.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		964EA4B42906CC6C00FE07B1 /* Scanning */ = {
+			isa = PBXGroup;
+			children = (
+				96862EDA29003AE100E66DB7 /* HandScanViewController.swift */,
+			);
+			path = Scanning;
+			sourceTree = "<group>";
+		};
+		964EA4B52906CC7800FE07B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				962282C228FFEFF000A72C97 /* Assets.xcassets */,
+				962282C728FFEFF000A72C97 /* Info.plist */,
+				962282C428FFEFF000A72C97 /* LaunchScreen.storyboard */,
+				962282B928FFEFEF00A72C97 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		966380A02906D19200FC9821 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9688F81C2913BC07006A23D5 /* LengthModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		968C536D29092A9100B8B3D0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				964EA4B42906CC6C00FE07B1 /* Scanning */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		968C536E29092AA800B8B3D0 /* Functionality */ = {
+			isa = PBXGroup;
+			children = (
+				968C536F29092AB900B8B3D0 /* Scanning */,
+			);
+			name = Functionality;
+			sourceTree = "<group>";
+		};
+		968C536F29092AB900B8B3D0 /* Scanning */ = {
+			isa = PBXGroup;
+			children = (
+				9643A16A2906DFBD005120DC /* DistanceCalculator.swift */,
+			);
+			name = Scanning;
+			sourceTree = "<group>";
+		};
+		DBF23B6BFACC1BCC3237CD81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BED4C5BC4BD868078395097 /* Pods_HandScan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		962282B528FFEFEF00A72C97 /* HandScan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 962282CA28FFEFF000A72C97 /* Build configuration list for PBXNativeTarget "HandScan" */;
+			buildPhases = (
+				FFD05931124710457C1A5747 /* [CP] Check Pods Manifest.lock */,
+				962282B228FFEFEF00A72C97 /* Sources */,
+				962282B328FFEFEF00A72C97 /* Frameworks */,
+				962282B428FFEFEF00A72C97 /* Resources */,
+				94C8370E85C0020BF5506782 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HandScan;
+			productName = HandScan;
+			productReference = 962282B628FFEFEF00A72C97 /* HandScan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		962282AE28FFEFEF00A72C97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					962282B528FFEFEF00A72C97 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 962282B128FFEFEF00A72C97 /* Build configuration list for PBXProject "HandScan" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 962282AD28FFEFEF00A72C97;
+			productRefGroup = 962282B728FFEFEF00A72C97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				962282B528FFEFEF00A72C97 /* HandScan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		962282B428FFEFEF00A72C97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				962282C628FFEFF000A72C97 /* LaunchScreen.storyboard in Resources */,
+				962282C328FFEFF000A72C97 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		94C8370E85C0020BF5506782 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandScan/Pods-HandScan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandScan/Pods-HandScan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HandScan/Pods-HandScan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD05931124710457C1A5747 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandScan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		962282B228FFEFEF00A72C97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				962282D228FFF0B500A72C97 /* Double+EX.swift in Sources */,
+				9643A16B2906DFBD005120DC /* DistanceCalculator.swift in Sources */,
+				9688F81D2913BC07006A23D5 /* LengthModel.swift in Sources */,
+				9663809D2906D00A00FC9821 /* AppConstants.swift in Sources */,
+				962282BA28FFEFEF00A72C97 /* AppDelegate.swift in Sources */,
+				964EA4B32906C90700FE07B1 /* RouteHelper.swift in Sources */,
+				96862EDB29003AE100E66DB7 /* HandScanViewController.swift in Sources */,
+				962282D028FFF0AA00A72C97 /* SceneKit+ARKIT+Ex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		962282C428FFEFF000A72C97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				962282C528FFEFF000A72C97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		962282C828FFEFF000A72C97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		962282C928FFEFF000A72C97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		962282CB28FFEFF000A72C97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F14ADD6859260A8461468413 /* Pods-HandScan.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J8VM9NVFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandScan/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application uses the camera to demonstrate new AR technology.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.combient.HandScan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Ilya Maslov Wildcard";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		962282CC28FFEFF000A72C97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0CF8107BC018AD50B086D47 /* Pods-HandScan.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J8VM9NVFDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandScan/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application uses the camera to demonstrate new AR technology.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.combient.HandScan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Ilya Maslov Wildcard";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		962282B128FFEFEF00A72C97 /* Build configuration list for PBXProject "HandScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962282C828FFEFF000A72C97 /* Debug */,
+				962282C928FFEFF000A72C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		962282CA28FFEFF000A72C97 /* Build configuration list for PBXNativeTarget "HandScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				962282CB28FFEFF000A72C97 /* Debug */,
+				962282CC28FFEFF000A72C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 962282AE28FFEFEF00A72C97 /* Project object */;
+}
