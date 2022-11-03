@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-ARDemo/Pods-ARDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/StandardCyborgFusion/StandardCyborgFusion.framework/StandardCyborgFusion

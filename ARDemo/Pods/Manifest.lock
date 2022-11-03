@@ -1,0 +1,20 @@
+PODS:
+  - SnapKit (5.6.0)
+  - StandardCyborgFusion (2.3.2)
+
+DEPENDENCIES:
+  - SnapKit
+  - StandardCyborgFusion (= 2.3.2)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+    - StandardCyborgFusion
+
+SPEC CHECKSUMS:
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  StandardCyborgFusion: f5c03dbf55f6c899924f887c76a424785c084513
+
+PODFILE CHECKSUM: b9f330c10a6df47980e41a2538227630fd4f46b1
+
+COCOAPODS: 1.11.3
