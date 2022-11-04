@@ -137,6 +137,11 @@
 		9688F823291400B4006A23D5 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F822291400B4006A23D5 /* DistanceCalculator.swift */; };
 		9688F825291400C7006A23D5 /* HandScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F824291400C7006A23D5 /* HandScanViewController.swift */; };
 		9688F827291400DD006A23D5 /* LengthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F826291400DD006A23D5 /* LengthModel.swift */; };
+		96AEA83D2915248100AC8FCF /* Vision + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AEA83C2915248100AC8FCF /* Vision + Extensions.swift */; };
+		96AEA83F291524DB00AC8FCF /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AEA83E291524DB00AC8FCF /* DrawingBoundingBoxView.swift */; };
+		96AEA8412915252B00AC8FCF /* VideoCaptureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AEA8402915252B00AC8FCF /* VideoCaptureHelper.swift */; };
+		96AEA843291526C400AC8FCF /* ObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AEA842291526C400AC8FCF /* ObjectRecognitionViewController.swift */; };
+		96AEA84629152D5900AC8FCF /* yolov5s.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 96AEA84529152D5900AC8FCF /* yolov5s.mlmodel */; };
 		C34D043302DF27472A22160E /* Pods_ARDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F490CC00A3DF5DC1BFEC03 /* Pods_ARDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -274,6 +279,11 @@
 		9688F822291400B4006A23D5 /* DistanceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		9688F824291400C7006A23D5 /* HandScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandScanViewController.swift; sourceTree = "<group>"; };
 		9688F826291400DD006A23D5 /* LengthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthModel.swift; sourceTree = "<group>"; };
+		96AEA83C2915248100AC8FCF /* Vision + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vision + Extensions.swift"; sourceTree = "<group>"; };
+		96AEA83E291524DB00AC8FCF /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+		96AEA8402915252B00AC8FCF /* VideoCaptureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureHelper.swift; sourceTree = "<group>"; };
+		96AEA842291526C400AC8FCF /* ObjectRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectRecognitionViewController.swift; sourceTree = "<group>"; };
+		96AEA84529152D5900AC8FCF /* yolov5s.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = yolov5s.mlmodel; sourceTree = "<group>"; };
 		B2F490CC00A3DF5DC1BFEC03 /* Pods_ARDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D905F0724C335C0877C5992F /* Pods-ARDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARDemo.release.xcconfig"; path = "Target Support Files/Pods-ARDemo/Pods-ARDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -311,6 +321,8 @@
 		2BDF174C290FA7140006AFB7 /* ARDemo */ = {
 			isa = PBXGroup;
 			children = (
+				96AEA84429152D3300AC8FCF /* MLModels */,
+				96AEA839291522A900AC8FCF /* ObjectRecognition */,
 				9688F82829140114006A23D5 /* Helpers */,
 				9688F81E29140018006A23D5 /* HandScanFlow */,
 				2BDF178A290FA9070006AFB7 /* INFootScan */,
@@ -591,7 +603,6 @@
 		2BDF17DF290FA9070006AFB7 /* Ultits */ = {
 			isa = PBXGroup;
 			children = (
-				2BDF17ED290FA9070006AFB7 /* CoreML */,
 				2BDF17EF290FA9070006AFB7 /* AppConstants.swift */,
 				2BDF17F0290FA9070006AFB7 /* Helpers */,
 				2BDF17F9290FA9070006AFB7 /* Localization */,
@@ -614,16 +625,9 @@
 				2BDF17EA290FA9070006AFB7 /* String + Extension.swift */,
 				2BDF17EB290FA9070006AFB7 /* Encodable + Extension.swift */,
 				2BDF17EC290FA9070006AFB7 /* Notification + Extension.swift */,
+				96AEA83C2915248100AC8FCF /* Vision + Extensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2BDF17ED290FA9070006AFB7 /* CoreML */ = {
-			isa = PBXGroup;
-			children = (
-				2BDF17EE290FA9070006AFB7 /* FootDetectionWithSocks.mlmodel */,
-			);
-			path = CoreML;
 			sourceTree = "<group>";
 		};
 		2BDF17F0290FA9070006AFB7 /* Helpers */ = {
@@ -809,10 +813,29 @@
 		9688F82829140114006A23D5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				96AEA8402915252B00AC8FCF /* VideoCaptureHelper.swift */,
 				2BDF17F2290FA9070006AFB7 /* FileHelper.swift */,
 				2BDF17F1290FA9070006AFB7 /* RouteHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		96AEA839291522A900AC8FCF /* ObjectRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				96AEA83E291524DB00AC8FCF /* DrawingBoundingBoxView.swift */,
+				96AEA842291526C400AC8FCF /* ObjectRecognitionViewController.swift */,
+			);
+			path = ObjectRecognition;
+			sourceTree = "<group>";
+		};
+		96AEA84429152D3300AC8FCF /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				96AEA84529152D5900AC8FCF /* yolov5s.mlmodel */,
+				2BDF17EE290FA9070006AFB7 /* FootDetectionWithSocks.mlmodel */,
+			);
+			path = MLModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -940,9 +963,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BDF183C290FA9070006AFB7 /* LightPopOverContentView.swift in Sources */,
+				96AEA8412915252B00AC8FCF /* VideoCaptureHelper.swift in Sources */,
 				2BDF184C290FA9070006AFB7 /* CustomFonts.swift in Sources */,
 				2BDF185E290FA9070006AFB7 /* SwitchView.swift in Sources */,
 				2BDF1840290FA9070006AFB7 /* LoaderViewController.swift in Sources */,
+				96AEA843291526C400AC8FCF /* ObjectRecognitionViewController.swift in Sources */,
 				2BDF188D290FA9080006AFB7 /* ObjectOrigin.swift in Sources */,
 				2BDF1832290FA9070006AFB7 /* AspectFillTextureCommandEncoder.swift in Sources */,
 				2BDF182E290FA9070006AFB7 /* SceneModel.swift in Sources */,
@@ -971,6 +996,7 @@
 				2BDF1895290FA9080006AFB7 /* ShareScanViewController.swift in Sources */,
 				2BDF1851290FA9070006AFB7 /* BackArrowButton.swift in Sources */,
 				2BDF1879290FA9070006AFB7 /* LocalizationAndAccessibilityModel.swift in Sources */,
+				96AEA84629152D5900AC8FCF /* yolov5s.mlmodel in Sources */,
 				2BDF189B290FA9080006AFB7 /* FlashlightButton.swift in Sources */,
 				2BDF1861290FA9070006AFB7 /* StepTitleDescriptionView.swift in Sources */,
 				2BDF1869290FA9070006AFB7 /* UserDefaults + Extension.swift in Sources */,
@@ -1032,6 +1058,7 @@
 				2BDF1853290FA9070006AFB7 /* BaseButtonWithLoader.swift in Sources */,
 				2BDF184B290FA9070006AFB7 /* FootTypeModel.swift in Sources */,
 				2BDF183D290FA9070006AFB7 /* StartOverPopOverContentView.swift in Sources */,
+				96AEA83F291524DB00AC8FCF /* DrawingBoundingBoxView.swift in Sources */,
 				2BDF1834290FA9070006AFB7 /* DefaultScanningViewRenderer.swift in Sources */,
 				2BDF1889290FA9080006AFB7 /* ObjectOriginAxis.swift in Sources */,
 				2BDF1897290FA9080006AFB7 /* ViewController+Gestures.swift in Sources */,
@@ -1054,6 +1081,7 @@
 				2BDF174E290FA7140006AFB7 /* AppDelegate.swift in Sources */,
 				2BDF1856290FA9070006AFB7 /* BaseButton.swift in Sources */,
 				2BDF1867290FA9070006AFB7 /* Double + Extension.swift in Sources */,
+				96AEA83D2915248100AC8FCF /* Vision + Extensions.swift in Sources */,
 				2BDF1750290FA7140006AFB7 /* SceneDelegate.swift in Sources */,
 				2BDF187B290FA9070006AFB7 /* ThresholdRotationGestureRecognizer.swift in Sources */,
 				2BDF1899290FA9080006AFB7 /* ViewController+ApplicationState.swift in Sources */,
