@@ -15,6 +15,9 @@ final class HandScanViewController: UIViewController {
     private let meshName = "ARPlaneMesh"
     private let handPoseRequest = VNDetectHumanHandPoseRequest()
 
+    private let sceneViewSize: CGSize = .init(width: AppConstants.screenSize.width,
+                                              height: AppConstants.screenSize.width)
+
     private lazy var distanceCalculator: DistanceCalculator = .init()
     private var arrayOfNodes: [SCNNode] = []
 
@@ -68,11 +71,11 @@ final class HandScanViewController: UIViewController {
     private func makeConstraints() {
         sceneView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.size.equalTo(CGSize(width: view.frame.width, height: view.frame.width))
+            make.size.equalTo(sceneViewSize)
         }
 
         statusLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(60)
+            make.top.equalToSuperview().offset(36)
             make.centerX.equalToSuperview()
             make.left.greaterThanOrEqualToSuperview()
             make.right.lessThanOrEqualToSuperview()

@@ -22,7 +22,7 @@ final class VideoCaptureHelper: NSObject {
 
     // MARK: - actions
 
-    func setUp(sessionPreset: AVCaptureSession.Preset = .vga640x480,
+    func setUp(sessionPreset: AVCaptureSession.Preset = .high,
                completion: @escaping (Bool) -> Void) {
         self.setUpCamera(sessionPreset: sessionPreset, completion: completion)
     }
@@ -48,7 +48,7 @@ final class VideoCaptureHelper: NSObject {
         if captureSession.canAddInput(videoInput) { captureSession.addInput(videoInput) }
 
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.videoGravity = .resizeAspectFill
+        previewLayer.videoGravity = .resizeAspect
         previewLayer.connection?.videoOrientation = .portrait
         self.previewLayer = previewLayer
 

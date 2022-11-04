@@ -15,6 +15,9 @@ class ObjectRecognitionViewController: UIViewController {
     private var visionModel: VNCoreMLModel?
     private var isInferencing = false
 
+    /// USED for making 16:9 format for the picture
+    private let previewSize: CGSize = .init(width: AppConstants.screenSize.width,
+                                     height: AppConstants.screenSize.width * 1.7)
     private let objectDectectionModel: MLModel
 
     // MARK: - AV Property
@@ -69,15 +72,17 @@ class ObjectRecognitionViewController: UIViewController {
 
     private func configureView() {
         navigationController?.isNavigationBarHidden = true
+        view.backgroundColor = .black
         view.addSubview(videoPreview)
         view.addSubview(boxesView)
 
         videoPreview.snp.makeConstraints { make in
-            make.edges.size.equalToSuperview()
+            make.center.equalToSuperview()
+            make.size.equalTo(previewSize)
         }
 
         boxesView.snp.makeConstraints { make in
-            make.edges.equalTo(videoPreview)
+            make.edges.size.equalTo(videoPreview)
         }
     }
 
@@ -91,7 +96,7 @@ class ObjectRecognitionViewController: UIViewController {
         guard let visionModel = try? VNCoreMLModel(for: objectDectectionModel) else { return }
         self.visionModel = visionModel
         request = VNCoreMLRequest(model: visionModel, completionHandler: visionRequestDidComplete)
-        request?.imageCropAndScaleOption = .scaleFill
+        request?.imageCropAndScaleOption = .scaleFit
     }
 
     // MARK: - SetUp Video
