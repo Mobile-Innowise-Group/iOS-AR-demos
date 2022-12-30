@@ -12,6 +12,7 @@
 		2B580F98290A7AA5008A2D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F97290A7AA5008A2D92 /* Assets.xcassets */; };
 		2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */; };
 		2B580FA5290A7DD5008A2D92 /* INObjectTracking in Frameworks */ = {isa = PBXBuildFile; productRef = 2B580FA4290A7DD5008A2D92 /* INObjectTracking */; };
+		CDE042E6295F0B21003E31E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B580FA2290A7ADC008A2D92 /* INObjectTracking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = INObjectTracking; path = ../INObjectTracking; sourceTree = "<group>"; };
 		2BFB92F3290BF6A800E1F0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2B580F95290A7AA2008A2D92 /* ContentView.swift */,
 				2B580F97290A7AA5008A2D92 /* Assets.xcassets */,
 				2B580F99290A7AA5008A2D92 /* Preview Content */,
+				CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */,
 			);
 			path = ObjectTrackingDemo;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE042E6295F0B21003E31E5 /* Launch Screen.storyboard in Resources */,
 				2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */,
 				2B580F98290A7AA5008A2D92 /* Assets.xcassets in Resources */,
 			);
@@ -292,13 +296,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectTrackingDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = 7YP67DVLV3;
+				DEVELOPMENT_TEAM = XJZXQZAKD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectTrackingDemo/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application will use the camera for Augmented Reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,13 +327,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectTrackingDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = 7YP67DVLV3;
+				DEVELOPMENT_TEAM = XJZXQZAKD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectTrackingDemo/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application will use the camera for Augmented Reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
