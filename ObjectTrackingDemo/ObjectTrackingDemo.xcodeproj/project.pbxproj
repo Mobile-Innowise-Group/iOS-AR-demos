@@ -12,6 +12,7 @@
 		2B580F98290A7AA5008A2D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F97290A7AA5008A2D92 /* Assets.xcassets */; };
 		2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */; };
 		2B580FA5290A7DD5008A2D92 /* INObjectTracking in Frameworks */ = {isa = PBXBuildFile; productRef = 2B580FA4290A7DD5008A2D92 /* INObjectTracking */; };
+		CD2CBE4C296341A90044E06C /* TeachingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4B296341A90044E06C /* TeachingView.swift */; };
 		CDE042E6295F0B21003E31E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */; };
 		CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E7295F0DC7003E31E5 /* MainScreen.swift */; };
 		CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E9295F166F003E31E5 /* FilterScreen.swift */; };
@@ -28,6 +29,11 @@
 		CDE0430E2962D228003E31E5 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDE043022962D228003E31E5 /* Roboto-BoldItalic.ttf */; };
 		CDE0430F2962D228003E31E5 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDE043032962D228003E31E5 /* Roboto-Italic.ttf */; };
 		CDE043112962D8EA003E31E5 /* ShoeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE043102962D8EA003E31E5 /* ShoeListView.swift */; };
+		CDE043152962E372003E31E5 /* ShoeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE043142962E372003E31E5 /* ShoeModel.swift */; };
+		CDE0431729631429003E31E5 /* SwipeItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0431629631429003E31E5 /* SwipeItemButton.swift */; };
+		CDE0431929631925003E31E5 /* SwipeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0431829631925003E31E5 /* SwipeItem.swift */; };
+		CDE0431B29631997003E31E5 /* DetailShoeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0431A29631997003E31E5 /* DetailShoeScreen.swift */; };
+		CDE0431D29633505003E31E5 /* SwipeItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0431C29633505003E31E5 /* SwipeItemsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,7 @@
 		2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B580FA2290A7ADC008A2D92 /* INObjectTracking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = INObjectTracking; path = ../INObjectTracking; sourceTree = "<group>"; };
 		2BFB92F3290BF6A800E1F0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD2CBE4B296341A90044E06C /* TeachingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingView.swift; sourceTree = "<group>"; };
 		CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CDE042E7295F0DC7003E31E5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CDE042E9295F166F003E31E5 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
@@ -54,6 +61,11 @@
 		CDE043022962D228003E31E5 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		CDE043032962D228003E31E5 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		CDE043102962D8EA003E31E5 /* ShoeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeListView.swift; sourceTree = "<group>"; };
+		CDE043142962E372003E31E5 /* ShoeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeModel.swift; sourceTree = "<group>"; };
+		CDE0431629631429003E31E5 /* SwipeItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeItemButton.swift; sourceTree = "<group>"; };
+		CDE0431829631925003E31E5 /* SwipeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeItem.swift; sourceTree = "<group>"; };
+		CDE0431A29631997003E31E5 /* DetailShoeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShoeScreen.swift; sourceTree = "<group>"; };
+		CDE0431C29633505003E31E5 /* SwipeItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeItemsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,7 @@
 		2B580F92290A7AA2008A2D92 /* ObjectTrackingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CDE043132962E35C003E31E5 /* Model */,
 				CDE043122962E264003E31E5 /* CustomViews */,
 				CDE042F72962D20C003E31E5 /* Fonts */,
 				2BFB92F3290BF6A800E1F0A0 /* Info.plist */,
@@ -99,6 +112,9 @@
 				CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */,
 				CDE042E7295F0DC7003E31E5 /* MainScreen.swift */,
 				CDE042E9295F166F003E31E5 /* FilterScreen.swift */,
+				CDE0431A29631997003E31E5 /* DetailShoeScreen.swift */,
+				CDE0431C29633505003E31E5 /* SwipeItemsView.swift */,
+				CD2CBE4B296341A90044E06C /* TeachingView.swift */,
 			);
 			path = ObjectTrackingDemo;
 			sourceTree = "<group>";
@@ -148,9 +164,19 @@
 		CDE043122962E264003E31E5 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				CDE0431829631925003E31E5 /* SwipeItem.swift */,
 				CDE043102962D8EA003E31E5 /* ShoeListView.swift */,
+				CDE0431629631429003E31E5 /* SwipeItemButton.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		CDE043132962E35C003E31E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDE043142962E372003E31E5 /* ShoeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,10 +265,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE0431B29631997003E31E5 /* DetailShoeScreen.swift in Sources */,
+				CD2CBE4C296341A90044E06C /* TeachingView.swift in Sources */,
 				CDE043112962D8EA003E31E5 /* ShoeListView.swift in Sources */,
+				CDE0431929631925003E31E5 /* SwipeItem.swift in Sources */,
 				CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */,
 				CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */,
+				CDE0431729631429003E31E5 /* SwipeItemButton.swift in Sources */,
+				CDE0431D29633505003E31E5 /* SwipeItemsView.swift in Sources */,
 				2B580F96290A7AA2008A2D92 /* ContentView.swift in Sources */,
+				CDE043152962E372003E31E5 /* ShoeModel.swift in Sources */,
 				2B580F94290A7AA2008A2D92 /* ObjectTrackingDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
