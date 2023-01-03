@@ -10,26 +10,35 @@ import SwiftUI
 struct MainScreen: View {
     var body: some View {
         TabView {
-            FilterScreen()
-                .tabItem {
-                    Label("",systemImage: "house")
-                }
-            FilterScreen()
-                .tabItem {
-                    Label("",systemImage: "doc.text.magnifyingglass")
-                }
-            FilterScreen()
-                .tabItem {
-                    Label("", systemImage: "person")
-                }
-            FilterScreen()
-                .tabItem {
-                    Label("", systemImage: "heart")
-                }
-            FilterScreen()
-                .tabItem {
-                    Label("", systemImage: "cart")
-                }
+            Group {
+                FilterScreen()
+                    .tabItem {
+                        Label("",systemImage: "house")
+                            .foregroundColor(.black)
+                    }
+                FilterScreen()
+                    .tabItem {
+                        Label("",systemImage: "doc.text.magnifyingglass")
+                            .foregroundColor(.black)
+                    }
+                FilterScreen()
+                    .tabItem {
+                        Label("", systemImage: "person")
+                            .foregroundColor(.black)
+                    }
+                FilterScreen()
+                    .tabItem {
+                        Label("", systemImage: "heart")
+                            .foregroundColor(.black)
+                    }
+                FilterScreen()
+                    .tabItem {
+                        Label("", systemImage: "cart")
+                            .foregroundColor(.black)
+                    }
+            }
         }
+        .accentColor(.black)
+        .toolbarColorScheme(.light, for: .tabBar)
     }
 }

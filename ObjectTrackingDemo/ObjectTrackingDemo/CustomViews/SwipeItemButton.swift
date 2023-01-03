@@ -18,10 +18,11 @@ struct SwipeItemButton: View {
             } label: {
                 VStack {
                     Image(systemName: sysImage)
+                        .foregroundColor(.black)
                     Text(buttonText)
                         .font(Font.custom("Roboto-Regular", size: 11))
+                        .foregroundColor(.black)
                 }
-                .padding(.leading, 5)
                 .frame(height: 130)
             }
     }

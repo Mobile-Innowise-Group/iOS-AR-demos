@@ -12,7 +12,7 @@ struct FilterScreen: View {
     var items: [ShoeModel] = [
         ShoeModel(
             title: "NEW BALANCE",
-            subtitle: "SNEAKER LOW AIR VAPORMAX 2021 FK DAMEN",
+            subtitle: "SNEAKER LOW AIR VAPORMAX 2021 WO",
             price: "220,00€*",
             image: "image1"
         ),
@@ -38,7 +38,10 @@ struct FilterScreen: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack {
+                VStack(alignment: .leading) {
+                    Text("Sportrschuhe fur Drinnen")
+                        .font(Font.custom("Roboto-Bold", size: 20))
+                        .padding(.leading)
                     ForEach(items) { item in
                         SwipeItem(
                             content: {
@@ -59,43 +62,25 @@ struct FilterScreen: View {
                                     }
                                 }
                                 .navigationDestination(isPresented: $showDetail) {
-                                    DetailShoeScreen()
+                                    DetailShoeView()
+                                        .navigationBarBackButtonHidden(true)
                                 }
                             }, itemHeight: 130)
                     }
                 }
             }
-//                List(items, id: \.self) { item in
-//                    SwipeItem(
-//                        content: {
-//                            ShoeListView(
-//                                title: item.title,
-//                                subtitle: item.subtitle,
-//                                price: item.price,
-//                                image: item.image
-//                            )
-//                        }, left: {
-//                            Button {} label: {
-//                                FakeSwipeItem()
-//                            }
-//                        }, right: {
-//                            Button {} label: {
-//                                LeftSwipeItem {
-//                                    self.showDetail = true
-//                                }
-//                            }
-//                            .navigationDestination(isPresented: $showDetail) {
-//                                DetailShoeScreen()
-//                            }
-//                        }, itemHeight: 130)
-//                }
-                .listStyle(.grouped)
-                        .toolbar {
-                            ToolbarItem(placement: .navigationBarLeading) {
-                                Text("Sportrschuhe fur Drinnen")
-                                    .font(Font.custom("Roboto-Bold", size: 20))
-                            }
-                        }
+            .toolbar(content: ) {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .foregroundColor(.black)
+                            .frame(width: 20, height: 20)
+                    }
+                }
+            }
         }
     }
 }

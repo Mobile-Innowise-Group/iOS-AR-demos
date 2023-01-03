@@ -43,9 +43,3 @@ struct ShoeListView: View {
         }.padding(.leading, 15)
     }
 }
-
-struct ShoeListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ShoeListView(title: "NEW BALANCE", subtitle: "SNEAKER LOW AIR VAPORMAX 2021 FK DAMEN", price: "220,00€*", image: "image 10")
-    }
-}

@@ -47,18 +47,12 @@ struct SwipeItem<Content: View, Left: View, Right: View>: View {
                             hoffset = -anchorWidth
                         }
                     }
-                     
-                     if anchor > 0 {
-//                         leftPast = hoffset > anchorWidth - swipeTreshold
-                     } else {
-//                         leftPast = hoffset > swipeTreshold
-                     }
-                     
-                     if anchor < 0 {
-                         rightPast = hoffset < -anchorWidth + swipeTreshold
-                     } else {
-                         rightPast = hoffset < -swipeTreshold
-                     }
+                    
+                    if anchor < 0 {
+                        rightPast = hoffset < -anchorWidth + swipeTreshold
+                    } else {
+                        rightPast = hoffset < -swipeTreshold
+                    }
                 }
             }
             .onEnded { value in
