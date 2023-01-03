@@ -70,11 +70,11 @@ final class Wireframe: SCNNode {
     // MARK: - Shading
     
     func setupShader() {
-//        guard let path = Bundle.main.path(forResource: "wireframe_shader", ofType: "metal", inDirectory: "art.scnassets"),
-//            let shader = try? String(contentsOfFile: path, encoding: .utf8) else {
-//                return
-//        }
-//        
-//        geometry?.firstMaterial?.shaderModifiers = [.surface: shader]
+        guard let path = Bundle.main.path(forResource: "wireframe_shader", ofType: "metal", inDirectory: "art.scnassets"),
+            let shader = try? String(contentsOfFile: path, encoding: .utf8) else {
+                return
+        }
+        
+        geometry?.firstMaterial?.shaderModifiers = [.surface: shader]
     }
 }

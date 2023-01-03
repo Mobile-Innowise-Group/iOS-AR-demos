@@ -9,8 +9,7 @@ import Foundation
 import SceneKit
 import ARKit
 
-class ScannedObject: SCNNode {
-    
+final class ScannedObject: SCNNode {
     static let positionChangedNotification = Notification.Name("ScannedObjectPositionChanged")
     static let boundingBoxCreatedNotification = Notification.Name("BoundingBoxWasCreated")
     static let ghostBoundingBoxCreatedNotification = Notification.Name("GhostBoundingBoxWasCreated")

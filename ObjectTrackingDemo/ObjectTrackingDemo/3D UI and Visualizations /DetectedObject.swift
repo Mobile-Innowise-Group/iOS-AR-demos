@@ -10,14 +10,8 @@ import ARKit
 import SceneKit
 
 class DetectedObject: SCNNode {
-    // TODO: 
     private lazy var bootNode: SCNNode = {
-        try! SCNScene(
-            url: Bundle.module.url(
-                forResource: "singleLeft",
-                withExtension: "scn"
-            )!
-        ).rootNode.childNodes.first!
+        SCNScene(named: "singleLeft.scn")!.rootNode.childNodes.first!
     }()
 
     var displayDuration: TimeInterval = 1.0 // How long this visualization is displayed in seconds after an update

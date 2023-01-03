@@ -152,10 +152,6 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 
     // MARK: - UIViewController Lifecycle
 
-    public override func loadView() {
-        view = sceneView
-    }
-
     public override func viewDidLoad() {
         super.viewDidLoad()
         guard ARObjectScanningConfiguration.isSupported, ARWorldTrackingConfiguration.isSupported else {
@@ -236,6 +232,16 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         
         displayWarningIfInLowPowerMode()
 
+        view.addSubview(sceneView)
+        sceneView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            sceneView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            sceneView.topAnchor.constraint(equalTo: view.topAnchor),
+            sceneView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            sceneView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+
         sceneView.addSubview(toggleInstructionsButton)
         sceneView.addSubview(nextButton)
         sceneView.addSubview(flashlightButton)
@@ -254,8 +260,8 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
             flashlightButton.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 20.0),
             flashlightButton.bottomAnchor.constraint(equalTo: sceneView.bottomAnchor, constant: -40.0),
 
-            loadModelButton.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 20.0),
-            loadModelButton.bottomAnchor.constraint(equalTo: sceneView.bottomAnchor, constant: -40.0),
+            loadModelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadModelButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40.0),
 
             sessionInfoView.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
             sessionInfoView.topAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.topAnchor, constant: 40.0),

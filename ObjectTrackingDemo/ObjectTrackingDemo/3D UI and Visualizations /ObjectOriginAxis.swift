@@ -53,15 +53,15 @@ class ObjectOriginAxis: SCNNode {
         switch axis {
             case .x:
                 color = UIColor.red
-                texture = UIImage(named: "handle_red", in: .module, with: nil)
-                dimensions = SIMD3<Float>(length, thickness, thickness)
+                texture = UIImage(named: "handle_red", in: .main, with: nil)
+                dimensions = SIMD3<Float>(length * 6, thickness, thickness)
             case .y:
                 color = UIColor.green
-                texture = UIImage(named: "handle_green", in: .module, with: nil)
+                texture = UIImage(named: "handle_green", in: .main, with: nil)
                 dimensions = SIMD3<Float>(thickness, length, thickness)
             case .z:
                 color = UIColor.blue
-                texture = UIImage(named: "handle_blue", in: .module, with: nil)
+                texture = UIImage(named: "handle_blue", in: .main, with: nil)
                 dimensions = SIMD3<Float>(thickness, thickness, length)
         }
 

@@ -8,16 +8,14 @@ A visualization indicating when part of a scanned bounding box has enough data f
 import UIKit
 import SceneKit
 
-class Tile: SCNNode {
-    
+final class Tile: SCNNode {
     var isCaptured: Bool = false
     var isHighlighted: Bool = false
     
     func updateVisualization() {
-//        var newOpacity: CGFloat = isCaptured ? 0.5 : 0.0
-//        newOpacity += isHighlighted ? 0.35 : 0.0
-//        opacity = newOpacity
-        opacity = 0.35
+        var newOpacity: CGFloat = isCaptured ? 0.5 : 0.0
+        newOpacity += isHighlighted ? 0.35 : 0.0
+        opacity = newOpacity
     }
     
     init(_ plane: SCNPlane) {
