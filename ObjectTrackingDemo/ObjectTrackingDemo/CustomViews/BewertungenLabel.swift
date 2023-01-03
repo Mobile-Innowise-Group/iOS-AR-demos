@@ -20,7 +20,7 @@ struct BewertungetLabel: View {
                         Text("Keine Bewertungen")
                             .font(Font.custom("Roboto-Regular", size: 12))
                             .foregroundColor(.black)
-                    }.padding(.leading, -12)
+                    }.padding(.trailing, 20)
                 .frame(width: 154, height: 29)
                 .foregroundColor(.clear)
     }

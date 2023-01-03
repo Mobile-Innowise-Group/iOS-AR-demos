@@ -45,6 +45,8 @@
 		CD2CBEA4296474EA0044E06C /* Launch Screen.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE772964733F0044E06C /* Launch Screen.storyboard */; };
 		CD2CBEA7296474EA0044E06C /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */; };
 		CD2CBEA8296475CA0044E06C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7D2964733F0044E06C /* Utilities.swift */; };
+		CD2CBEAA296480B00044E06C /* ShoeChooseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBEA9296480B00044E06C /* ShoeChooseButton.swift */; };
+		CD2CBEAB296488A50044E06C /* singleLeft.scn in Resources */ = {isa = PBXBuildFile; fileRef = CD2CBE672964733E0044E06C /* singleLeft.scn */; };
 		CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E7295F0DC7003E31E5 /* MainScreen.swift */; };
 		CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E9295F166F003E31E5 /* FilterScreen.swift */; };
 		CDE043042962D228003E31E5 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDE042F82962D227003E31E5 /* Roboto-Light.ttf */; };
@@ -118,6 +120,7 @@
 		CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
 		CD2CBE7F2964733F0044E06C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ObjectTrackingDemo/art.scnassets; sourceTree = "<group>"; };
 		CD2CBE802964733F0044E06C /* singleLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = singleLeft.scn; path = ObjectTrackingDemo/singleLeft.scn; sourceTree = "<group>"; };
+		CD2CBEA9296480B00044E06C /* ShoeChooseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeChooseButton.swift; sourceTree = "<group>"; };
 		CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CDE042E7295F0DC7003E31E5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CDE042E9295F166F003E31E5 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
@@ -198,6 +201,7 @@
 				CDE0431A29631997003E31E5 /* DetailShoeView.swift */,
 				CDE0431C29633505003E31E5 /* SwipeItemsView.swift */,
 				CD2CBE4B296341A90044E06C /* TeachingView.swift */,
+				CD2CBEA9296480B00044E06C /* ShoeChooseButton.swift */,
 			);
 			path = ObjectTrackingDemo;
 			sourceTree = "<group>";
@@ -407,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2CBEAB296488A50044E06C /* singleLeft.scn in Resources */,
 				CDE0430C2962D228003E31E5 /* Roboto-ThinItalic.ttf in Resources */,
 				CDE043082962D228003E31E5 /* Roboto-Medium.ttf in Resources */,
 				CDE0430D2962D228003E31E5 /* Roboto-MediumItalic.ttf in Resources */,
@@ -468,6 +473,7 @@
 				CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */,
 				CD2CBE52296436B50044E06C /* BewertungenLabel.swift in Sources */,
 				CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */,
+				CD2CBEAA296480B00044E06C /* ShoeChooseButton.swift in Sources */,
 				CDE0431729631429003E31E5 /* SwipeItemButton.swift in Sources */,
 				CDE0431D29633505003E31E5 /* SwipeItemsView.swift in Sources */,
 				2B580F96290A7AA2008A2D92 /* ContentView.swift in Sources */,

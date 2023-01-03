@@ -19,34 +19,7 @@ struct TestBottomSheet: View {
         }.sheet(isPresented: $show) {
             CameraSheetView()
                 .presentationDragIndicator(.visible)
-                .presentationDetents([.fraction(0.23), .fraction(0.6)])
-        }
-    }
-}
-
-struct SomeViewH: View {
-    var body: some View {
-        VStack(alignment: .leading) {
-            HStack(alignment: .top) {
-                RoundedRectangle(cornerRadius: 8)
-                    .overlay {
-                        Text("NIKE")
-                            .font(Font.custom("Roboto-Regular", size: 12))
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: 47, height: 32)
-                    .padding([.trailing, .bottom])
-                Text("Sneaker low Air Max 97 SE W Damen")
-                    .font(Font.custom("Roboto-Bold", size: 18))
-                    .lineLimit(2, reservesSpace: true)
-                    .padding([.trailing, .bottom])
-                Button {} label: {
-                    Image(systemName: "heart")
-                        .resizable()
-                        .frame(width: 16, height: 16)
-                        .foregroundColor(.gray)
-                }.padding([.leading, .bottom])
-            }
+                .presentationDetents([.fraction(0.2), .fraction(0.6)])
         }
     }
 }

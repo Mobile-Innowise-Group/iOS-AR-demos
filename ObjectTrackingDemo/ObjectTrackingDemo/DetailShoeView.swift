@@ -25,7 +25,7 @@ struct DetailShoeView: View {
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(.black)
                         }
-                        .padding([.leading, .bottom], 15)
+                        .padding(.top)
                         RoundedRectangle(cornerRadius: 8)
                             .overlay {
                                 Text("NIKE")
@@ -33,11 +33,11 @@ struct DetailShoeView: View {
                                     .foregroundColor(.white)
                             }
                             .frame(width: 47, height: 32)
-                            .padding(.leading, 15)
+                            .padding(.top)
                         Text("Sneaker low Air Max 97 SE W Damen")
                             .lineLimit(2, reservesSpace: true)
                             .font(Font.custom("Roboto-Bold", size: 26))
-                            .padding(.leading, 15)
+                            .padding(.top)
                         HStack {
                             BewertungetLabel()
                             Spacer()
@@ -46,16 +46,14 @@ struct DetailShoeView: View {
                                 .background {
                                     Color.yellow
                                 }
-                                .padding(.trailing, 15)
-                        }.padding(.leading, 10)
+                        }
+                        .padding(.top)
                         Text("Produktinformation")
                             .font(Font.custom("Roboto-Bold", size: 20))
-                            .padding()
+                            .padding(.top)
                         Text("ID: 5bc3f493-8...")
                             .font(Font.custom("Roboto-Regular", size: 12))
-                            .padding()
-                    }
-                    VStack {
+                            .padding(.top)
                         HStack {
                             Circle()
                                 .frame(width: 9, height: 9)
@@ -63,7 +61,8 @@ struct DetailShoeView: View {
                             Text("Verfugbar")
                             Spacer()
                             Text("38,39")
-                        }.padding()
+                        }
+                        .padding(.top)
                         Button {} label: {
                             RoundedRectangle(cornerRadius: 8)
                                 .overlay {
@@ -80,9 +79,10 @@ struct DetailShoeView: View {
                                     }
                                 }
                                 .foregroundColor(Color.yellow)
-                        }.frame(height: 43)
-                            .padding([.leading, .trailing], 25)
-                    }
+                        }
+                        .frame(height: 43)
+                        .padding(.top)
+                    }.padding([.leading, .trailing], 25)
                 }
             }
             .toolbar(content: {
@@ -103,13 +103,13 @@ struct DetailShoeView: View {
                             Image(systemName: "square.and.arrow.up")
                                 .resizable()
                                 .foregroundColor(.black)
-                                .frame(width: 25, height: 25)
+                                .frame(width: 25, height: 30)
                         }
                         Button {} label: {
                             Image(systemName: "heart")
                                 .resizable()
                                 .foregroundColor(.black)
-                                .frame(width: 25, height: 25)
+                                .frame(width: 30, height: 25)
                         }
                     }
                 }
@@ -118,7 +118,7 @@ struct DetailShoeView: View {
             .navigationDestination(isPresented: $showCameraScreen) {
                 ContentView()
                     .toolbar(.hidden, for: .tabBar)
-                    .toolbar(.hidden, for: .navigationBar)
+                    .ignoresSafeArea(.all)
             }
     }
 }

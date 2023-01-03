@@ -19,13 +19,13 @@ struct ObjectTrackingWrap: UIViewControllerRepresentable {
 }
 
 struct ContentView: View {
+    @State private var show: Bool = true
     var body: some View {
         ObjectTrackingWrap()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+            .sheet(isPresented: $show) {
+                CameraSheetView()
+                    .presentationDragIndicator(.visible)
+                    .presentationDetents([.fraction(0.2), .fraction(0.6)])
+            }
     }
 }
