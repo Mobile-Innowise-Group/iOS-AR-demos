@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import INObjectTracking
 
 struct ObjectTrackingWrap: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> some UIViewController {
@@ -15,7 +14,7 @@ struct ObjectTrackingWrap: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        uiViewController.view.frame = UIScreen.main.bounds
+//        uiViewController.view.frame = UIScreen.main.bounds
     }
 }
 
