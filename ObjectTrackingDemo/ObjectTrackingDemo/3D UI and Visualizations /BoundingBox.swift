@@ -517,8 +517,14 @@ class BoundingBox: SCNNode {
             let maxX = plane.center.x + plane.extent.x / 2 + plane.extent.x * tolerance
             let minZ = plane.center.z - plane.extent.z / 2 - plane.extent.z * tolerance
             let maxZ = plane.center.z + plane.extent.z / 2 + plane.extent.z * tolerance
+            let minY = plane.center.y - plane.extent.y / 4 - plane.extent.y * tolerance
+            let maxY = plane.center.y + plane.extent.y / 4 + plane.extent.y * tolerance
             
-            guard (minX...maxX).contains(bottomCenterInPlaneCoords.x) && (minZ...maxZ).contains(bottomCenterInPlaneCoords.z) else {
+            guard
+                (minX...maxX).contains(bottomCenterInPlaneCoords.x),
+                (minY...maxY).contains(bottomCenterInPlaneCoords.y),
+                (minZ...maxZ).contains(bottomCenterInPlaneCoords.z)
+            else {
                 continue
             }
             

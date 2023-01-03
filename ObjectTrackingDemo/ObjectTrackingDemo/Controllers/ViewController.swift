@@ -255,13 +255,13 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
             toggleInstructionsButton.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -20),
 
             nextButton.centerXAnchor.constraint(equalTo: sessionInfoLabel.centerXAnchor),
-            nextButton.centerYAnchor.constraint(equalTo: flashlightButton.centerYAnchor),
+            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 
             flashlightButton.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 20.0),
             flashlightButton.bottomAnchor.constraint(equalTo: sceneView.bottomAnchor, constant: -40.0),
 
-            loadModelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadModelButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40.0),
+//            loadModelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            loadModelButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40.0),
 
             sessionInfoView.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
             sessionInfoView.topAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.topAnchor, constant: 40.0),

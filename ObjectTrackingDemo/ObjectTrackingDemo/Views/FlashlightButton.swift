@@ -8,9 +8,7 @@ A button with two states that toggles the flashlight.
 import UIKit
 import AVFoundation
 
-@IBDesignable
 class FlashlightButton: RoundedButton {
-    
     override var isHidden: Bool {
         didSet {
             // Never show this button if there is no torch on this device.
@@ -27,7 +25,7 @@ class FlashlightButton: RoundedButton {
             }
         }
     }
-    
+
     override var toggledOn: Bool {
         didSet {
             // Update UI
@@ -46,7 +44,7 @@ class FlashlightButton: RoundedButton {
                 }
                 return
             }
-            
+
             do {
                 try captureDevice.lockForConfiguration()
                 let mode: AVCaptureDevice.TorchMode = toggledOn ? .on : .off
