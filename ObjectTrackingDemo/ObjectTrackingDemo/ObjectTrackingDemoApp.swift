@@ -11,10 +11,10 @@ import SwiftUI
 struct ObjectTrackingDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ObjectTrackingWrap()
-//            NavigationView {
-                //MainScreen()//ContentView()
-//            }
+//            ObjectTrackingWrap()
+            NavigationView {
+                MainScreen()//ContentView()
+            }
         }
     }
 }

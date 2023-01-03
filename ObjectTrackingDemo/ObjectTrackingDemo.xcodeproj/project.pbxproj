@@ -11,12 +11,40 @@
 		2B580F96290A7AA2008A2D92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B580F95290A7AA2008A2D92 /* ContentView.swift */; };
 		2B580F98290A7AA5008A2D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F97290A7AA5008A2D92 /* Assets.xcassets */; };
 		2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */; };
-		2B580FA5290A7DD5008A2D92 /* INObjectTracking in Frameworks */ = {isa = PBXBuildFile; productRef = 2B580FA4290A7DD5008A2D92 /* INObjectTracking */; };
 		CD2CBE4C296341A90044E06C /* TeachingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4B296341A90044E06C /* TeachingView.swift */; };
 		CD2CBE4E29641A910044E06C /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4D29641A910044E06C /* CustomPopup.swift */; };
 		CD2CBE50296434BD0044E06C /* CameraSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4F296434BD0044E06C /* CameraSheetView.swift */; };
 		CD2CBE52296436B50044E06C /* BewertungenLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE51296436B50044E06C /* BewertungenLabel.swift */; };
-		CDE042E6295F0B21003E31E5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */; };
+		CD2CBE812964746D0044E06C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE592964733E0044E06C /* ViewController.swift */; };
+		CD2CBE822964746D0044E06C /* ViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE5A2964733E0044E06C /* ViewController+NavigationBar.swift */; };
+		CD2CBE832964746D0044E06C /* ViewController+SessionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE5B2964733E0044E06C /* ViewController+SessionInfo.swift */; };
+		CD2CBE842964746D0044E06C /* ShareScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE5C2964733E0044E06C /* ShareScanViewController.swift */; };
+		CD2CBE852964746D0044E06C /* ViewController+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE5E2964733E0044E06C /* ViewController+Gestures.swift */; };
+		CD2CBE862964746D0044E06C /* ViewController+ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE602964733E0044E06C /* ViewController+ApplicationState.swift */; };
+		CD2CBE87296474970044E06C /* ScannedPointCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE6A2964733E0044E06C /* ScannedPointCloud.swift */; };
+		CD2CBE88296474970044E06C /* ScannedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE6B2964733E0044E06C /* ScannedObject.swift */; };
+		CD2CBE89296474970044E06C /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE6C2964733E0044E06C /* Wireframe.swift */; };
+		CD2CBE8A296474970044E06C /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE6D2964733E0044E06C /* BoundingBox.swift */; };
+		CD2CBE8B296474970044E06C /* BoundingBoxSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE6E2964733E0044E06C /* BoundingBoxSide.swift */; };
+		CD2CBE8C296474970044E06C /* DetectedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE6F2964733E0044E06C /* DetectedObject.swift */; };
+		CD2CBE8D296474970044E06C /* Snapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE702964733E0044E06C /* Snapping.swift */; };
+		CD2CBE8E296474970044E06C /* DetectedPointCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE712964733E0044E06C /* DetectedPointCloud.swift */; };
+		CD2CBE8F296474970044E06C /* ObjectOriginAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE722964733E0044E06C /* ObjectOriginAxis.swift */; };
+		CD2CBE90296474970044E06C /* PointCloud+CreateVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE732964733E0044E06C /* PointCloud+CreateVisualization.swift */; };
+		CD2CBE91296474970044E06C /* DetectedBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE742964733E0044E06C /* DetectedBoundingBox.swift */; };
+		CD2CBE92296474970044E06C /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE752964733E0044E06C /* Tile.swift */; };
+		CD2CBE93296474970044E06C /* ObjectOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE762964733E0044E06C /* ObjectOrigin.swift */; };
+		CD2CBE94296474BD0044E06C /* TestRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE582964733E0044E06C /* TestRun.swift */; };
+		CD2CBE95296474BD0044E06C /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE792964733F0044E06C /* MessageLabel.swift */; };
+		CD2CBE96296474BD0044E06C /* FlashlightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7A2964733F0044E06C /* FlashlightButton.swift */; };
+		CD2CBE97296474BD0044E06C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7B2964733F0044E06C /* RoundedButton.swift */; };
+		CD2CBEA0296474EA0044E06C /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE5F2964733E0044E06C /* Scan.swift */; };
+		CD2CBEA1296474EA0044E06C /* ThresholdRotationGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE542964733E0044E06C /* ThresholdRotationGestureRecognizer.swift */; };
+		CD2CBEA2296474EA0044E06C /* ThresholdPinchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE552964733E0044E06C /* ThresholdPinchGestureRecognizer.swift */; };
+		CD2CBEA3296474EA0044E06C /* ThresholdPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE562964733E0044E06C /* ThresholdPanGestureRecognizer.swift */; };
+		CD2CBEA4296474EA0044E06C /* Launch Screen.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE772964733F0044E06C /* Launch Screen.storyboard */; };
+		CD2CBEA7296474EA0044E06C /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */; };
+		CD2CBEA8296475CA0044E06C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7D2964733F0044E06C /* Utilities.swift */; };
 		CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E7295F0DC7003E31E5 /* MainScreen.swift */; };
 		CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E9295F166F003E31E5 /* FilterScreen.swift */; };
 		CDE043042962D228003E31E5 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDE042F82962D227003E31E5 /* Roboto-Light.ttf */; };
@@ -45,12 +73,51 @@
 		2B580F95290A7AA2008A2D92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B580F97290A7AA5008A2D92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2B580FA2290A7ADC008A2D92 /* INObjectTracking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = INObjectTracking; path = ../INObjectTracking; sourceTree = "<group>"; };
 		2BFB92F3290BF6A800E1F0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CD2CBE4B296341A90044E06C /* TeachingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingView.swift; sourceTree = "<group>"; };
 		CD2CBE4D29641A910044E06C /* CustomPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopup.swift; sourceTree = "<group>"; };
 		CD2CBE4F296434BD0044E06C /* CameraSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraSheetView.swift; path = ../../CameraSheetView.swift; sourceTree = "<group>"; };
 		CD2CBE51296436B50044E06C /* BewertungenLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BewertungenLabel.swift; sourceTree = "<group>"; };
+		CD2CBE542964733E0044E06C /* ThresholdRotationGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdRotationGestureRecognizer.swift; sourceTree = "<group>"; };
+		CD2CBE552964733E0044E06C /* ThresholdPinchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdPinchGestureRecognizer.swift; sourceTree = "<group>"; };
+		CD2CBE562964733E0044E06C /* ThresholdPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		CD2CBE582964733E0044E06C /* TestRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRun.swift; sourceTree = "<group>"; };
+		CD2CBE592964733E0044E06C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ObjectTrackingDemo/Controllers/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		CD2CBE5A2964733E0044E06C /* ViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		CD2CBE5B2964733E0044E06C /* ViewController+SessionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SessionInfo.swift"; sourceTree = "<group>"; };
+		CD2CBE5C2964733E0044E06C /* ShareScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareScanViewController.swift; sourceTree = "<group>"; };
+		CD2CBE5D2964733E0044E06C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD2CBE5E2964733E0044E06C /* ViewController+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Gestures.swift"; sourceTree = "<group>"; };
+		CD2CBE5F2964733E0044E06C /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
+		CD2CBE602964733E0044E06C /* ViewController+ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ApplicationState.swift"; sourceTree = "<group>"; };
+		CD2CBE612964733E0044E06C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ObjectTrackingDemo/Assets.xcassets; sourceTree = "<group>"; };
+		CD2CBE632964733E0044E06C /* Nike_East_K_75_Low_Poly_FreebieRight.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Nike_East_K_75_Low_Poly_FreebieRight.usdz; sourceTree = "<group>"; };
+		CD2CBE642964733E0044E06C /* Nike_East_K_75_Low_Poly_FreebieLeft.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Nike_East_K_75_Low_Poly_FreebieLeft.usdz; sourceTree = "<group>"; };
+		CD2CBE652964733E0044E06C /* Brown_SneakersRight.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Brown_SneakersRight.usdz; sourceTree = "<group>"; };
+		CD2CBE662964733E0044E06C /* Brown_SneakersLeft.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Brown_SneakersLeft.usdz; sourceTree = "<group>"; };
+		CD2CBE672964733E0044E06C /* singleLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = singleLeft.scn; sourceTree = "<group>"; };
+		CD2CBE682964733E0044E06C /* singleRight.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = singleRight.scn; sourceTree = "<group>"; };
+		CD2CBE6A2964733E0044E06C /* ScannedPointCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedPointCloud.swift; sourceTree = "<group>"; };
+		CD2CBE6B2964733E0044E06C /* ScannedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedObject.swift; sourceTree = "<group>"; };
+		CD2CBE6C2964733E0044E06C /* Wireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
+		CD2CBE6D2964733E0044E06C /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		CD2CBE6E2964733E0044E06C /* BoundingBoxSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxSide.swift; sourceTree = "<group>"; };
+		CD2CBE6F2964733E0044E06C /* DetectedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedObject.swift; sourceTree = "<group>"; };
+		CD2CBE702964733E0044E06C /* Snapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapping.swift; sourceTree = "<group>"; };
+		CD2CBE712964733E0044E06C /* DetectedPointCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedPointCloud.swift; sourceTree = "<group>"; };
+		CD2CBE722964733E0044E06C /* ObjectOriginAxis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectOriginAxis.swift; sourceTree = "<group>"; };
+		CD2CBE732964733E0044E06C /* PointCloud+CreateVisualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PointCloud+CreateVisualization.swift"; sourceTree = "<group>"; };
+		CD2CBE742964733E0044E06C /* DetectedBoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedBoundingBox.swift; sourceTree = "<group>"; };
+		CD2CBE752964733E0044E06C /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		CD2CBE762964733E0044E06C /* ObjectOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectOrigin.swift; sourceTree = "<group>"; };
+		CD2CBE772964733F0044E06C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "ObjectTrackingDemo/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CD2CBE792964733F0044E06C /* MessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
+		CD2CBE7A2964733F0044E06C /* FlashlightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightButton.swift; sourceTree = "<group>"; };
+		CD2CBE7B2964733F0044E06C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		CD2CBE7D2964733F0044E06C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
+		CD2CBE7F2964733F0044E06C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ObjectTrackingDemo/art.scnassets; sourceTree = "<group>"; };
+		CD2CBE802964733F0044E06C /* singleLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = singleLeft.scn; path = ObjectTrackingDemo/singleLeft.scn; sourceTree = "<group>"; };
 		CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CDE042E7295F0DC7003E31E5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CDE042E9295F166F003E31E5 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
@@ -79,7 +146,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B580FA5290A7DD5008A2D92 /* INObjectTracking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +155,16 @@
 		2B580F87290A7AA2008A2D92 = {
 			isa = PBXGroup;
 			children = (
+				CD2CBE692964733E0044E06C /* 3D UI and Visualizations  */,
+				CD2CBE7F2964733F0044E06C /* art.scnassets */,
+				CD2CBE612964733E0044E06C /* Assets.xcassets */,
+				CD2CBE622964733E0044E06C /* Boots */,
+				CD2CBE572964733E0044E06C /* Controllers */,
+				CD2CBE532964733E0044E06C /* Gesture Recognizers */,
+				CD2CBE772964733F0044E06C /* Launch Screen.storyboard */,
+				CD2CBE802964733F0044E06C /* singleLeft.scn */,
+				CD2CBE7C2964733F0044E06C /* Utility Extensions */,
+				CD2CBE782964733F0044E06C /* Views */,
 				2B580FA1290A7ADC008A2D92 /* Packages */,
 				2B580F92290A7AA2008A2D92 /* ObjectTrackingDemo */,
 				2B580F91290A7AA2008A2D92 /* Products */,
@@ -137,7 +213,6 @@
 		2B580FA1290A7ADC008A2D92 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				2B580FA2290A7ADC008A2D92 /* INObjectTracking */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -147,6 +222,90 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD2CBE532964733E0044E06C /* Gesture Recognizers */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBE542964733E0044E06C /* ThresholdRotationGestureRecognizer.swift */,
+				CD2CBE552964733E0044E06C /* ThresholdPinchGestureRecognizer.swift */,
+				CD2CBE562964733E0044E06C /* ThresholdPanGestureRecognizer.swift */,
+			);
+			name = "Gesture Recognizers";
+			path = "ObjectTrackingDemo/Gesture Recognizers";
+			sourceTree = "<group>";
+		};
+		CD2CBE572964733E0044E06C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBE582964733E0044E06C /* TestRun.swift */,
+				CD2CBE592964733E0044E06C /* ViewController.swift */,
+				CD2CBE5A2964733E0044E06C /* ViewController+NavigationBar.swift */,
+				CD2CBE5B2964733E0044E06C /* ViewController+SessionInfo.swift */,
+				CD2CBE5C2964733E0044E06C /* ShareScanViewController.swift */,
+				CD2CBE5D2964733E0044E06C /* AppDelegate.swift */,
+				CD2CBE5E2964733E0044E06C /* ViewController+Gestures.swift */,
+				CD2CBE5F2964733E0044E06C /* Scan.swift */,
+				CD2CBE602964733E0044E06C /* ViewController+ApplicationState.swift */,
+			);
+			name = Controllers;
+			path = ObjectTrackingDemo/Controllers;
+			sourceTree = "<group>";
+		};
+		CD2CBE622964733E0044E06C /* Boots */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBE632964733E0044E06C /* Nike_East_K_75_Low_Poly_FreebieRight.usdz */,
+				CD2CBE642964733E0044E06C /* Nike_East_K_75_Low_Poly_FreebieLeft.usdz */,
+				CD2CBE652964733E0044E06C /* Brown_SneakersRight.usdz */,
+				CD2CBE662964733E0044E06C /* Brown_SneakersLeft.usdz */,
+				CD2CBE672964733E0044E06C /* singleLeft.scn */,
+				CD2CBE682964733E0044E06C /* singleRight.scn */,
+			);
+			name = Boots;
+			path = ObjectTrackingDemo/Boots;
+			sourceTree = "<group>";
+		};
+		CD2CBE692964733E0044E06C /* 3D UI and Visualizations  */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBE6A2964733E0044E06C /* ScannedPointCloud.swift */,
+				CD2CBE6B2964733E0044E06C /* ScannedObject.swift */,
+				CD2CBE6C2964733E0044E06C /* Wireframe.swift */,
+				CD2CBE6D2964733E0044E06C /* BoundingBox.swift */,
+				CD2CBE6E2964733E0044E06C /* BoundingBoxSide.swift */,
+				CD2CBE6F2964733E0044E06C /* DetectedObject.swift */,
+				CD2CBE702964733E0044E06C /* Snapping.swift */,
+				CD2CBE712964733E0044E06C /* DetectedPointCloud.swift */,
+				CD2CBE722964733E0044E06C /* ObjectOriginAxis.swift */,
+				CD2CBE732964733E0044E06C /* PointCloud+CreateVisualization.swift */,
+				CD2CBE742964733E0044E06C /* DetectedBoundingBox.swift */,
+				CD2CBE752964733E0044E06C /* Tile.swift */,
+				CD2CBE762964733E0044E06C /* ObjectOrigin.swift */,
+			);
+			name = "3D UI and Visualizations ";
+			path = "ObjectTrackingDemo/3D UI and Visualizations ";
+			sourceTree = "<group>";
+		};
+		CD2CBE782964733F0044E06C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBE792964733F0044E06C /* MessageLabel.swift */,
+				CD2CBE7A2964733F0044E06C /* FlashlightButton.swift */,
+				CD2CBE7B2964733F0044E06C /* RoundedButton.swift */,
+			);
+			name = Views;
+			path = ObjectTrackingDemo/Views;
+			sourceTree = "<group>";
+		};
+		CD2CBE7C2964733F0044E06C /* Utility Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD2CBE7D2964733F0044E06C /* Utilities.swift */,
+				CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */,
+			);
+			name = "Utility Extensions";
+			path = "ObjectTrackingDemo/Utility Extensions";
 			sourceTree = "<group>";
 		};
 		CDE042F72962D20C003E31E5 /* Fonts */ = {
@@ -205,7 +364,6 @@
 			);
 			name = ObjectTrackingDemo;
 			packageProductDependencies = (
-				2B580FA4290A7DD5008A2D92 /* INObjectTracking */,
 			);
 			productName = ObjectTrackingDemo;
 			productReference = 2B580F90290A7AA2008A2D92 /* ObjectTrackingDemo.app */;
@@ -252,7 +410,6 @@
 				CDE0430C2962D228003E31E5 /* Roboto-ThinItalic.ttf in Resources */,
 				CDE043082962D228003E31E5 /* Roboto-Medium.ttf in Resources */,
 				CDE0430D2962D228003E31E5 /* Roboto-MediumItalic.ttf in Resources */,
-				CDE042E6295F0B21003E31E5 /* Launch Screen.storyboard in Resources */,
 				CDE0430A2962D228003E31E5 /* Roboto-Regular.ttf in Resources */,
 				2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */,
 				CDE043072962D228003E31E5 /* Roboto-LightItalic.ttf in Resources */,
@@ -274,6 +431,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2CBEA8296475CA0044E06C /* Utilities.swift in Sources */,
+				CD2CBEA0296474EA0044E06C /* Scan.swift in Sources */,
+				CD2CBEA1296474EA0044E06C /* ThresholdRotationGestureRecognizer.swift in Sources */,
+				CD2CBEA2296474EA0044E06C /* ThresholdPinchGestureRecognizer.swift in Sources */,
+				CD2CBEA3296474EA0044E06C /* ThresholdPanGestureRecognizer.swift in Sources */,
+				CD2CBEA4296474EA0044E06C /* Launch Screen.storyboard in Sources */,
+				CD2CBEA7296474EA0044E06C /* ARCameraTrackingState.swift in Sources */,
+				CD2CBE94296474BD0044E06C /* TestRun.swift in Sources */,
+				CD2CBE95296474BD0044E06C /* MessageLabel.swift in Sources */,
+				CD2CBE96296474BD0044E06C /* FlashlightButton.swift in Sources */,
+				CD2CBE97296474BD0044E06C /* RoundedButton.swift in Sources */,
+				CD2CBE87296474970044E06C /* ScannedPointCloud.swift in Sources */,
+				CD2CBE88296474970044E06C /* ScannedObject.swift in Sources */,
+				CD2CBE89296474970044E06C /* Wireframe.swift in Sources */,
+				CD2CBE8A296474970044E06C /* BoundingBox.swift in Sources */,
+				CD2CBE8B296474970044E06C /* BoundingBoxSide.swift in Sources */,
+				CD2CBE8C296474970044E06C /* DetectedObject.swift in Sources */,
+				CD2CBE8D296474970044E06C /* Snapping.swift in Sources */,
+				CD2CBE8E296474970044E06C /* DetectedPointCloud.swift in Sources */,
+				CD2CBE8F296474970044E06C /* ObjectOriginAxis.swift in Sources */,
+				CD2CBE90296474970044E06C /* PointCloud+CreateVisualization.swift in Sources */,
+				CD2CBE91296474970044E06C /* DetectedBoundingBox.swift in Sources */,
+				CD2CBE92296474970044E06C /* Tile.swift in Sources */,
+				CD2CBE93296474970044E06C /* ObjectOrigin.swift in Sources */,
+				CD2CBE812964746D0044E06C /* ViewController.swift in Sources */,
+				CD2CBE822964746D0044E06C /* ViewController+NavigationBar.swift in Sources */,
+				CD2CBE832964746D0044E06C /* ViewController+SessionInfo.swift in Sources */,
+				CD2CBE842964746D0044E06C /* ShareScanViewController.swift in Sources */,
+				CD2CBE852964746D0044E06C /* ViewController+Gestures.swift in Sources */,
+				CD2CBE862964746D0044E06C /* ViewController+ApplicationState.swift in Sources */,
 				CDE0431B29631997003E31E5 /* DetailShoeView.swift in Sources */,
 				CD2CBE4C296341A90044E06C /* TeachingView.swift in Sources */,
 				CDE043112962D8EA003E31E5 /* ShoeListView.swift in Sources */,
@@ -492,13 +679,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2B580FA4290A7DD5008A2D92 /* INObjectTracking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = INObjectTracking;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B580F88290A7AA2008A2D92 /* Project object */;
 }

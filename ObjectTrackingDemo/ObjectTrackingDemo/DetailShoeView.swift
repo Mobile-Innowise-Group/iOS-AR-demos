@@ -118,7 +118,7 @@ struct DetailShoeView: View {
             .navigationDestination(isPresented: $showCameraScreen) {
                 ContentView()
                     .toolbar(.hidden, for: .tabBar)
-//                    .toolbar(.hidden, for: .navigationBar)
+                    .toolbar(.hidden, for: .navigationBar)
             }
     }
 }
