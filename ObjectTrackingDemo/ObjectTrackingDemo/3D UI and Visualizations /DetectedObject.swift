@@ -13,7 +13,7 @@ class DetectedObject: SCNNode {
     private lazy var bootNode: SCNNode = {
         try! SCNScene(
             url: Bundle.main.url(
-                forResource: "Brown_SneakersLeft",
+                forResource: "Nike_Air_Jordan_Jordan",
                 withExtension: "scn"
             )!
         ).rootNode.childNodes.first!
@@ -113,9 +113,9 @@ class DetectedObject: SCNNode {
 //            .init(0.0, 0.0, 0.0, 1.0)
 //        )
         bootNode.simdWorldTransform = .init(
-            .init(0.1, 0.0, 0.0, 0.0),
-            .init(0.0, 0.1, 0.0, 0.0),
-            .init(0.0, 0.0, 0.1, 0.0),
+            .init(0.01, 0.0, 0.0, 0.0),
+            .init(0.0, 0.01, 0.0, 0.0),
+            .init(0.0, 0.0, 0.01, 0.0),
             .init(0.0, 0.0, 0.0, 1.0)
         ) * .init(
             .init(-1.0, 0.0, 0.0, 0.0),
@@ -123,7 +123,7 @@ class DetectedObject: SCNNode {
             .init(0.0, 0.0, -1.0, 0.0),
             .init(0.0, 0.0, 0.0, 1.0)
         )
-        bootNode.simdWorldPosition = .init(-0.2, 0.0, 0.1)
+        bootNode.simdWorldPosition = .init(0.0, 0.0, 0.0)
 //        * .init(
 //            .init(0.0, 0.0, 0.0, -0.5),
 //            .init(0.0, 0.0, 0.0, 0.0),
