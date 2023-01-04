@@ -13,7 +13,7 @@ class DetectedObject: SCNNode {
     private lazy var bootNode: SCNNode = {
         try! SCNScene(
             url: Bundle.main.url(
-                forResource: "singleLeft",
+                forResource: "Brown_SneakersLeft",
                 withExtension: "scn"
             )!
         ).rootNode.childNodes.first!

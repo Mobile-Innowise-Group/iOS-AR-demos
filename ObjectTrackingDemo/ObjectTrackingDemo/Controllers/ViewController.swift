@@ -113,6 +113,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         button.heightAnchor.constraint(equalToConstant: 120).isActive = true
         button.clipsToBounds = true
         button.setBackgroundImage(#imageLiteral(resourceName: "sneakers"), for: .normal)
+        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -123,6 +124,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         button.heightAnchor.constraint(equalToConstant: 120).isActive = true
         button.clipsToBounds = true
         button.setBackgroundImage(#imageLiteral(resourceName: "sneakers-2"), for: .normal)
+        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -133,6 +135,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         button.heightAnchor.constraint(equalToConstant: 120).isActive = true
         button.clipsToBounds = true
         button.setBackgroundImage(#imageLiteral(resourceName: "sneakers-3"), for: .normal)
+        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
     

@@ -46,6 +46,8 @@
 		CD2CBEA7296474EA0044E06C /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */; };
 		CD2CBEA8296475CA0044E06C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7D2964733F0044E06C /* Utilities.swift */; };
 		CD2CBEAB296488A50044E06C /* singleLeft.scn in Resources */ = {isa = PBXBuildFile; fileRef = CD2CBE672964733E0044E06C /* singleLeft.scn */; };
+		CD72625129659F0C00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn in Resources */ = {isa = PBXBuildFile; fileRef = CD72624F29659EEE00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn */; };
+		CD72625229659F0C00FE6699 /* Brown_SneakersLeft.scn in Resources */ = {isa = PBXBuildFile; fileRef = CD72625029659EF600FE6699 /* Brown_SneakersLeft.scn */; };
 		CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E7295F0DC7003E31E5 /* MainScreen.swift */; };
 		CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E9295F166F003E31E5 /* FilterScreen.swift */; };
 		CDE043042962D228003E31E5 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDE042F82962D227003E31E5 /* Roboto-Light.ttf */; };
@@ -119,6 +121,8 @@
 		CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
 		CD2CBE7F2964733F0044E06C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ObjectTrackingDemo/art.scnassets; sourceTree = "<group>"; };
 		CD2CBE802964733F0044E06C /* singleLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = singleLeft.scn; path = ObjectTrackingDemo/singleLeft.scn; sourceTree = "<group>"; };
+		CD72624F29659EEE00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Nike_East_K_75_Low_Poly_FreebieLeft.scn; path = ObjectTrackingDemo/Nike_East_K_75_Low_Poly_FreebieLeft.scn; sourceTree = "<group>"; };
+		CD72625029659EF600FE6699 /* Brown_SneakersLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Brown_SneakersLeft.scn; sourceTree = "<group>"; };
 		CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CDE042E7295F0DC7003E31E5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CDE042E9295F166F003E31E5 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				CD2CBE532964733E0044E06C /* Gesture Recognizers */,
 				CD2CBE772964733F0044E06C /* Launch Screen.storyboard */,
 				CD2CBE802964733F0044E06C /* singleLeft.scn */,
+				CD72624F29659EEE00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn */,
+				CD72625029659EF600FE6699 /* Brown_SneakersLeft.scn */,
 				CD2CBE7C2964733F0044E06C /* Utility Extensions */,
 				CD2CBE782964733F0044E06C /* Views */,
 				2B580FA1290A7ADC008A2D92 /* Packages */,
@@ -257,8 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				CD2CBE632964733E0044E06C /* Nike_East_K_75_Low_Poly_FreebieRight.usdz */,
-				CD2CBE642964733E0044E06C /* Nike_East_K_75_Low_Poly_FreebieLeft.usdz */,
 				CD2CBE652964733E0044E06C /* Brown_SneakersRight.usdz */,
+				CD2CBE642964733E0044E06C /* Nike_East_K_75_Low_Poly_FreebieLeft.usdz */,
 				CD2CBE662964733E0044E06C /* Brown_SneakersLeft.usdz */,
 				CD2CBE672964733E0044E06C /* singleLeft.scn */,
 				CD2CBE682964733E0044E06C /* singleRight.scn */,
@@ -408,6 +414,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD72625129659F0C00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn in Resources */,
+				CD72625229659F0C00FE6699 /* Brown_SneakersLeft.scn in Resources */,
 				CD2CBEAB296488A50044E06C /* singleLeft.scn in Resources */,
 				CDE0430C2962D228003E31E5 /* Roboto-ThinItalic.ttf in Resources */,
 				CDE043082962D228003E31E5 /* Roboto-Medium.ttf in Resources */,
