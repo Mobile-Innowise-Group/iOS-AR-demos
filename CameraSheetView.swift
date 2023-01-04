@@ -16,10 +16,14 @@ struct TestBottomSheet: View {
             } label: {
                 Text("Show")
             }
-        }.sheet(isPresented: $show) {
+        }
+//        .popup(isPresented: $show) {
+//            ScanIntroductionView()
+//        }
+        .sheet(isPresented: $show) {
             CameraSheetView()
                 .presentationDragIndicator(.visible)
-                .presentationDetents([.fraction(0.2), .fraction(0.6)])
+                .presentationDetents([.fraction(0.23), .fraction(0.6)])
         }
     }
 }
@@ -44,10 +48,10 @@ struct CameraSheetView: View {
                     Button {} label: {
                         Image(systemName: "heart")
                             .resizable()
-                            .frame(width: 16, height: 16)
+                            .frame(width: 20, height: 18)
                             .foregroundColor(.gray)
                     }.padding([.leading, .bottom])
-                }
+                }.padding(.top, 30)
                 HStack {
                     Image("airForce")
                         .resizable()
@@ -55,30 +59,31 @@ struct CameraSheetView: View {
                     VStack(alignment: .leading) {
                         BewertungetLabel()
                         Button {} label: {
-                                    HStack {
-                                        Text("Auswählen")
-                                            .font(Font.custom("Roboto-Bold", size: 18))
-                                            .foregroundColor(.black)
-                                        Text("190,00€*")
-                                            .font(Font.custom("Roboto-Bold", size: 18))
-                                            .foregroundColor(.black)
-                                    }.padding()
+                            HStack {
+                                Text("Auswählen")
+                                    .font(Font.custom("Roboto-Bold", size: 18))
+                                    .foregroundColor(.black)
+                                Text("190,00€*")
+                                    .font(Font.custom("Roboto-Bold", size: 18))
+                                    .foregroundColor(.black)
+                            }.padding()
                                 .frame(height: 53)
                         }.background {
                             Color.yellow
                         }
                     }
                 }
-                Text("Produktinformation")
-                    .font(Font.custom("Roboto-Bold", size: 18))
-                    .padding(.bottom)
-                Text("ID: 5bc3f493-8...")
-                    .font(Font.custom("Roboto-Regular", size: 18))
-                    .padding(.bottom)
-                Text("Dieser Schuh vereint klassische Formen mit maximalem Tragekomfort. Das Design mit Wellenlinien, reflektierenden Highlights und dezenten Logo-Stickereien sorgt für eine unverwechselbare Silhuouette. Der Nike Air Max 97 SE Women Schuh ist ein Kult-Sneaker und der Hingucker in deinem Street-Style. Dieser Schuh vereint klassische Formen mit maximalem Tragekomfort. Das Design mit Wellenlinien, reflektierenden Highlights und dezenten Logo-Stickereien sorgt für eine unverwechselbare Silhuouette. Dieser sehr bequeme Sneaker überzeugt nicht nur in Sachen Optik, sondern auch mit seinem strapazierfähigem Obermaterial aus Lederimitat und Textil. Das durchgehende Air-Max-Element in der Sohle verspricht einen leichtgewichtige und außergewöhnlich gute Schrittdämpfung. Produktinformationen")
-                    .font(Font.custom("Roboto-Regular", size: 18))
-            }
-            .padding()
+                VStack(alignment: .leading) {
+                    Text("Produktinformation")
+                        .font(Font.custom("Roboto-Bold", size: 18))
+                        .padding(.bottom)
+                    Text("ID: 5bc3f493-8...")
+                        .font(Font.custom("Roboto-Regular", size: 18))
+                        .padding(.bottom)
+                    Text("Dieser Schuh vereint klassische Formen mit maximalem Tragekomfort. Das Design mit Wellenlinien, reflektierenden Highlights und dezenten Logo-Stickereien sorgt für eine unverwechselbare Silhuouette. Der Nike Air Max 97 SE Women Schuh ist ein Kult-Sneaker und der Hingucker in deinem Street-Style. Dieser Schuh vereint klassische Formen mit maximalem Tragekomfort. Das Design mit Wellenlinien, reflektierenden Highlights und dezenten Logo-Stickereien sorgt für eine unverwechselbare Silhuouette. Dieser sehr bequeme Sneaker überzeugt nicht nur in Sachen Optik, sondern auch mit seinem strapazierfähigem Obermaterial aus Lederimitat und Textil. Das durchgehende Air-Max-Element in der Sohle verspricht einen leichtgewichtige und außergewöhnlich gute Schrittdämpfung. Produktinformationen")
+                        .font(Font.custom("Roboto-Regular", size: 18))
+                }
+            }.padding([.leading, .trailing], 30)
         }
     }
 }

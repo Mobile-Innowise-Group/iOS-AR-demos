@@ -11,7 +11,7 @@
 		2B580F96290A7AA2008A2D92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B580F95290A7AA2008A2D92 /* ContentView.swift */; };
 		2B580F98290A7AA5008A2D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F97290A7AA5008A2D92 /* Assets.xcassets */; };
 		2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */; };
-		CD2CBE4C296341A90044E06C /* TeachingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4B296341A90044E06C /* TeachingView.swift */; };
+		CD2CBE4C296341A90044E06C /* ScanIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4B296341A90044E06C /* ScanIntroductionView.swift */; };
 		CD2CBE4E29641A910044E06C /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4D29641A910044E06C /* CustomPopup.swift */; };
 		CD2CBE50296434BD0044E06C /* CameraSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4F296434BD0044E06C /* CameraSheetView.swift */; };
 		CD2CBE52296436B50044E06C /* BewertungenLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE51296436B50044E06C /* BewertungenLabel.swift */; };
@@ -45,7 +45,6 @@
 		CD2CBEA4296474EA0044E06C /* Launch Screen.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE772964733F0044E06C /* Launch Screen.storyboard */; };
 		CD2CBEA7296474EA0044E06C /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */; };
 		CD2CBEA8296475CA0044E06C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7D2964733F0044E06C /* Utilities.swift */; };
-		CD2CBEAA296480B00044E06C /* ShoeChooseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBEA9296480B00044E06C /* ShoeChooseButton.swift */; };
 		CD2CBEAB296488A50044E06C /* singleLeft.scn in Resources */ = {isa = PBXBuildFile; fileRef = CD2CBE672964733E0044E06C /* singleLeft.scn */; };
 		CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E7295F0DC7003E31E5 /* MainScreen.swift */; };
 		CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E9295F166F003E31E5 /* FilterScreen.swift */; };
@@ -76,7 +75,7 @@
 		2B580F97290A7AA5008A2D92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BFB92F3290BF6A800E1F0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		CD2CBE4B296341A90044E06C /* TeachingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingView.swift; sourceTree = "<group>"; };
+		CD2CBE4B296341A90044E06C /* ScanIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanIntroductionView.swift; sourceTree = "<group>"; };
 		CD2CBE4D29641A910044E06C /* CustomPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopup.swift; sourceTree = "<group>"; };
 		CD2CBE4F296434BD0044E06C /* CameraSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraSheetView.swift; path = ../../CameraSheetView.swift; sourceTree = "<group>"; };
 		CD2CBE51296436B50044E06C /* BewertungenLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BewertungenLabel.swift; sourceTree = "<group>"; };
@@ -120,7 +119,6 @@
 		CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
 		CD2CBE7F2964733F0044E06C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ObjectTrackingDemo/art.scnassets; sourceTree = "<group>"; };
 		CD2CBE802964733F0044E06C /* singleLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = singleLeft.scn; path = ObjectTrackingDemo/singleLeft.scn; sourceTree = "<group>"; };
-		CD2CBEA9296480B00044E06C /* ShoeChooseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeChooseButton.swift; sourceTree = "<group>"; };
 		CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CDE042E7295F0DC7003E31E5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CDE042E9295F166F003E31E5 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
@@ -200,8 +198,7 @@
 				CDE042E9295F166F003E31E5 /* FilterScreen.swift */,
 				CDE0431A29631997003E31E5 /* DetailShoeView.swift */,
 				CDE0431C29633505003E31E5 /* SwipeItemsView.swift */,
-				CD2CBE4B296341A90044E06C /* TeachingView.swift */,
-				CD2CBEA9296480B00044E06C /* ShoeChooseButton.swift */,
+				CD2CBE4B296341A90044E06C /* ScanIntroductionView.swift */,
 			);
 			path = ObjectTrackingDemo;
 			sourceTree = "<group>";
@@ -467,13 +464,12 @@
 				CD2CBE852964746D0044E06C /* ViewController+Gestures.swift in Sources */,
 				CD2CBE862964746D0044E06C /* ViewController+ApplicationState.swift in Sources */,
 				CDE0431B29631997003E31E5 /* DetailShoeView.swift in Sources */,
-				CD2CBE4C296341A90044E06C /* TeachingView.swift in Sources */,
+				CD2CBE4C296341A90044E06C /* ScanIntroductionView.swift in Sources */,
 				CDE043112962D8EA003E31E5 /* ShoeListView.swift in Sources */,
 				CDE0431929631925003E31E5 /* SwipeItem.swift in Sources */,
 				CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */,
 				CD2CBE52296436B50044E06C /* BewertungenLabel.swift in Sources */,
 				CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */,
-				CD2CBEAA296480B00044E06C /* ShoeChooseButton.swift in Sources */,
 				CDE0431729631429003E31E5 /* SwipeItemButton.swift in Sources */,
 				CDE0431D29633505003E31E5 /* SwipeItemsView.swift in Sources */,
 				2B580F96290A7AA2008A2D92 /* ContentView.swift in Sources */,

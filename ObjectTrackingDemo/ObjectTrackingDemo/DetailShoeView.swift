@@ -20,11 +20,17 @@ struct DetailShoeView: View {
                         Button {
                             self.showCameraScreen = true
                         } label: {
-                            Image(systemName: "arkit")
-                                .resizable()
-                                .frame(width: 40, height: 40)
-                                .foregroundColor(.black)
+                            HStack {
+                                Image(systemName: "arkit")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .foregroundColor(.black)
+                                Text("Try it now")
+                                    .font(Font.custom("Roboto-Regular", size: 13))
+                                    .foregroundColor(.black)
+                            }
                         }
+                        .offset(x:0, y: -50)
                         .padding(.top)
                         RoundedRectangle(cornerRadius: 8)
                             .overlay {
@@ -100,16 +106,16 @@ struct DetailShoeView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack(spacing: 15) {
                         Button {} label: {
-                            Image(systemName: "square.and.arrow.up")
+                            Image("shareButton")
                                 .resizable()
                                 .foregroundColor(.black)
-                                .frame(width: 25, height: 30)
+                                .frame(width: 16, height: 16)
                         }
                         Button {} label: {
                             Image(systemName: "heart")
                                 .resizable()
                                 .foregroundColor(.black)
-                                .frame(width: 30, height: 25)
+                                .frame(width: 16, height: 13.65)
                         }
                     }
                 }

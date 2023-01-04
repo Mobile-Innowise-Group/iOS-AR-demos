@@ -10,33 +10,31 @@ import SwiftUI
 struct MainScreen: View {
     var body: some View {
         TabView {
-            Group {
-                FilterScreen()
-                    .tabItem {
-                        Label("",systemImage: "house")
-                            .foregroundColor(.black)
-                    }
-                FilterScreen()
-                    .tabItem {
-                        Label("",systemImage: "doc.text.magnifyingglass")
-                            .foregroundColor(.black)
-                    }
-                FilterScreen()
-                    .tabItem {
-                        Label("", systemImage: "person")
-                            .foregroundColor(.black)
-                    }
-                FilterScreen()
-                    .tabItem {
-                        Label("", systemImage: "heart")
-                            .foregroundColor(.black)
-                    }
-                FilterScreen()
-                    .tabItem {
-                        Label("", systemImage: "cart")
-                            .foregroundColor(.black)
-                    }
-            }
+            FilterScreen()
+                .tabItem {
+                    Label("",systemImage: "house")
+                        .foregroundColor(.black)
+                }
+            FilterScreen()
+                .tabItem {
+                    Label("",systemImage: "doc.text.magnifyingglass")
+                        .foregroundColor(.black)
+                }.disabled(true)
+            FilterScreen()
+                .tabItem {
+                    Label("", systemImage: "person")
+                        .foregroundColor(.black)
+                }.disabled(true)
+            FilterScreen()
+                .tabItem {
+                    Label("", systemImage: "heart")
+                        .foregroundColor(.black)
+                }.disabled(true)
+            FilterScreen()
+                .tabItem {
+                    Label("", systemImage: "cart")
+                        .foregroundColor(.black)
+                }.disabled(true)
         }
         .accentColor(.black)
         .toolbarColorScheme(.light, for: .tabBar)

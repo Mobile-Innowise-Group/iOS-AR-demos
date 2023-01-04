@@ -25,7 +25,7 @@ struct ContentView: View {
             .sheet(isPresented: $show) {
                 CameraSheetView()
                     .presentationDragIndicator(.visible)
-                    .presentationDetents([.fraction(0.2), .fraction(0.6)])
+                    .presentationDetents([.fraction(0.23), .fraction(0.6)])
             }
     }
 }

@@ -8,6 +8,7 @@ Main view controller for the object scanning UI.
 import UIKit
 import SceneKit
 import ARKit
+import SwiftUI
 
 public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UIDocumentPickerDelegate {
 
@@ -23,76 +24,77 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
     }()
     var backButton: UIBarButtonItem!
     var mergeScanButton: UIBarButtonItem!
+    
 
-    lazy var startOverButton: UIButton = {
-        let button = UIButton(frame: .zero)
-        button.setTitle("Restart", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
-        return button
-    }()
+//    lazy var startOverButton: UIButton = {
+//        let button = UIButton(frame: .zero)
+//        button.setTitle("Restart", for: .normal)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
+//        return button
+//    }()
 
-    lazy var instructionView: UIVisualEffectView = {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentView.addSubview(instructionLabel)
-        NSLayoutConstraint.activate([
-            instructionLabel.leadingAnchor.constraint(equalTo: view.contentView.leadingAnchor, constant: 8.0),
-            instructionLabel.trailingAnchor.constraint(equalTo: view.contentView.trailingAnchor, constant: -8.0),
-            instructionLabel.topAnchor.constraint(equalTo: view.contentView.topAnchor, constant: 8.0),
-            instructionLabel.bottomAnchor.constraint(equalTo: view.contentView.bottomAnchor, constant: -8.0)
-        ])
-        return view
-    }()
+//    lazy var instructionView: UIVisualEffectView = {
+//        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.contentView.addSubview(instructionLabel)
+//        NSLayoutConstraint.activate([
+//            instructionLabel.leadingAnchor.constraint(equalTo: view.contentView.leadingAnchor, constant: 8.0),
+//            instructionLabel.trailingAnchor.constraint(equalTo: view.contentView.trailingAnchor, constant: -8.0),
+//            instructionLabel.topAnchor.constraint(equalTo: view.contentView.topAnchor, constant: 8.0),
+//            instructionLabel.bottomAnchor.constraint(equalTo: view.contentView.bottomAnchor, constant: -8.0)
+//        ])
+//        return view
+//    }()
 
-    lazy var instructionLabel: MessageLabel = {
-        let label = MessageLabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.widthAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true
-        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 22.0).isActive = true
-        return label
-    }()
+//    lazy var instructionLabel: MessageLabel = {
+//        let label = MessageLabel(frame: .zero)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.widthAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true
+//        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 22.0).isActive = true
+//        return label
+//    }()
 
-    lazy var sessionInfoView: UIVisualEffectView = {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentView.addSubview(sessionInfoLabel)
-        NSLayoutConstraint.activate([
-            sessionInfoLabel.leadingAnchor.constraint(equalTo: view.contentView.leadingAnchor, constant: 8.0),
-            sessionInfoLabel.trailingAnchor.constraint(equalTo: view.contentView.trailingAnchor, constant: -14.0),
-            sessionInfoLabel.topAnchor.constraint(equalTo: view.contentView.topAnchor, constant: 8.0),
-            sessionInfoLabel.bottomAnchor.constraint(equalTo: view.contentView.bottomAnchor, constant: -8.0)
-        ])
-        return view
-    }()
+//    lazy var sessionInfoView: UIVisualEffectView = {
+//        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        view.contentView.addSubview(sessionInfoLabel)
+//        NSLayoutConstraint.activate([
+//            sessionInfoLabel.leadingAnchor.constraint(equalTo: view.contentView.leadingAnchor, constant: 8.0),
+//            sessionInfoLabel.trailingAnchor.constraint(equalTo: view.contentView.trailingAnchor, constant: -14.0),
+//            sessionInfoLabel.topAnchor.constraint(equalTo: view.contentView.topAnchor, constant: 8.0),
+//            sessionInfoLabel.bottomAnchor.constraint(equalTo: view.contentView.bottomAnchor, constant: -8.0)
+//        ])
+//        return view
+//    }()
 
-    lazy var sessionInfoLabel: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.widthAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true
-        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 22.0).isActive = true
-        return label
-    }()
+//    lazy var sessionInfoLabel: UILabel = {
+//        let label = UILabel(frame: .zero)
+//        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.widthAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true
+//        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 22.0).isActive = true
+//        return label
+//    }()
 
-    lazy var loadModelButton: RoundedButton = {
-        let button = RoundedButton(frame: .zero)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraint(equalToConstant: 110.0).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
-        button.setTitle("Load Model", for: .normal)
-        button.addTarget(self, action: #selector(loadModelButtonTapped(_:)), for: .touchUpInside)
-        return button
-    }()
+//    lazy var loadModelButton: RoundedButton = {
+//        let button = RoundedButton(frame: .zero)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.widthAnchor.constraint(equalToConstant: 110.0).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
+//        button.setTitle("Load Model", for: .normal)
+//        button.addTarget(self, action: #selector(loadModelButtonTapped(_:)), for: .touchUpInside)
+//        return button
+//    }()
 
-    lazy var flashlightButton: FlashlightButton = {
-        let button = FlashlightButton(frame: .zero)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraint(equalToConstant: 110.0).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
-        button.setTitle("Light Off", for: .normal)
-        button.addTarget(self, action: #selector(toggleFlashlightButtonTapped(_:)), for: .touchUpInside)
-        return button
-    }()
+//    lazy var flashlightButton: FlashlightButton = {
+//        let button = FlashlightButton(frame: .zero)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.widthAnchor.constraint(equalToConstant: 110.0).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
+//        button.setTitle("Light Off", for: .normal)
+//        button.addTarget(self, action: #selector(toggleFlashlightButtonTapped(_:)), for: .touchUpInside)
+//        return button
+//    }()
 
     lazy var nextButton: RoundedButton = {
         let button = RoundedButton(frame: .zero)
@@ -103,16 +105,56 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         button.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
         return button
     }()
-
-    lazy var toggleInstructionsButton: RoundedButton = {
-        let button = RoundedButton(frame: .zero)
+    
+    lazy var sneakerButton: UIButton = {
+        let button = UIButton(type: .custom)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraint(equalToConstant: 45.0).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
-        button.addTarget(self, action: #selector(toggleInstructionsButtonTapped(_:)), for: .touchUpInside)
-        button.setTitle("?", for: .normal)
+        button.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        button.clipsToBounds = true
+        button.setBackgroundImage(#imageLiteral(resourceName: "sneakers"), for: .normal)
         return button
     }()
+    
+    lazy var sneakerButton2: UIButton = {
+        let button = UIButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        button.clipsToBounds = true
+        button.setBackgroundImage(#imageLiteral(resourceName: "sneakers-2"), for: .normal)
+        return button
+    }()
+    
+    lazy var sneakerButton3: UIButton = {
+        let button = UIButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        button.clipsToBounds = true
+        button.setBackgroundImage(#imageLiteral(resourceName: "sneakers-3"), for: .normal)
+        return button
+    }()
+    
+    lazy var sneakerStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .center
+        stackView.distribution = .fillEqually
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+        return stackView
+    }()
+
+//    lazy var toggleInstructionsButton: RoundedButton = {
+//        let button = RoundedButton(frame: .zero)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.widthAnchor.constraint(equalToConstant: 45.0).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
+//        button.addTarget(self, action: #selector(toggleInstructionsButtonTapped(_:)), for: .touchUpInside)
+//        button.setTitle("?", for: .normal)
+//        return button
+//    }()
 
     internal var internalState: State = .startARSession
 
@@ -145,8 +187,8 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 
     var instructionsVisible: Bool = true {
         didSet {
-            instructionView.isHidden = !instructionsVisible
-            toggleInstructionsButton.toggledOn = instructionsVisible
+//            instructionView.isHidden = !instructionsVisible
+//            toggleInstructionsButton.toggledOn = instructionsVisible
         }
     }
 
@@ -242,38 +284,48 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
             sceneView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
 
-        sceneView.addSubview(toggleInstructionsButton)
+//        sceneView.addSubview(toggleInstructionsButton)
         sceneView.addSubview(nextButton)
-        sceneView.addSubview(flashlightButton)
-        sceneView.addSubview(loadModelButton)
-        sceneView.addSubview(sessionInfoView)
-        sceneView.addSubview(instructionView)
-        sceneView.addSubview(startOverButton)
+        sceneView.addSubview(sneakerStackView)
+        sneakerStackView.addArrangedSubview(sneakerButton)
+        sneakerStackView.addArrangedSubview(sneakerButton2)
+        sneakerStackView.addArrangedSubview(sneakerButton3)
+//        sceneView.addSubview(flashlightButton)
+//        sceneView.addSubview(loadModelButton)
+//        sceneView.addSubview(sessionInfoView)
+//        sceneView.addSubview(instructionView)
+//        sceneView.addSubview(startOverButton)
 
         NSLayoutConstraint.activate([
-            toggleInstructionsButton.centerYAnchor.constraint(equalTo: nextButton.centerYAnchor),
-            toggleInstructionsButton.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -20),
+//            toggleInstructionsButton.centerYAnchor.constraint(equalTo: nextButton.centerYAnchor),
+//            toggleInstructionsButton.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -20),
 
-            nextButton.centerXAnchor.constraint(equalTo: sessionInfoLabel.centerXAnchor),
+//            nextButton.centerXAnchor.constraint(equalTo: sessionInfoLabel.centerXAnchor),
+            nextButton.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+//            sneakerCarousel.view.bottomAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.bottomAnchor, constant: 15),
+//            sneakerCarousel.view.leadingAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.leadingAnchor, constant: 15),
+            sneakerStackView.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: 10),
+            sneakerStackView.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 12),
+            sneakerStackView.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -12),
 
-            flashlightButton.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 20.0),
-            flashlightButton.bottomAnchor.constraint(equalTo: sceneView.bottomAnchor, constant: -40.0),
+//            flashlightButton.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 20.0),
+//            flashlightButton.bottomAnchor.constraint(equalTo: sceneView.bottomAnchor, constant: -40.0),
 
 //            loadModelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 //            loadModelButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40.0),
 
-            sessionInfoView.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
-            sessionInfoView.topAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.topAnchor, constant: 40.0),
-
-            instructionView.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
-            instructionView.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 120.0),
-            instructionView.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -120.0),
-            instructionView.bottomAnchor.constraint(equalTo: sceneView.bottomAnchor, constant: -135.0),
-            instructionView.heightAnchor.constraint(greaterThanOrEqualToConstant: 25.0),
-
-            startOverButton.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -24.0),
-            startOverButton.centerYAnchor.constraint(equalTo: sceneView.centerYAnchor)
+//            sessionInfoView.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
+//            sessionInfoView.topAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.topAnchor, constant: 40.0),
+//
+//            instructionView.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
+//            instructionView.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 120.0),
+//            instructionView.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -120.0),
+//            instructionView.bottomAnchor.constraint(equalTo: sceneView.bottomAnchor, constant: -135.0),
+//            instructionView.heightAnchor.constraint(greaterThanOrEqualToConstant: 25.0),
+//
+//            startOverButton.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -24.0),
+//            startOverButton.centerYAnchor.constraint(equalTo: sceneView.centerYAnchor)
         ])
         
 
@@ -424,7 +476,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
     // MARK: - loadModelButton
     @objc
     func loadModelButtonTapped(_ sender: Any) {
-        guard !loadModelButton.isHidden && loadModelButton.isEnabled else { return }
+//        guard !loadModelButton.isHidden && loadModelButton.isEnabled else { return }
         
         let documentPicker = UIDocumentPickerViewController(
             documentTypes: ["com.pixar.universal-scene-description-mobile"],
@@ -433,8 +485,8 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         documentPicker.delegate = self
         
         documentPicker.modalPresentationStyle = .overCurrentContext
-        documentPicker.popoverPresentationController?.sourceView = self.loadModelButton
-        documentPicker.popoverPresentationController?.sourceRect = self.loadModelButton.bounds
+//        documentPicker.popoverPresentationController?.sourceView = self.loadModelButton
+//        documentPicker.popoverPresentationController?.sourceRect = self.loadModelButton.bounds
         
         DispatchQueue.main.async {
             self.present(documentPicker, animated: true, completion: nil)
@@ -454,19 +506,19 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
     // MARK: flashlightButton
     @objc
     func toggleFlashlightButtonTapped(_ sender: Any) {
-        guard !flashlightButton.isHidden && flashlightButton.isEnabled else { return }
-        flashlightButton.toggledOn = !flashlightButton.toggledOn
+//        guard !flashlightButton.isHidden && flashlightButton.isEnabled else { return }
+//        flashlightButton.toggledOn = !flashlightButton.toggledOn
     }
 
     // MARK: - toggleInstructionsButton
     @objc
     func toggleInstructionsButtonTapped(_ sender: Any) {
-        guard !toggleInstructionsButton.isHidden && toggleInstructionsButton.isEnabled else { return }
+//        guard !toggleInstructionsButton.isHidden && toggleInstructionsButton.isEnabled else { return }
         instructionsVisible.toggle()
     }
     
     func displayInstruction(_ message: Message) {
-        instructionLabel.display(message)
+//        instructionLabel.display(message)
         instructionsVisible = true
     }
     

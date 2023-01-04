@@ -38,22 +38,22 @@ extension ViewController {
                 startMessageExpirationTimer(duration: timeToKeepLastMessageOnScreen)
             } else {
                 // Otherwise hide the info label immediately.
-                self.sessionInfoLabel.text = ""
-                self.sessionInfoView.isHidden = true
+//                self.sessionInfoLabel.text = ""
+//                self.sessionInfoView.isHidden = true
             }
             return
         }
         
-        sessionInfoLabel.text = message
-        sessionInfoView.isHidden = false
+//        sessionInfoLabel.text = message
+//        sessionInfoView.isHidden = false
     }
     
     func displayMessage(_ message: String, expirationTime: TimeInterval) {
         startTimeOfLastMessage = Date().timeIntervalSince1970
         expirationTimeOfLastMessage = expirationTime
         DispatchQueue.main.async {
-            self.sessionInfoLabel.text = message
-            self.sessionInfoView.isHidden = false
+//            self.sessionInfoLabel.text = message
+//            self.sessionInfoView.isHidden = false
             self.startMessageExpirationTimer(duration: expirationTime)
         }
     }
@@ -63,8 +63,8 @@ extension ViewController {
         
         messageExpirationTimer = Timer.scheduledTimer(withTimeInterval: duration, repeats: false) { (timer) in
             self.cancelMessageExpirationTimer()
-            self.sessionInfoLabel.text = ""
-            self.sessionInfoView.isHidden = true
+//            self.sessionInfoLabel.text = ""
+//            self.sessionInfoView.isHidden = true
             
             self.startTimeOfLastMessage = nil
             self.expirationTimeOfLastMessage = nil
