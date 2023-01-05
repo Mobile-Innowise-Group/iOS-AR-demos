@@ -25,7 +25,6 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
     var backButton: UIBarButtonItem!
     var mergeScanButton: UIBarButtonItem!
     
-
 //    lazy var startOverButton: UIButton = {
 //        let button = UIButton(frame: .zero)
 //        button.setTitle("Restart", for: .normal)
@@ -113,7 +112,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         button.heightAnchor.constraint(equalToConstant: 120).isActive = true
         button.clipsToBounds = true
         button.setBackgroundImage(#imageLiteral(resourceName: "sneakers"), for: .normal)
-        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(sneakerFirst(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -124,7 +123,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         button.heightAnchor.constraint(equalToConstant: 120).isActive = true
         button.clipsToBounds = true
         button.setBackgroundImage(#imageLiteral(resourceName: "sneakers-2"), for: .normal)
-        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(sneakerTwo(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -135,7 +134,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         button.heightAnchor.constraint(equalToConstant: 120).isActive = true
         button.clipsToBounds = true
         button.setBackgroundImage(#imageLiteral(resourceName: "sneakers-3"), for: .normal)
-        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(sneakerThree(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -210,7 +209,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
                 determine whether to show UI for launching AR experiences.
             """) // For details, see https://developer.apple.com/documentation/arkit
         }
-        
+        DetectedObject.userDefault.set("RedAJ", forKey: "Sneaker")
         sceneView.delegate = self
         sceneView.session.delegate = self
         
@@ -360,7 +359,8 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         // Entering this state will run() the ARSession.
         state = .startARSession
     }
-
+    
+    let previewView = UIHostingController(rootView: ScanIntroductionView())
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ViewController.instance = self
@@ -391,12 +391,37 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         // so it can be retrieved later from outside the main thread.
         screenCenter = sceneView.center
     }
-
+@objc
+    func sneakerFirst(_ sender: Any) {
+        DetectedObject.userDefault.set("RedAJ", forKey: "Sneaker")
+        recreateScene()
+    }
+@objc
+    func sneakerTwo(_ sender: Any) {
+        DetectedObject.userDefault.set("GreenAJ", forKey: "Sneaker")
+        recreateScene()
+    }
+@objc
+    func sneakerThree(_ sender: Any) {
+        DetectedObject.userDefault.set("PurpleAJ", forKey: "Sneaker")
+        recreateScene()
+    }
+    
+    private func recreateScene() {
+//        sceneView.scene.rootNode.childNodes.forEach { node in
+//            node.removeFromParentNode()
+//        }
+        
+        testRun?.detectedObject?.recreateBootNode(name: DetectedObject.userDefault.string(forKey: "Sneaker")!)
+        
+//        let config = ARObjectScanningConfiguration()
+//        sceneView.session.run(config, options: [.resetSceneReconstruction])
+    }
     // MARK: - UI Event Handling
 
     // MARK: - startOverButton
-    @objc
-    func restartButtonTapped(_ sender: Any) {
+//    @objc
+    func restartButtonTapped() {
         if let scan = scan, scan.boundingBoxExists {
             let title = "Start over?"
             let message = "Discard the current scan and start over?"

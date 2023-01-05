@@ -106,6 +106,7 @@ class TestRun {
         ViewController.instance?.displayMessage(
             "SUCCESS ✅"
             , expirationTime: 5.0)
+        detectedObject?.firstBootNode(name: DetectedObject.userDefault.string(forKey: "Sneaker")!)
         startNoDetectionTimer()
     }
     

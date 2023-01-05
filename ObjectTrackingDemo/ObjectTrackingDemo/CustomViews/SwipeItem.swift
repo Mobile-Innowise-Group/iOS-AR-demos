@@ -82,6 +82,9 @@ struct SwipeItem<Content: View, Left: View, Right: View>: View {
                     .frame(width: anchorWidth)
                     .zIndex(1)
                     .clipped()
+            }.onDisappear {
+                anchor = 0
+                hoffset = anchor
             }
         }
         .offset(x: -anchorWidth + hoffset)

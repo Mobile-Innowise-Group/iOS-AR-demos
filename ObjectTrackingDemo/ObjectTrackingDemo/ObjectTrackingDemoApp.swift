@@ -14,6 +14,7 @@ struct ObjectTrackingDemoApp: App {
 //            ObjectTrackingWrap()
             NavigationView {
                 MainScreen()//ContentView()
+                    .preferredColorScheme(.light)
             }
         }
     }

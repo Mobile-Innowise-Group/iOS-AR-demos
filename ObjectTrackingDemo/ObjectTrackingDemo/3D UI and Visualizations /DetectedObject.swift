@@ -8,16 +8,19 @@ A visualization of a detected object, using either a loaded 3D asset or a simple
 import Foundation
 import ARKit
 import SceneKit
+import SceneKit.ModelIO
 
 class DetectedObject: SCNNode {
-    private lazy var bootNode: SCNNode = {
-        try! SCNScene(
-            url: Bundle.main.url(
-                forResource: "Nike_Air_Jordan_Jordan",
-                withExtension: "scn"
-            )!
-        ).rootNode.childNodes.first!
-    }()
+    static let userDefault = UserDefaults.standard
+    
+//    lazy var bootNode: SCNNode = {
+//       return try! SCNScene(
+//            url: Bundle.main.url(
+//                forResource: DetectedObject.userDefault.string(forKey: "Sneaker"),
+//                withExtension: "scn"
+//            )!
+//        ).rootNode.childNodes.first!
+//    }()
 
     var displayDuration: TimeInterval = 1.0 // How long this visualization is displayed in seconds after an update
     
@@ -92,8 +95,57 @@ class DetectedObject: SCNNode {
         isHidden = true
         
         set3DModel(ViewController.instance?.modelURL)
+        
+//        originVis.addChildNode(bootNode)
+//        let extent = referenceObject.extent
+//        bootNode.simdTransform = .init(
+//            .init(0.1, 0.0, 0.0, 0.0),
+//            .init(0.0, 0.1, 0.0, 0.0),
+//            .init(0.0, 0.0, 0.1, 0.0),
+//            .init(0.0, 0.0, 0.0, 1.0)
+//        )
+////        * .init(
+////            .init(1.0, 0.0, 0.0, 0.0),
+////            .init(0.0, 1.0, 0.0, 0.0),
+////            .init(0.0, 0.0, 1.0, 0.0),
+////            .init(0.0, 0.0, 0.0, 1.0)
+////        )
+////        * .init(
+////            .init(0.0, 0.0, 0.0, 100.0),
+////            .init(0.0, 0.0, 0.0, 0.0),
+////            .init(0.0, 0.0, 0.0, 0.0),
+////            .init(0.0, 0.0, 0.0, 1.0)
+////        )
+//        bootNode.simdWorldTransform = .init(
+//            .init(0.01, 0.0, 0.0, 0.0),
+//            .init(0.0, 0.01, 0.0, 0.0),
+//            .init(0.0, 0.0, 0.01, 0.0),
+//            .init(0.0, 0.0, 0.0, 1.0)
+//        ) * .init(
+//            .init(-1.0, 0.0, 0.0, 0.0),
+//            .init(0.0, 1.0, 0.0, 0.0),
+//            .init(0.0, 0.0, -1.0, 0.0),
+//            .init(0.0, 0.0, 0.0, 1.0)
+//        )
+//        bootNode.simdWorldPosition = .init(0.0, 0.0, 0.0)
+//        * .init(
+//            .init(0.0, 0.0, 0.0, -0.5),
+//            .init(0.0, 0.0, 0.0, 0.0),
+//            .init(0.0, 0.0, 0.0, -0.5),
+//            .init(0.0, 0.0, 0.0, 1.0)
+//        )
+    }
+    private var _bootNode : SCNNode?
+    func firstBootNode(name: String) {
+        var bootNode = try! SCNScene(
+                    url: Bundle.main.url(
+                        forResource: name,
+                        withExtension: "scn"
+                    )!
+                ).rootNode.childNodes.first!
+        _bootNode = bootNode
         originVis.addChildNode(bootNode)
-        let extent = referenceObject.extent
+        
         bootNode.simdTransform = .init(
             .init(0.1, 0.0, 0.0, 0.0),
             .init(0.0, 0.1, 0.0, 0.0),
@@ -130,6 +182,44 @@ class DetectedObject: SCNNode {
 //            .init(0.0, 0.0, 0.0, -0.5),
 //            .init(0.0, 0.0, 0.0, 1.0)
 //        )
+    }
+    
+    func recreateBootNode(name: String) {
+        let url = Bundle.main.url(
+            forResource: name,
+            withExtension: "scn"
+        )!
+        var bootNode = try! SCNScene(
+            url: url
+                ).rootNode.childNodes.first!
+        
+//        let fuckScene = try! SCNScene(url: url)
+
+        bootNode.childNodes.enumerated().forEach { (index, element) in
+            _bootNode?.childNodes[index].geometry = element.geometry
+        }
+//        if var clone = _bootNode?.clone() {
+//            
+//            clone.geometry?.materials = bootNode.geometry!.materials
+////            clone.geometry = bootNode.geometry
+//            _bootNode?.removeFromParentNode()
+//            _bootNode = clone
+//            originVis.addChildNode(clone)
+//            
+//        }
+        
+//        let material = SCNMaterial()
+//        material.diffuse = .init(contents: UIColor.orange)
+//        _bootNode?.geometry?.materials = [material]
+        
+//        if let bootFuck = _bootNode  {
+//            bootNode.eulerAngles = bootFuck.eulerAngles
+//            bootNode.position = bootFuck.position
+//            bootNode.simdWorldPosition = bootFuck.simdWorldPosition
+//            bootNode.simdWorldTransform = bootFuck.simdWorldTransform
+//            bootFuck.simdWorldOrientation = bootFuck.simdWorldOrientation
+//        }
+
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -11,7 +11,6 @@
 		2B580F96290A7AA2008A2D92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B580F95290A7AA2008A2D92 /* ContentView.swift */; };
 		2B580F98290A7AA5008A2D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F97290A7AA5008A2D92 /* Assets.xcassets */; };
 		2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */; };
-		2BC49E002965DE530047D1D5 /* Nike_Air_Jordan_Jordan.scn in Resources */ = {isa = PBXBuildFile; fileRef = 2BC49DFF2965DE530047D1D5 /* Nike_Air_Jordan_Jordan.scn */; };
 		CD2CBE4C296341A90044E06C /* ScanIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4B296341A90044E06C /* ScanIntroductionView.swift */; };
 		CD2CBE4E29641A910044E06C /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4D29641A910044E06C /* CustomPopup.swift */; };
 		CD2CBE50296434BD0044E06C /* CameraSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4F296434BD0044E06C /* CameraSheetView.swift */; };
@@ -46,10 +45,9 @@
 		CD2CBEA4296474EA0044E06C /* Launch Screen.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE772964733F0044E06C /* Launch Screen.storyboard */; };
 		CD2CBEA7296474EA0044E06C /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */; };
 		CD2CBEA8296475CA0044E06C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7D2964733F0044E06C /* Utilities.swift */; };
-		CD2CBEAB296488A50044E06C /* singleLeft.scn in Resources */ = {isa = PBXBuildFile; fileRef = CD2CBE672964733E0044E06C /* singleLeft.scn */; };
-		CD72625129659F0C00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn in Resources */ = {isa = PBXBuildFile; fileRef = CD72624F29659EEE00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn */; };
-		CD72625229659F0C00FE6699 /* Brown_SneakersLeft.scn in Resources */ = {isa = PBXBuildFile; fileRef = CD72625029659EF600FE6699 /* Brown_SneakersLeft.scn */; };
-		CDB035752966B82D0034E260 /* Nike_Air_Jordan_JordanLavand.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB035742966B82D0034E260 /* Nike_Air_Jordan_JordanLavand.scn */; };
+		CDB0357D2967413F0034E260 /* GreenAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357B2967413F0034E260 /* GreenAJ.scn */; };
+		CDB0357E2967413F0034E260 /* PurpleAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357C2967413F0034E260 /* PurpleAJ.scn */; };
+		CDB035802967415A0034E260 /* RedAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357F2967415A0034E260 /* RedAJ.scn */; };
 		CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E7295F0DC7003E31E5 /* MainScreen.swift */; };
 		CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E9295F166F003E31E5 /* FilterScreen.swift */; };
 		CDE043042962D228003E31E5 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDE042F82962D227003E31E5 /* Roboto-Light.ttf */; };
@@ -78,7 +76,6 @@
 		2B580F95290A7AA2008A2D92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B580F97290A7AA5008A2D92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2BC49DFF2965DE530047D1D5 /* Nike_Air_Jordan_Jordan.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Nike_Air_Jordan_Jordan.scn; sourceTree = "<group>"; };
 		2BFB92F3290BF6A800E1F0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CD2CBE4B296341A90044E06C /* ScanIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanIntroductionView.swift; sourceTree = "<group>"; };
 		CD2CBE4D29641A910044E06C /* CustomPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopup.swift; sourceTree = "<group>"; };
@@ -123,10 +120,9 @@
 		CD2CBE7D2964733F0044E06C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
 		CD2CBE7F2964733F0044E06C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ObjectTrackingDemo/art.scnassets; sourceTree = "<group>"; };
-		CD2CBE802964733F0044E06C /* singleLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = singleLeft.scn; path = ObjectTrackingDemo/singleLeft.scn; sourceTree = "<group>"; };
-		CD72624F29659EEE00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Nike_East_K_75_Low_Poly_FreebieLeft.scn; path = ObjectTrackingDemo/Nike_East_K_75_Low_Poly_FreebieLeft.scn; sourceTree = "<group>"; };
-		CD72625029659EF600FE6699 /* Brown_SneakersLeft.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Brown_SneakersLeft.scn; sourceTree = "<group>"; };
-		CDB035742966B82D0034E260 /* Nike_Air_Jordan_JordanLavand.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Nike_Air_Jordan_JordanLavand.scn; sourceTree = "<group>"; };
+		CDB0357B2967413F0034E260 /* GreenAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = GreenAJ.scn; sourceTree = "<group>"; };
+		CDB0357C2967413F0034E260 /* PurpleAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PurpleAJ.scn; sourceTree = "<group>"; };
+		CDB0357F2967415A0034E260 /* RedAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = RedAJ.scn; sourceTree = "<group>"; };
 		CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CDE042E7295F0DC7003E31E5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CDE042E9295F166F003E31E5 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
@@ -164,6 +160,8 @@
 		2B580F87290A7AA2008A2D92 = {
 			isa = PBXGroup;
 			children = (
+				CDB0357B2967413F0034E260 /* GreenAJ.scn */,
+				CDB0357C2967413F0034E260 /* PurpleAJ.scn */,
 				CD2CBE692964733E0044E06C /* 3D UI and Visualizations  */,
 				CD2CBE7F2964733F0044E06C /* art.scnassets */,
 				CD2CBE612964733E0044E06C /* Assets.xcassets */,
@@ -171,11 +169,7 @@
 				CD2CBE572964733E0044E06C /* Controllers */,
 				CD2CBE532964733E0044E06C /* Gesture Recognizers */,
 				CD2CBE772964733F0044E06C /* Launch Screen.storyboard */,
-				2BC49DFF2965DE530047D1D5 /* Nike_Air_Jordan_Jordan.scn */,
-				CD2CBE802964733F0044E06C /* singleLeft.scn */,
-				CDB035742966B82D0034E260 /* Nike_Air_Jordan_JordanLavand.scn */,
-				CD72624F29659EEE00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn */,
-				CD72625029659EF600FE6699 /* Brown_SneakersLeft.scn */,
+				CDB0357F2967415A0034E260 /* RedAJ.scn */,
 				CD2CBE7C2964733F0044E06C /* Utility Extensions */,
 				CD2CBE782964733F0044E06C /* Views */,
 				2B580FA1290A7ADC008A2D92 /* Packages */,
@@ -420,25 +414,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD72625129659F0C00FE6699 /* Nike_East_K_75_Low_Poly_FreebieLeft.scn in Resources */,
-				CD72625229659F0C00FE6699 /* Brown_SneakersLeft.scn in Resources */,
-				CD2CBEAB296488A50044E06C /* singleLeft.scn in Resources */,
-				CDB035752966B82D0034E260 /* Nike_Air_Jordan_JordanLavand.scn in Resources */,
 				CDE0430C2962D228003E31E5 /* Roboto-ThinItalic.ttf in Resources */,
 				CDE043082962D228003E31E5 /* Roboto-Medium.ttf in Resources */,
 				CDE0430D2962D228003E31E5 /* Roboto-MediumItalic.ttf in Resources */,
 				CDE0430A2962D228003E31E5 /* Roboto-Regular.ttf in Resources */,
 				2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */,
-				2BC49E002965DE530047D1D5 /* Nike_Air_Jordan_Jordan.scn in Resources */,
 				CDE043072962D228003E31E5 /* Roboto-LightItalic.ttf in Resources */,
+				CDB0357E2967413F0034E260 /* PurpleAJ.scn in Resources */,
 				CDE0430F2962D228003E31E5 /* Roboto-Italic.ttf in Resources */,
 				CDE0430B2962D228003E31E5 /* Roboto-Black.ttf in Resources */,
+				CDB0357D2967413F0034E260 /* GreenAJ.scn in Resources */,
 				CDE043062962D228003E31E5 /* Roboto-Bold.ttf in Resources */,
 				CDE043052962D228003E31E5 /* Roboto-BlackItalic.ttf in Resources */,
 				CDE043042962D228003E31E5 /* Roboto-Light.ttf in Resources */,
 				2B580F98290A7AA5008A2D92 /* Assets.xcassets in Resources */,
 				CDE0430E2962D228003E31E5 /* Roboto-BoldItalic.ttf in Resources */,
 				CDE043092962D228003E31E5 /* Roboto-Thin.ttf in Resources */,
+				CDB035802967415A0034E260 /* RedAJ.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectTrackingDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = 7YP67DVLV3;
+				DEVELOPMENT_TEAM = XJZXQZAKD4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectTrackingDemo/Info.plist;

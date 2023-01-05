@@ -196,7 +196,7 @@ extension ViewController {
             if let scan = scan {
                 switch scan.state {
                 case .ready:
-                    restartButtonTapped(self)
+                    restartButtonTapped()
                 case .defineBoundingBox:
                     scan.state = .ready
                 case .scanning:
