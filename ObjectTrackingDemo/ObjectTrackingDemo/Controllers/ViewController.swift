@@ -307,7 +307,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
 //            sneakerCarousel.view.bottomAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.bottomAnchor, constant: 15),
 //            sneakerCarousel.view.leadingAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.leadingAnchor, constant: 15),
-            sneakerStackView.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: 10),
+            sneakerStackView.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -20),
             sneakerStackView.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 12),
             sneakerStackView.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -12),
 
