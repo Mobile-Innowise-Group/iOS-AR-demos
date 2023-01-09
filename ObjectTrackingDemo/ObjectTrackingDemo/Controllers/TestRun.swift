@@ -32,6 +32,8 @@ class TestRun {
     
     private(set) var previewImage = UIImage()
     
+    var onSuccessfullDetection: (() -> Void)?
+
     init(sceneView: ARSCNView) {
         self.sceneView = sceneView
     }
@@ -103,15 +105,15 @@ class TestRun {
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionObjects = [object]
         self.sceneView.session.run(configuration)
-        ViewController.instance?.displayMessage(
-            "SUCCESS ✅"
-            , expirationTime: 5.0)
+//        ViewController.instance?.displayMessage(
+//            "SUCCESS ✅"
+//            , expirationTime: 5.0)
         detectedObject?.firstBootNode(name: DetectedObject.userDefault.string(forKey: "Sneaker")!)
         startNoDetectionTimer()
     }
     
     func successfulDetection(_ objectAnchor: ARObjectAnchor) {
-        
+        onSuccessfullDetection?()
         // Compute the time it took to detect this object & the average.
         lastDetectionDelayInSeconds = Date().timeIntervalSince(self.lastDetectionStartTime!)
         detections += 1

@@ -11,12 +11,12 @@ import ARKit
 import SwiftUI
 
 public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate, UIDocumentPickerDelegate {
-
+    
     static let appStateChangedNotification = Notification.Name("ApplicationStateChanged")
     static let appStateUserInfoKey = "AppState"
-
+    
     static var instance: ViewController?
-
+    
     lazy var sceneView: ARSCNView = {
         let view = ARSCNView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -25,76 +25,82 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
     var backButton: UIBarButtonItem!
     var mergeScanButton: UIBarButtonItem!
     
-//    lazy var startOverButton: UIButton = {
-//        let button = UIButton(frame: .zero)
-//        button.setTitle("Restart", for: .normal)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
-//        return button
-//    }()
-
-//    lazy var instructionView: UIVisualEffectView = {
-//        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        view.contentView.addSubview(instructionLabel)
-//        NSLayoutConstraint.activate([
-//            instructionLabel.leadingAnchor.constraint(equalTo: view.contentView.leadingAnchor, constant: 8.0),
-//            instructionLabel.trailingAnchor.constraint(equalTo: view.contentView.trailingAnchor, constant: -8.0),
-//            instructionLabel.topAnchor.constraint(equalTo: view.contentView.topAnchor, constant: 8.0),
-//            instructionLabel.bottomAnchor.constraint(equalTo: view.contentView.bottomAnchor, constant: -8.0)
-//        ])
-//        return view
-//    }()
-
-//    lazy var instructionLabel: MessageLabel = {
-//        let label = MessageLabel(frame: .zero)
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.widthAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true
-//        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 22.0).isActive = true
-//        return label
-//    }()
-
-//    lazy var sessionInfoView: UIVisualEffectView = {
-//        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        view.contentView.addSubview(sessionInfoLabel)
-//        NSLayoutConstraint.activate([
-//            sessionInfoLabel.leadingAnchor.constraint(equalTo: view.contentView.leadingAnchor, constant: 8.0),
-//            sessionInfoLabel.trailingAnchor.constraint(equalTo: view.contentView.trailingAnchor, constant: -14.0),
-//            sessionInfoLabel.topAnchor.constraint(equalTo: view.contentView.topAnchor, constant: 8.0),
-//            sessionInfoLabel.bottomAnchor.constraint(equalTo: view.contentView.bottomAnchor, constant: -8.0)
-//        ])
-//        return view
-//    }()
-
-//    lazy var sessionInfoLabel: UILabel = {
-//        let label = UILabel(frame: .zero)
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.widthAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true
-//        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 22.0).isActive = true
-//        return label
-//    }()
-
-//    lazy var loadModelButton: RoundedButton = {
-//        let button = RoundedButton(frame: .zero)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.widthAnchor.constraint(equalToConstant: 110.0).isActive = true
-//        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
-//        button.setTitle("Load Model", for: .normal)
-//        button.addTarget(self, action: #selector(loadModelButtonTapped(_:)), for: .touchUpInside)
-//        return button
-//    }()
-
-//    lazy var flashlightButton: FlashlightButton = {
-//        let button = FlashlightButton(frame: .zero)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.widthAnchor.constraint(equalToConstant: 40).isActive = true
-//        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-////        button.setImage(UIImage(systemName: "bolt"), for: .normal)
-//        button.addTarget(self, action: #selector(toggleFlashlightButtonTapped(_:)), for: .touchUpInside)
-//        return button
-//    }()
-
+    //    lazy var startOverButton: UIButton = {
+    //        let button = UIButton(frame: .zero)
+    //        button.setTitle("Restart", for: .normal)
+    //        button.translatesAutoresizingMaskIntoConstraints = false
+    //        button.addTarget(self, action: #selector(restartButtonTapped(_:)), for: .touchUpInside)
+    //        return button
+    //    }()
+    
+    //    lazy var instructionView: UIVisualEffectView = {
+    //        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    //        view.translatesAutoresizingMaskIntoConstraints = false
+    //        view.contentView.addSubview(instructionLabel)
+    //        NSLayoutConstraint.activate([
+    //            instructionLabel.leadingAnchor.constraint(equalTo: view.contentView.leadingAnchor, constant: 8.0),
+    //            instructionLabel.trailingAnchor.constraint(equalTo: view.contentView.trailingAnchor, constant: -8.0),
+    //            instructionLabel.topAnchor.constraint(equalTo: view.contentView.topAnchor, constant: 8.0),
+    //            instructionLabel.bottomAnchor.constraint(equalTo: view.contentView.bottomAnchor, constant: -8.0)
+    //        ])
+    //        return view
+    //    }()
+    
+    //    lazy var instructionLabel: MessageLabel = {
+    //        let label = MessageLabel(frame: .zero)
+    //        label.translatesAutoresizingMaskIntoConstraints = false
+    //        label.widthAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true
+    //        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 22.0).isActive = true
+    //        return label
+    //    }()
+    
+    //    lazy var sessionInfoView: UIVisualEffectView = {
+    //        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    //        view.translatesAutoresizingMaskIntoConstraints = false
+    //        view.contentView.addSubview(sessionInfoLabel)
+    //        NSLayoutConstraint.activate([
+    //            sessionInfoLabel.leadingAnchor.constraint(equalTo: view.contentView.leadingAnchor, constant: 8.0),
+    //            sessionInfoLabel.trailingAnchor.constraint(equalTo: view.contentView.trailingAnchor, constant: -14.0),
+    //            sessionInfoLabel.topAnchor.constraint(equalTo: view.contentView.topAnchor, constant: 8.0),
+    //            sessionInfoLabel.bottomAnchor.constraint(equalTo: view.contentView.bottomAnchor, constant: -8.0)
+    //        ])
+    //        return view
+    //    }()
+    
+    lazy var sessionInfoLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 24.0, weight: .semibold, width: .standard)
+        label.numberOfLines = .zero
+        label.backgroundColor = UIColor.black.withAlphaComponent(0.2)
+        label.textColor = UIColor.white
+        label.text = "Fix your camera on the foot. Once you see the wireframe, tap on the foot."
+        label.textAlignment = .center
+        //        label.widthAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true
+        //        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 22.0).isActive = true
+        return label
+    }()
+    
+    //    lazy var loadModelButton: RoundedButton = {
+    //        let button = RoundedButton(frame: .zero)
+    //        button.translatesAutoresizingMaskIntoConstraints = false
+    //        button.widthAnchor.constraint(equalToConstant: 110.0).isActive = true
+    //        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
+    //        button.setTitle("Load Model", for: .normal)
+    //        button.addTarget(self, action: #selector(loadModelButtonTapped(_:)), for: .touchUpInside)
+    //        return button
+    //    }()
+    
+    //    lazy var flashlightButton: FlashlightButton = {
+    //        let button = FlashlightButton(frame: .zero)
+    //        button.translatesAutoresizingMaskIntoConstraints = false
+    //        button.widthAnchor.constraint(equalToConstant: 40).isActive = true
+    //        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    ////        button.setImage(UIImage(systemName: "bolt"), for: .normal)
+    //        button.addTarget(self, action: #selector(toggleFlashlightButtonTapped(_:)), for: .touchUpInside)
+    //        return button
+    //    }()
+    
     lazy var nextButton: RoundedButton = {
         let button = RoundedButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -146,6 +152,29 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         stackView.axis = .horizontal
         stackView.spacing = 10
         return stackView
+    }()
+    
+    lazy var aimView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 20.0).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
+        
+        //        view.layer.cornerRadius = 15.0
+        let configuration = UIImage.SymbolConfiguration(scale: .large)
+        let image = UIImage(systemName: "plus", withConfiguration: configuration)?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        view.addSubview(UIImageView(image: image))
+        view.alpha = .zero
+        return view
+    }()
+    
+    
+    lazy var activityView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .large)
+        view.color = .systemPink
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
     }()
 
 //    lazy var toggleInstructionsButton: RoundedButton = {
@@ -287,8 +316,12 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         ])
 
 //        sceneView.addSubview(toggleInstructionsButton)
-        sceneView.addSubview(nextButton)
-        sceneView.addSubview(sneakerStackView)
+        view.addSubview(nextButton)
+        view.addSubview(sneakerStackView)
+        view.addSubview(sessionInfoLabel)
+        sceneView.addSubview(aimView)
+        sceneView.addSubview(activityView)
+
         sneakerStackView.addArrangedSubview(sneakerButton)
         sneakerStackView.addArrangedSubview(sneakerButton2)
         sneakerStackView.addArrangedSubview(sneakerButton3)
@@ -299,6 +332,10 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 //        sceneView.addSubview(startOverButton)
 
         NSLayoutConstraint.activate([
+            sessionInfoLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            sessionInfoLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24.0),
+            sessionInfoLabel.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 24.0),
+            sessionInfoLabel.trailingAnchor.constraint(greaterThanOrEqualTo: view.trailingAnchor, constant: -24.0),
 //            toggleInstructionsButton.centerYAnchor.constraint(equalTo: nextButton.centerYAnchor),
 //            toggleInstructionsButton.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -20),
 
@@ -310,6 +347,12 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
             sneakerStackView.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -20),
             sneakerStackView.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 12),
             sneakerStackView.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -12),
+            aimView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            aimView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            activityView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            
 
 //            flashlightButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20.0),
 //            flashlightButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20.0),
@@ -626,8 +669,16 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
     }
     
     func testObjectDetection(of object: ARReferenceObject) {
+        testRun?.onSuccessfullDetection = { [activityView] in
+            Task { @MainActor in
+                activityView.stopAnimating()
+            }
+        }
         self.testRun?.setReferenceObject(object, screenshot: scan?.screenshot)
-        
+//        Task { @MainActor in
+//            try? await Task.sleep(for: .seconds(1))
+//            activityView.stopAnimating()
+//        }
         // Delete the scan to make sure that users cannot go back from
         // testing to scanning, because:
         // 1. Testing and scanning require running the ARSession with different configurations,

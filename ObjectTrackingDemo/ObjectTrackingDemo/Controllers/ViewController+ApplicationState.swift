@@ -116,6 +116,8 @@ extension ViewController {
                 nextButton.setTitle("Share", for: [])
                 
                 testRun = TestRun(sceneView: sceneView)
+                activityView.startAnimating()
+                aimView.alpha = .zero
                 testObjectDetection()
                 cancelMaxScanTimeTimer()
             }
@@ -131,7 +133,7 @@ extension ViewController {
         guard self.state == .scanning, let scan = notification.object as? Scan, scan === self.scan else { return }
         guard let scanState = notification.userInfo?[Scan.stateUserInfoKey] as? Scan.State else { return }
         
-        DispatchQueue.main.async {
+        Task { @MainActor in
             switch scanState {
             case .ready:
                 print("State: Ready to scan")
@@ -156,7 +158,7 @@ extension ViewController {
                 self.nextButton.isEnabled = scan.boundingBoxExists
 //                self.loadModelButton.isHidden = true
 //                self.flashlightButton.isHidden = true
-                self.nextButton.setTitle("Scan", for: [])
+                self.nextButton.setTitle("Next", for: [])
             case .scanning:
                 self.displayInstruction(Message("Scan the object from all sides that you are " +
                     "interested in. Do not move the object while scanning!"))
@@ -169,7 +171,7 @@ extension ViewController {
                 self.nextButton.isEnabled = true
 //                self.loadModelButton.isHidden = true
 //                self.flashlightButton.isHidden = true
-                self.nextButton.setTitle("Finish", for: [])
+                self.nextButton.setTitle("Next", for: [])
                 // Disable plane detection (even if no plane has been found yet at this time) for performance reasons.
                 self.sceneView.stopPlaneDetection()
             case .adjustingOrigin:
@@ -181,7 +183,7 @@ extension ViewController {
                 self.nextButton.isEnabled = true
 //                self.loadModelButton.isHidden = false
 //                self.flashlightButton.isHidden = true
-                self.nextButton.setTitle("Test", for: [])
+                self.nextButton.setTitle("Next", for: [])
             }
         }
     }
@@ -212,25 +214,38 @@ extension ViewController {
     }
     
     func switchToNextState() {
+        print("CURRENT STATE", state)
         switch state {
         case .startARSession:
+            Task { @MainActor in
+                sessionInfoLabel.text = "Fix your camera on the foot. Once you see the wireframe, tap on the foot and click \"Next\" button."
+            }
             state = .notReady
         case .notReady:
             state = .scanning
         case .scanning:
-            if let scan = scan {
-                switch scan.state {
-                case .ready:
-                    scan.state = .defineBoundingBox
-                case .defineBoundingBox:
-                    scan.state = .scanning
-                case .scanning:
-                    scan.state = .adjustingOrigin
-                case .adjustingOrigin:
-                    state = .testing
+                Task { @MainActor in
+                    if let scan = scan {
+                        switch scan.state {
+                        case .ready:
+                            aimView.alpha = .zero
+                            scan.state = .defineBoundingBox
+                            sessionInfoLabel.text = "Place your foot within the scene along a RED axis line. Once it's done, click \"Next\" button."
+                        case .defineBoundingBox:
+                            aimView.alpha = 1.0
+                            scan.state = .scanning
+                            sessionInfoLabel.text = "Make all the red sides yellow by pointing your smartphone's camera at different sides of the foot: top, right, left, front and back."
+                        case .scanning:
+                            scan.state = .adjustingOrigin
+                            sessionInfoLabel.text = "All is set up. Click \"Next\" button."
+                        case .adjustingOrigin:
+                            state = .testing
+                            sessionInfoLabel.text = ""
+                        }
+                    }
                 }
-            }
         case .testing:
+            // TODO: - Add Loader
             // Testing is the last state, show the share sheet at the end.
             createAndShareReferenceObject()
         }

@@ -63,9 +63,9 @@ class Scan {
                 It is unlikely that a good reference object can be generated.
                 Do you want to go back and continue the scan?
                 """
-                ViewController.instance?.showAlert(title: title, message: message, buttonTitle: "Yes", showCancel: true) { _ in
-                    self.state = .scanning
-                }
+//                ViewController.instance?.showAlert(title: title, message: message, buttonTitle: "Yes", showCancel: true) { _ in
+//                    self.state = .scanning
+//                }
             case .adjustingOrigin where stateValue == .scanning:
                 if let boundingBox = scannedObject.boundingBox, boundingBox.progressPercentage < 100 {
                     let title = "Scan not complete"
