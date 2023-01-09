@@ -91,7 +91,7 @@ class BoundingBox: SCNNode {
                 sides.forEach { $0.value.isHidden = false }
             case .adjustingOrigin:
                 // Hide the sides while adjusting the origin.
-                sides.forEach { $0.value.isHidden = true }
+                sides.forEach { $0.value.isHidden = false }
         }
     }
     
@@ -157,11 +157,11 @@ class BoundingBox: SCNNode {
     private func updateWireframe() {
         // When this method is called the first time, create the wireframe and add them as child node.
         guard let wireframe = self.wireframe else {
-            let wireframe = Wireframe(extent: .init(0.2, 0.1, 0.1), color: color)
+            let wireframe = Wireframe(extent: .init(0.2, 0.1, 0.1), color: .green)
             self.addChildNode(wireframe)
             self.wireframe = wireframe
-            //            self.origin = origin
-            
+//            self.origin = origin
+
             return
         }
         
@@ -184,7 +184,7 @@ class BoundingBox: SCNNode {
     
     private func createSides() {
         for position in BoundingBoxSide.Position.allCases {
-            self.sides[position] = BoundingBoxSide(position, boundingBoxExtent: self.extent, color: self.color)
+            self.sides[position] = BoundingBoxSide(position, boundingBoxExtent: self.extent, color: .systemRed)
             self.sidesNode.addChildNode(self.sides[position]!)
         }
     }
@@ -405,6 +405,7 @@ class BoundingBox: SCNNode {
             if let (tile, _) = self.tile(hitBy: hitTest.ray) {
                 capturedTiles.append(tile)
                 tile.isCaptured = true
+                tile.update(with: .appYellow)
             }
         }
         
