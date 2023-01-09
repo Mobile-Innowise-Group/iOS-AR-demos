@@ -50,8 +50,8 @@ class DetectedObject: SCNNode {
             customModel?.removeFromParentNode()
             customModel = nil
             addChildNode(originVis)
-            pointCloudVisualization.isHidden = false
-            boundingBox?.isHidden = false
+            pointCloudVisualization.isHidden = true
+            boundingBox?.isHidden = true
         }
     }
     
@@ -199,13 +199,13 @@ class DetectedObject: SCNNode {
             _bootNode?.childNodes[index].geometry = element.geometry
         }
 //        if var clone = _bootNode?.clone() {
-//            
+//
 //            clone.geometry?.materials = bootNode.geometry!.materials
 ////            clone.geometry = bootNode.geometry
 //            _bootNode?.removeFromParentNode()
 //            _bootNode = clone
 //            originVis.addChildNode(clone)
-//            
+//
 //        }
         
 //        let material = SCNMaterial()

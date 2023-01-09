@@ -37,49 +37,53 @@ struct FilterScreen: View {
     ]
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    Text("Sportrschuhe fur Drinnen")
-                        .font(Font.custom("Roboto-Bold", size: 20))
-                        .padding(.leading)
-                    ForEach(items) { item in
-                        SwipeItem(
-                            content: {
-                                ShoeListView(
-                                    title: item.title,
-                                    subtitle: item.subtitle,
-                                    price: item.price,
-                                    image: item.image
-                                )
-                            }, left: {
-                                Button {} label: {
-                                    FakeSwipeItem()
-                                }
-                            }, right: {
-                                Button {} label: {
-                                    LeftSwipeItem {
-                                        self.showDetail = true
+            ZStack(alignment: .bottom) {
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        Text("Sportrschuhe fur Drinnen")
+                            .font(Font.custom("Roboto-Bold", size: 20))
+                            .padding([.leading, .top])
+                        ForEach(items) { item in
+                            SwipeItem(
+                                content: {
+                                    ShoeListView(
+                                        title: item.title,
+                                        subtitle: item.subtitle,
+                                        price: item.price,
+                                        image: item.image
+                                    )
+                                }, left: {
+                                    Button {} label: {
+                                        FakeSwipeItem()
                                     }
-                                }
-                                .navigationDestination(isPresented: $showDetail) {
-                                    DetailShoeView()
-                                        .navigationBarBackButtonHidden(true)
-                                }
-                            }, itemHeight: 130)
+                                }, right: {
+                                    Button {} label: {
+                                        LeftSwipeItem {
+                                            self.showDetail = true
+                                        }
+                                    }
+                                    .navigationDestination(isPresented: $showDetail) {
+                                        DetailShoeView()
+                                            .navigationBarBackButtonHidden(true)
+                                    }
+                                }, itemHeight: 130)
+                        }
                     }
                 }
-            }
-            .toolbar(content: ) {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "magnifyingglass")
-                            .resizable()
-                            .foregroundColor(.black)
-                            .frame(width: 20, height: 20)
+                .toolbar(content: ) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "magnifyingglass")
+                                .resizable()
+                                .foregroundColor(.black)
+                                .frame(width: 20, height: 20)
+                        }
                     }
                 }
+                FilterButton()
+                    .padding(.bottom, 15)
             }
         }
     }

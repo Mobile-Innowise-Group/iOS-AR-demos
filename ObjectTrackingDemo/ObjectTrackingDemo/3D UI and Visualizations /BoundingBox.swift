@@ -52,7 +52,7 @@ class BoundingBox: SCNNode {
     private var currentSidePlaneDrag: PlaneDrag?
     private var currentGroundPlaneDrag: PlaneDrag?
     
-    private var wireframe: Wireframe?
+    public var wireframe: Wireframe?
     
     private var sidesNode = SCNNode()
     private var sides: [BoundingBoxSide.Position: BoundingBoxSide] = [:]

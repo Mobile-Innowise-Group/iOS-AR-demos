@@ -88,9 +88,9 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 //    lazy var flashlightButton: FlashlightButton = {
 //        let button = FlashlightButton(frame: .zero)
 //        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.widthAnchor.constraint(equalToConstant: 110.0).isActive = true
-//        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
-//        button.setTitle("Light Off", for: .normal)
+//        button.widthAnchor.constraint(equalToConstant: 40).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+////        button.setImage(UIImage(systemName: "bolt"), for: .normal)
 //        button.addTarget(self, action: #selector(toggleFlashlightButtonTapped(_:)), for: .touchUpInside)
 //        return button
 //    }()
@@ -311,8 +311,8 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
             sneakerStackView.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 12),
             sneakerStackView.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -12),
 
-//            flashlightButton.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 20.0),
-//            flashlightButton.bottomAnchor.constraint(equalTo: sceneView.bottomAnchor, constant: -40.0),
+//            flashlightButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20.0),
+//            flashlightButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20.0),
 
 //            loadModelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 //            loadModelButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40.0),
@@ -360,7 +360,14 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         state = .startARSession
     }
     
-    let previewView = UIHostingController(rootView: ScanIntroductionView())
+    private func showPopUpView() {
+        let popupView = UIHostingController(rootView: ScanIntroductionView())
+        self.addChild(popupView)
+        popupView.view.frame = self.view.frame
+        self.view.addSubview(popupView.view)
+        popupView.didMove(toParent: self)
+    }
+    
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ViewController.instance = self
@@ -373,6 +380,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+//        showPopUpView()
 //        if let scene = buildConverse() {
 //            let pyramid = subScene.rootNode.childNodeWithName("pyramid", recursively: true)!
 
@@ -532,11 +540,11 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 //    }
 
     // MARK: flashlightButton
-    @objc
-    func toggleFlashlightButtonTapped(_ sender: Any) {
+//    @objc
+//    func toggleFlashlightButtonTapped(_ sender: Any) {
 //        guard !flashlightButton.isHidden && flashlightButton.isEnabled else { return }
 //        flashlightButton.toggledOn = !flashlightButton.toggledOn
-    }
+//    }
 
     // MARK: - toggleInstructionsButton
     @objc

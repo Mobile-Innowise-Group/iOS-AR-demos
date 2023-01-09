@@ -30,11 +30,13 @@ class FlashlightButton: RoundedButton {
         didSet {
             // Update UI
             if toggledOn {
-                setTitle("Light On", for: [])
-                backgroundColor = .appBlue
+                setImage(UIImage(systemName: "bolt.slash"), for: .normal)
+//                setTitle("Light On", for: [])
+                backgroundColor = .clear
             } else {
-                setTitle("Light Off", for: [])
-                backgroundColor = .appLightBlue
+//                setTitle("Light Off", for: [])
+                backgroundColor = .clear
+                setImage(UIImage(systemName: "bolt"), for: .normal)
             }
             
             // Toggle flashlight

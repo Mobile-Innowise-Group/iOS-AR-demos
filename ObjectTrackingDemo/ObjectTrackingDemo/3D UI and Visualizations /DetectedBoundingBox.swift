@@ -22,8 +22,8 @@ class DetectedBoundingBox: SCNNode {
         
         self.simdPosition += (localMax + localMin) / 2
         let extent = localMax - localMin
-        let wireframe = Wireframe(extent: extent, color: color, scale: scale)
-        self.addChildNode(wireframe)
+//        let wireframe = Wireframe(extent: extent, color: color, scale: scale)
+//        self.addChildNode(wireframe)
     }
     
     required init?(coder aDecoder: NSCoder) {

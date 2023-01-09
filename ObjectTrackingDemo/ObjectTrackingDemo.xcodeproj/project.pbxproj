@@ -48,6 +48,7 @@
 		CDB0357D2967413F0034E260 /* GreenAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357B2967413F0034E260 /* GreenAJ.scn */; };
 		CDB0357E2967413F0034E260 /* PurpleAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357C2967413F0034E260 /* PurpleAJ.scn */; };
 		CDB035802967415A0034E260 /* RedAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357F2967415A0034E260 /* RedAJ.scn */; };
+		CDB03582296BE1720034E260 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB03581296BE1720034E260 /* FilterButton.swift */; };
 		CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E7295F0DC7003E31E5 /* MainScreen.swift */; };
 		CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE042E9295F166F003E31E5 /* FilterScreen.swift */; };
 		CDE043042962D228003E31E5 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDE042F82962D227003E31E5 /* Roboto-Light.ttf */; };
@@ -123,6 +124,7 @@
 		CDB0357B2967413F0034E260 /* GreenAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = GreenAJ.scn; sourceTree = "<group>"; };
 		CDB0357C2967413F0034E260 /* PurpleAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PurpleAJ.scn; sourceTree = "<group>"; };
 		CDB0357F2967415A0034E260 /* RedAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = RedAJ.scn; sourceTree = "<group>"; };
+		CDB03581296BE1720034E260 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CDE042E7295F0DC7003E31E5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		CDE042E9295F166F003E31E5 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				CDE0431A29631997003E31E5 /* DetailShoeView.swift */,
 				CDE0431C29633505003E31E5 /* SwipeItemsView.swift */,
 				CD2CBE4B296341A90044E06C /* ScanIntroductionView.swift */,
+				CDB03581296BE1720034E260 /* FilterButton.swift */,
 			);
 			path = ObjectTrackingDemo;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				CDE042EA295F166F003E31E5 /* FilterScreen.swift in Sources */,
 				CD2CBE52296436B50044E06C /* BewertungenLabel.swift in Sources */,
 				CDE042E8295F0DC7003E31E5 /* MainScreen.swift in Sources */,
+				CDB03582296BE1720034E260 /* FilterButton.swift in Sources */,
 				CDE0431729631429003E31E5 /* SwipeItemButton.swift in Sources */,
 				CDE0431D29633505003E31E5 /* SwipeItemsView.swift in Sources */,
 				2B580F96290A7AA2008A2D92 /* ContentView.swift in Sources */,
@@ -613,7 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectTrackingDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = XJZXQZAKD4;
+				DEVELOPMENT_TEAM = J8VM9NVFDC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectTrackingDemo/Info.plist;
@@ -628,7 +632,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uvolchyk.rickeriments.ObjectTrackingDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.innowise.decathlon.ObjectTrackingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
