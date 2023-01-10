@@ -9,34 +9,37 @@ import SwiftUI
 
 struct MainScreen: View {
     var body: some View {
-        TabView {
-            FilterScreen()
-                .tabItem {
-                    Label("",systemImage: "house")
-                        .foregroundColor(.black)
-                }
-            FilterScreen()
-                .tabItem {
-                    Label("",systemImage: "doc.text.magnifyingglass")
-                        .foregroundColor(.black)
-                }.disabled(true)
-            FilterScreen()
-                .tabItem {
-                    Label("", systemImage: "person")
-                        .foregroundColor(.black)
-                }.disabled(true)
-            FilterScreen()
-                .tabItem {
-                    Label("", systemImage: "heart")
-                        .foregroundColor(.black)
-                }.disabled(true)
-            FilterScreen()
-                .tabItem {
-                    Label("", systemImage: "cart")
-                        .foregroundColor(.black)
-                }.disabled(true)
+        NavigationView {
+            TabView {
+                FilterScreen()
+                    .tabItem {
+                        Label("",systemImage: "house")
+                            .foregroundColor(.black)
+                    }
+                FilterScreen()
+                    .tabItem {
+                        Label("",systemImage: "doc.text.magnifyingglass")
+                            .foregroundColor(.black)
+                    }.disabled(true)
+                FilterScreen()
+                    .tabItem {
+                        Label("", systemImage: "person")
+                            .foregroundColor(.black)
+                    }.disabled(true)
+                FilterScreen()
+                    .tabItem {
+                        Label("", systemImage: "heart")
+                            .foregroundColor(.black)
+                    }.disabled(true)
+                FilterScreen()
+                    .tabItem {
+                        Label("", systemImage: "cart")
+                            .foregroundColor(.black)
+                    }.disabled(true)
+            }
+            .accentColor(.black)
+            .toolbarColorScheme(.light, for: .tabBar)
+            .toolbar(.hidden, for: .navigationBar)
         }
-        .accentColor(.black)
-        .toolbarColorScheme(.light, for: .tabBar)
     }
 }

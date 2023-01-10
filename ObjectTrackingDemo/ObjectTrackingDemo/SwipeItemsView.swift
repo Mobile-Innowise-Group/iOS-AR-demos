@@ -17,10 +17,10 @@ struct LeftSwipeItem: View {
     var completion: (() -> Void)?
     var body: some View {
         HStack {
-            SwipeItemButton(sysImage: "arkit", buttonText: "AR Anprobe") {
+            LeftItemButton(sysImage: "ar_button", buttonText: "AR Anprobe") {
                 completion?()
             }
-            SwipeItemButton(sysImage: "heart", buttonText: "Zur Wunschliste") {}
+            RightItemButton(sysImage: "heart", buttonText: "Zur Wunschliste")
         }
     }
 }

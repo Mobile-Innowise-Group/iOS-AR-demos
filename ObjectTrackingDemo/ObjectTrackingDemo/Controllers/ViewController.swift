@@ -159,8 +159,6 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 20.0).isActive = true
         view.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-        
-        //        view.layer.cornerRadius = 15.0
         let configuration = UIImage.SymbolConfiguration(scale: .large)
         let image = UIImage(systemName: "plus", withConfiguration: configuration)?.withTintColor(.orange, renderingMode: .alwaysOriginal)
         view.addSubview(UIImageView(image: image))
@@ -173,8 +171,17 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         let view = UIActivityIndicatorView(style: .large)
         view.color = .systemPink
         view.translatesAutoresizingMaskIntoConstraints = false
-
         return view
+    }()
+    
+    lazy var additionalInfoButton: RoundedButton = {
+        let button = RoundedButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
+        button.setTitle("Info", for: .normal)
+        button.addTarget(self, action: #selector(addtionalInfo(_:)), for: .touchUpInside)
+        return button
     }()
 
 //    lazy var toggleInstructionsButton: RoundedButton = {
@@ -241,7 +248,6 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         DetectedObject.userDefault.set("RedAJ", forKey: "Sneaker")
         sceneView.delegate = self
         sceneView.session.delegate = self
-        
         // Prevent the screen from being dimmed after a while.
         UIApplication.shared.isIdleTimerDisabled = true
         
@@ -321,6 +327,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         view.addSubview(sessionInfoLabel)
         sceneView.addSubview(aimView)
         sceneView.addSubview(activityView)
+        sceneView.addSubview(additionalInfoButton)
 
         sneakerStackView.addArrangedSubview(sneakerButton)
         sneakerStackView.addArrangedSubview(sneakerButton2)
@@ -340,8 +347,12 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 //            toggleInstructionsButton.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -20),
 
 //            nextButton.centerXAnchor.constraint(equalTo: sessionInfoLabel.centerXAnchor),
-            nextButton.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
+//            nextButton.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            
+            additionalInfoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            additionalInfoButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
 //            sneakerCarousel.view.bottomAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.bottomAnchor, constant: 15),
 //            sneakerCarousel.view.leadingAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.leadingAnchor, constant: 15),
             sneakerStackView.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -20),
@@ -401,14 +412,21 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         // Make sure the application launches in .startARSession state.
         // Entering this state will run() the ARSession.
         state = .startARSession
+        showPopUpView()
     }
     
     private func showPopUpView() {
         let popupView = UIHostingController(rootView: ScanIntroductionView())
-        self.addChild(popupView)
-        popupView.view.frame = self.view.frame
-        self.view.addSubview(popupView.view)
-        popupView.didMove(toParent: self)
+        guard let subview = popupView.view else { return }
+        subview.backgroundColor = .clear
+        self.view.addSubview(subview)
+        subview.frame = self.view.frame
+        subview.didMoveToSuperview()
+        popupView.rootView.completion = {
+            UIView.animate(withDuration: 0.1) {
+                subview.removeFromSuperview()
+            }
+        }
     }
     
     public override func viewWillAppear(_ animated: Bool) {
@@ -423,7 +441,6 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        showPopUpView()
 //        if let scene = buildConverse() {
 //            let pyramid = subScene.rootNode.childNodeWithName("pyramid", recursively: true)!
 
@@ -442,6 +459,21 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         // so it can be retrieved later from outside the main thread.
         screenCenter = sceneView.center
     }
+    
+@objc
+    func addtionalInfo(_ sender: Any) {
+        let infoView = UIHostingController(rootView: CameraSheetView())
+        if let sheet = infoView.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.largestUndimmedDetentIdentifier = .medium
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersEdgeAttachedInCompactHeight = true
+            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+            sheet.prefersGrabberVisible = true
+        }
+        present(infoView, animated: true)
+    }
+    
 @objc
     func sneakerFirst(_ sender: Any) {
         DetectedObject.userDefault.set("RedAJ", forKey: "Sneaker")

@@ -5,7 +5,6 @@ Abstract:
 Navigation bar management for the main view controller.
 */
 
-import Foundation
 import UIKit
 
 extension ViewController {

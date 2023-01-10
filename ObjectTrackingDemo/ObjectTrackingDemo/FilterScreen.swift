@@ -66,19 +66,7 @@ struct FilterScreen: View {
                                         DetailShoeView()
                                             .navigationBarBackButtonHidden(true)
                                     }
-                                }, itemHeight: 130)
-                        }
-                    }
-                }
-                .toolbar(content: ) {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "magnifyingglass")
-                                .resizable()
-                                .foregroundColor(.black)
-                                .frame(width: 20, height: 20)
+                                }, itemHeight: 151)
                         }
                     }
                 }

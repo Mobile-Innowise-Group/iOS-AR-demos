@@ -12,7 +12,6 @@
 		2B580F98290A7AA5008A2D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F97290A7AA5008A2D92 /* Assets.xcassets */; };
 		2B580F9B290A7AA5008A2D92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */; };
 		CD2CBE4C296341A90044E06C /* ScanIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4B296341A90044E06C /* ScanIntroductionView.swift */; };
-		CD2CBE4E29641A910044E06C /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4D29641A910044E06C /* CustomPopup.swift */; };
 		CD2CBE50296434BD0044E06C /* CameraSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE4F296434BD0044E06C /* CameraSheetView.swift */; };
 		CD2CBE52296436B50044E06C /* BewertungenLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE51296436B50044E06C /* BewertungenLabel.swift */; };
 		CD2CBE812964746D0044E06C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE592964733E0044E06C /* ViewController.swift */; };
@@ -45,6 +44,7 @@
 		CD2CBEA4296474EA0044E06C /* Launch Screen.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE772964733F0044E06C /* Launch Screen.storyboard */; };
 		CD2CBEA7296474EA0044E06C /* ARCameraTrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */; };
 		CD2CBEA8296475CA0044E06C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2CBE7D2964733F0044E06C /* Utilities.swift */; };
+		CD377EE9296D61BC00669F51 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD377EE8296D61BC00669F51 /* StartScreen.swift */; };
 		CDB0357D2967413F0034E260 /* GreenAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357B2967413F0034E260 /* GreenAJ.scn */; };
 		CDB0357E2967413F0034E260 /* PurpleAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357C2967413F0034E260 /* PurpleAJ.scn */; };
 		CDB035802967415A0034E260 /* RedAJ.scn in Resources */ = {isa = PBXBuildFile; fileRef = CDB0357F2967415A0034E260 /* RedAJ.scn */; };
@@ -79,7 +79,6 @@
 		2B580F9A290A7AA5008A2D92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BFB92F3290BF6A800E1F0A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CD2CBE4B296341A90044E06C /* ScanIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanIntroductionView.swift; sourceTree = "<group>"; };
-		CD2CBE4D29641A910044E06C /* CustomPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopup.swift; sourceTree = "<group>"; };
 		CD2CBE4F296434BD0044E06C /* CameraSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraSheetView.swift; path = ../../CameraSheetView.swift; sourceTree = "<group>"; };
 		CD2CBE51296436B50044E06C /* BewertungenLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BewertungenLabel.swift; sourceTree = "<group>"; };
 		CD2CBE542964733E0044E06C /* ThresholdRotationGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdRotationGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		CD2CBE7D2964733F0044E06C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		CD2CBE7E2964733F0044E06C /* ARCameraTrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraTrackingState.swift; sourceTree = "<group>"; };
 		CD2CBE7F2964733F0044E06C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ObjectTrackingDemo/art.scnassets; sourceTree = "<group>"; };
+		CD377EE8296D61BC00669F51 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
 		CDB0357B2967413F0034E260 /* GreenAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = GreenAJ.scn; sourceTree = "<group>"; };
 		CDB0357C2967413F0034E260 /* PurpleAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PurpleAJ.scn; sourceTree = "<group>"; };
 		CDB0357F2967415A0034E260 /* RedAJ.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = RedAJ.scn; sourceTree = "<group>"; };
@@ -199,6 +199,7 @@
 				2B580F93290A7AA2008A2D92 /* ObjectTrackingDemoApp.swift */,
 				2B580F95290A7AA2008A2D92 /* ContentView.swift */,
 				2B580F97290A7AA5008A2D92 /* Assets.xcassets */,
+				CD377EE8296D61BC00669F51 /* StartScreen.swift */,
 				2B580F99290A7AA5008A2D92 /* Preview Content */,
 				CDE042E5295F0B21003E31E5 /* Launch Screen.storyboard */,
 				CD2CBE4F296434BD0044E06C /* CameraSheetView.swift */,
@@ -343,7 +344,6 @@
 				CDE0431829631925003E31E5 /* SwipeItem.swift */,
 				CDE043102962D8EA003E31E5 /* ShoeListView.swift */,
 				CDE0431629631429003E31E5 /* SwipeItemButton.swift */,
-				CD2CBE4D29641A910044E06C /* CustomPopup.swift */,
 				CD2CBE51296436B50044E06C /* BewertungenLabel.swift */,
 			);
 			path = CustomViews;
@@ -454,6 +454,7 @@
 				CD2CBE94296474BD0044E06C /* TestRun.swift in Sources */,
 				CD2CBE95296474BD0044E06C /* MessageLabel.swift in Sources */,
 				CD2CBE96296474BD0044E06C /* FlashlightButton.swift in Sources */,
+				CD377EE9296D61BC00669F51 /* StartScreen.swift in Sources */,
 				CD2CBE97296474BD0044E06C /* RoundedButton.swift in Sources */,
 				CD2CBE87296474970044E06C /* ScannedPointCloud.swift in Sources */,
 				CD2CBE88296474970044E06C /* ScannedObject.swift in Sources */,
@@ -488,7 +489,6 @@
 				CD2CBE50296434BD0044E06C /* CameraSheetView.swift in Sources */,
 				CDE043152962E372003E31E5 /* ShoeModel.swift in Sources */,
 				2B580F94290A7AA2008A2D92 /* ObjectTrackingDemoApp.swift in Sources */,
-				CD2CBE4E29641A910044E06C /* CustomPopup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectTrackingDemo/Preview Content\"";
@@ -621,11 +622,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectTrackingDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Decathlon Demo";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application will use the camera for Augmented Reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -647,6 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectTrackingDemo/Preview Content\"";
@@ -654,11 +658,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectTrackingDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Decathlon Demo";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This application will use the camera for Augmented Reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

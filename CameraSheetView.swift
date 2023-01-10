@@ -32,44 +32,46 @@ struct CameraSheetView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                HStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 8)
-                        .overlay {
-                            Text("NIKE")
-                                .font(Font.custom("Roboto-Regular", size: 12))
-                                .foregroundColor(.white)
-                        }
-                        .frame(width: 47, height: 32)
-                        .padding([.trailing, .bottom])
-                    Text("Sneaker low Air Max 97 SE W Damen")
-                        .font(Font.custom("Roboto-Bold", size: 18))
-                        .lineLimit(2, reservesSpace: true)
-                        .padding([.trailing, .bottom])
-                    Button {} label: {
-                        Image(systemName: "heart")
-                            .resizable()
-                            .frame(width: 20, height: 18)
-                            .foregroundColor(.gray)
-                    }.padding([.leading, .bottom])
-                }.padding(.top, 30)
-                HStack {
-                    Image("airForce")
-                        .resizable()
-                        .frame(width: 138, height: 115)
-                    VStack(alignment: .leading) {
-                        BewertungetLabel()
+                VStack {
+                    HStack(alignment: .top) {
+                        RoundedRectangle(cornerRadius: 8)
+                            .overlay {
+                                Text("NIKE")
+                                    .font(Font.custom("Roboto-Regular", size: 12))
+                                    .foregroundColor(.white)
+                            }
+                            .frame(width: 47, height: 32)
+                            .padding([.trailing, .bottom])
+                        Text("Sneaker low Air Max 97 SE W Damen")
+                            .font(Font.custom("Roboto-Bold", size: 18))
+                            .lineLimit(2, reservesSpace: true)
+                            .padding([.trailing, .bottom])
                         Button {} label: {
-                            HStack {
-                                Text("Auswählen")
-                                    .font(Font.custom("Roboto-Bold", size: 18))
-                                    .foregroundColor(.black)
-                                Text("190,00€*")
-                                    .font(Font.custom("Roboto-Bold", size: 18))
-                                    .foregroundColor(.black)
-                            }.padding()
-                                .frame(height: 53)
-                        }.background {
-                            Color.yellow
+                            Image(systemName: "heart")
+                                .resizable()
+                                .frame(width: 20, height: 18)
+                                .foregroundColor(.gray)
+                        }.padding([.leading, .bottom])
+                    }.padding(.top, 30)
+                    HStack {
+                        Image("airForce")
+                            .resizable()
+                            .frame(width: 138, height: 115)
+                        VStack(alignment: .leading) {
+                            BewertungetLabel()
+                            Button {} label: {
+                                HStack {
+                                    Text("Auswählen")
+                                        .font(Font.custom("Roboto-Bold", size: 18))
+                                        .foregroundColor(.black)
+                                    Text("190,00€*")
+                                        .font(Font.custom("Roboto-Bold", size: 18))
+                                        .foregroundColor(.black)
+                                }.padding()
+                                    .frame(height: 53)
+                            }.background {
+                                Color.yellow
+                            }
                         }
                     }
                 }

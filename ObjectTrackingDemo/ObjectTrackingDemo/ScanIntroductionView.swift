@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct ScanIntroductionView: View {
-    @Environment(\.presentationMode) var presentationMode
     var completion: (() -> Void)?
     var body: some View {
         ZStack {
-            VisualEffectView(effect: UIBlurEffect(style: .light))
+            VisualEffectView(effect: UIBlurEffect(style: .dark))
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 HStack() {
                     Spacer()
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
                         completion?()
                     } label: {
                         Image(systemName: "xmark")
@@ -45,7 +43,7 @@ struct ScanIntroductionView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(.white)
             }
-            .padding([.leading, .trailing], 30)
+            .padding(.all, 30)
         }
     }
 }

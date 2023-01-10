@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DetailShoeView: View {
-    @Environment(\.presentationMode) var presentationMode
     @State private var showCameraScreen: Bool = false
+    @State private var goBack: Bool = false
     var body: some View {
             ScrollView {
                 VStack {
@@ -21,14 +21,13 @@ struct DetailShoeView: View {
                             self.showCameraScreen = true
                         } label: {
                             HStack {
-                                Image(systemName: "arkit")
+                                Image("ar_button")
                                     .resizable()
-                                    .frame(width: 40, height: 40)
-                                    .foregroundColor(.black)
+                                    .frame(width: 30, height: 30)
                                 Text("Try it now")
                                     .font(Font.custom("Roboto-Regular", size: 13))
                                     .foregroundColor(.black)
-                            }
+                            }.padding(.leading, 5)
                         }
                         .offset(x:0, y: -50)
                         .padding(.top)
@@ -94,7 +93,7 @@ struct DetailShoeView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        self.presentationMode.wrappedValue.dismiss()
+                        self.goBack = true
                     }
                 label: {
                     Image(systemName: "chevron.left")
@@ -125,6 +124,31 @@ struct DetailShoeView: View {
                 ContentView()
                     .toolbar(.hidden, for: .tabBar)
                     .ignoresSafeArea(.all)
+            }
+            .navigationDestination(isPresented: $goBack) {
+                MainScreen()
+                    .toolbar(content: {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button {} label: {
+                                Image(systemName: "chevron.left")
+                                    .resizable()
+                                    .foregroundColor(.black)
+                            }
+                        }
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "magnifyingglass")
+                                    .resizable()
+                                    .foregroundColor(.black)
+                                    .frame(width: 20, height: 20)
+                            }                    }
+                    })
+                    .navigationBarBackButtonHidden(true)
+            }
+            .onAppear {
+                self.goBack = false
             }
     }
 }

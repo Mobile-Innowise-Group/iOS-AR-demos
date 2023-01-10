@@ -19,13 +19,22 @@ struct ObjectTrackingWrap: UIViewControllerRepresentable {
 }
 
 struct ContentView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var show: Bool = true
     var body: some View {
         ObjectTrackingWrap()
-            .sheet(isPresented: $show) {
-                CameraSheetView()
-                    .presentationDragIndicator(.visible)
-                    .presentationDetents([.fraction(0.23), .fraction(0.6)])
-            }
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        self.presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .frame(width: 16, height: 16)
+                            .foregroundColor(.white)
+                    }
+                }
+            })
+            .navigationBarBackButtonHidden(true)
     }
 }
