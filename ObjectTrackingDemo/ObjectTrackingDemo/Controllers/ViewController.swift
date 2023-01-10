@@ -104,7 +104,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
     lazy var nextButton: RoundedButton = {
         let button = RoundedButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+//        button.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
         button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
         button.setTitle("Next", for: .normal)
         button.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
@@ -177,7 +177,7 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
     lazy var additionalInfoButton: RoundedButton = {
         let button = RoundedButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 100).isActive = true
         button.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
         button.setTitle("Info", for: .normal)
         button.addTarget(self, action: #selector(addtionalInfo(_:)), for: .touchUpInside)
@@ -349,12 +349,14 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
 //            nextButton.centerXAnchor.constraint(equalTo: sessionInfoLabel.centerXAnchor),
 //            nextButton.centerXAnchor.constraint(equalTo: sceneView.centerXAnchor),
             nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            nextButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            
+            nextButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            nextButton.leadingAnchor.constraint(equalTo: additionalInfoButton.trailingAnchor, constant: 20),
+//
             additionalInfoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            additionalInfoButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            additionalInfoButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
 //            sneakerCarousel.view.bottomAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.bottomAnchor, constant: 15),
 //            sneakerCarousel.view.leadingAnchor.constraint(equalTo: sceneView.safeAreaLayoutGuide.leadingAnchor, constant: 15),
+            
             sneakerStackView.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -20),
             sneakerStackView.leadingAnchor.constraint(equalTo: sceneView.leadingAnchor, constant: 12),
             sneakerStackView.trailingAnchor.constraint(equalTo: sceneView.trailingAnchor, constant: -12),
@@ -362,9 +364,6 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
             aimView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             activityView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            
-            
-
 //            flashlightButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20.0),
 //            flashlightButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20.0),
 
@@ -420,7 +419,17 @@ public final class ViewController: UIViewController, ARSCNViewDelegate, ARSessio
         guard let subview = popupView.view else { return }
         subview.backgroundColor = .clear
         self.view.addSubview(subview)
-        subview.frame = self.view.frame
+        // subview.frame = self.view.frame
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            subview.topAnchor.constraint(equalTo: self.view.topAnchor),
+            subview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            subview.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            subview.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            subview.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor),
+            subview.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor)
+        ])
+        
         subview.didMoveToSuperview()
         popupView.rootView.completion = {
             UIView.animate(withDuration: 0.1) {

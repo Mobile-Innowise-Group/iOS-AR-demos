@@ -43,7 +43,7 @@ struct ScanIntroductionView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundColor(.white)
             }
-            .padding(.all, 30)
+            .padding([.leading, .trailing], 30)
         }
     }
 }
