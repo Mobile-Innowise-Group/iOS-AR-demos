@@ -36,7 +36,7 @@ struct FilterScreen: View {
         )
     ]
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack(alignment: .bottom) {
                 ScrollView {
                     VStack(alignment: .leading) {
@@ -64,7 +64,7 @@ struct FilterScreen: View {
                                     }
                                     .navigationDestination(isPresented: $showDetail) {
                                         DetailShoeView()
-                                            .navigationBarBackButtonHidden(true)
+//                                            .navigationBarBackButtonHidden(true)
                                     }
                                 }, itemHeight: 151)
                         }

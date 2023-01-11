@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MainScreen: View {
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        NavigationView {
             TabView {
                 FilterScreen()
                     .tabItem {
@@ -39,7 +39,26 @@ struct MainScreen: View {
             }
             .accentColor(.black)
             .toolbarColorScheme(.light, for: .tabBar)
-            .toolbar(.hidden, for: .navigationBar)
-        }
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .resizable()
+                            .foregroundColor(.black)
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .foregroundColor(.black)
+                            .frame(width: 20, height: 20)
+                    }                    }
+            })
+            .navigationBarBackButtonHidden(true)
     }
 }

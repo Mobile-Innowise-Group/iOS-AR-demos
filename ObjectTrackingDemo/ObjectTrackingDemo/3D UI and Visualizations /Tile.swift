@@ -13,7 +13,7 @@ final class Tile: SCNNode {
     var isHighlighted: Bool = false
 
     func updateVisualization() {
-        var newOpacity: CGFloat = isCaptured ? 0.5 : 0.2
+        var newOpacity: CGFloat = isCaptured ? 0.9 : 0.7
 //        newOpacity += isHighlighted ? 0.35 : 0.0
         opacity = newOpacity
     }

@@ -11,7 +11,6 @@ struct StartScreen: View {
     @Environment(\.dismiss) var dismiss
     @State private var isShow: Bool = false
     var body: some View {
-        NavigationView {
             ScrollView {
                 VStack(spacing: 20) {
                     Text("Wählen Sie die gewünschte Abteilung oder Marke im Geschäft aus")
@@ -45,33 +44,11 @@ struct StartScreen: View {
                 }
                 .navigationDestination(isPresented: $isShow) {
                     MainScreen()
-                        .toolbar(content: {
-                            ToolbarItem(placement: .navigationBarLeading) {
-                                Button {
-                                    dismiss()
-                                } label: {
-                                    Image(systemName: "chevron.left")
-                                        .resizable()
-                                        .foregroundColor(.black)
-                                }
-                            }
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                Button {
-                                    
-                                } label: {
-                                    Image(systemName: "magnifyingglass")
-                                        .resizable()
-                                        .foregroundColor(.black)
-                                        .frame(width: 20, height: 20)
-                                }                    }
-                        })
-                        .navigationBarBackButtonHidden(true)
                 }
                 .onAppear {
                     self.isShow = false
                 }
             }
-        }
     }
 }
 

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DetailShoeView: View {
+    @Environment(\.dismiss) var dismiss
     @State private var showCameraScreen: Bool = false
-    @State private var goBack: Bool = false
     var body: some View {
             ScrollView {
                 VStack {
@@ -90,10 +90,11 @@ struct DetailShoeView: View {
                     }.padding([.leading, .trailing], 25)
                 }
             }
+            .toolbar(.hidden, for: .tabBar)
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        self.goBack = true
+                        dismiss()
                     }
                 label: {
                     Image(systemName: "chevron.left")
@@ -119,36 +120,11 @@ struct DetailShoeView: View {
                     }
                 }
             })
-            .toolbar(.hidden, for: .tabBar)
+            .navigationBarBackButtonHidden(true)
             .navigationDestination(isPresented: $showCameraScreen) {
                 ContentView()
                     .toolbar(.hidden, for: .tabBar)
                     .ignoresSafeArea(.all)
-            }
-            .navigationDestination(isPresented: $goBack) {
-                MainScreen()
-                    .toolbar(content: {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button {} label: {
-                                Image(systemName: "chevron.left")
-                                    .resizable()
-                                    .foregroundColor(.black)
-                            }
-                        }
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "magnifyingglass")
-                                    .resizable()
-                                    .foregroundColor(.black)
-                                    .frame(width: 20, height: 20)
-                            }                    }
-                    })
-                    .navigationBarBackButtonHidden(true)
-            }
-            .onAppear {
-                self.goBack = false
             }
     }
 }
