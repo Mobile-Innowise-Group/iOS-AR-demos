@@ -13,13 +13,28 @@ final class MasterController: UITableViewController {
         static let reuseIdentifier = "id"
     }
 
-    private let contents: Array<(title: String, builder: () -> UIViewController)> = [
-        ("Foot scan", { RouteHelper.sh.buildSetup(startVC: SplashScreenViewController.init()) } ),
-        ("Object identifier", ViewController.init),
-        ("Hand scan", HandScanViewController.init),
-        ("Object recognition with bounding boxes", {
-            ObjectRecognitionViewController(objectDectectionModel: (try! yolov5s(configuration: .init())).model) })
-    ]
+    private var contents: Array<(title: String, builder: () -> UIViewController)> = {
+        if #available(iOS 16, *) {
+            return [
+                ("Foot scan", { RouteHelper.sh.buildSetup(startVC: SplashScreenViewController.init()) } ),
+                ("Object identifier", ViewController.init),
+                ("Hand scan", HandScanViewController.init),
+                ("Object recognition with bounding boxes", {
+                    ObjectRecognitionViewController(objectDectectionModel: (try! yolov5s(configuration: .init())).model) }),
+                ("Create 3D Room Plan", {
+                    UIStoryboard(name: "RoomPlanMain", bundle: .main).instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingViewController
+                })
+            ]
+        } else {
+            return [
+                ("Foot scan", { RouteHelper.sh.buildSetup(startVC: SplashScreenViewController.init()) } ),
+                ("Object identifier", ViewController.init),
+                ("Hand scan", HandScanViewController.init),
+                ("Object recognition with bounding boxes", {
+                    ObjectRecognitionViewController(objectDectectionModel: (try! yolov5s(configuration: .init())).model) })
+            ]
+        }
+    }()
 
     override func viewDidLoad() {
         self.tableView = UITableView(frame: .zero, style: .insetGrouped)
@@ -49,9 +64,18 @@ final class MasterController: UITableViewController {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        showDetailViewController(
-            contents[indexPath.row].builder(),
-            sender: nil
-        )
+        if let vc = contents[indexPath.row].builder() as? OnboardingViewController {
+            vc.definesPresentationContext = true
+            vc.modalPresentationStyle = .overFullScreen
+            showDetailViewController(
+                vc,
+                sender: nil
+            )
+        } else {
+            showDetailViewController(
+                contents[indexPath.row].builder(),
+                sender: nil
+            )
+        }
     }
 }

@@ -22,7 +22,7 @@ final class RouteHelper: NSObject {
         navigationController.interactivePopGestureRecognizer?.isEnabled = false
         navigationController.navigationBar.isHidden = true
         self.navController = navigationController
-        
+
         navigationController.viewControllers = [startVC]
         return navigationController
     }
@@ -95,5 +95,9 @@ final class RouteHelper: NSObject {
         } else {
             self.navController?.dismiss(animated: animated, completion: { completion?() })
         }
+    }
+
+    func deInit() {
+        navController = nil
     }
 }

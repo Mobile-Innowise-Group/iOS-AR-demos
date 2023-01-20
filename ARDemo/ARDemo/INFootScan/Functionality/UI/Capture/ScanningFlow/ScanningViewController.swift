@@ -33,7 +33,7 @@ final class ScanningViewController: UIViewController {
     
     /// FOR case when overaly of manual scanning presented
     private let audioSession = AVAudioSession.sharedInstance()
-    
+
     // MARK: - mesh and camera variables
     private let minBrightnessValue: Double = 0
     private var scanningFinishDelay: CGFloat = 0.1
@@ -134,6 +134,10 @@ final class ScanningViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         debugPrint("Received low memory warning; stopping scanning")
         self.stopScanning(reason: .finished)
+    }
+
+    deinit {
+        
     }
     
     /// getting some accesses if stil not have for the scanning

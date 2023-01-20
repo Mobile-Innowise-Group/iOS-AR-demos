@@ -134,6 +134,10 @@
 		2BDF18AE290FA92A0006AFB7 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF18A6290FA92A0006AFB7 /* Lato-Black.ttf */; };
 		2BDF18AF290FA92A0006AFB7 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BDF18A7290FA92A0006AFB7 /* Lato-Regular.ttf */; };
 		2BDF18B1290FAB330006AFB7 /* MasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF18B0290FAB330006AFB7 /* MasterController.swift */; };
+		3900C2C0297AB0820001449E /* RoomCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3900C2BF297AB0820001449E /* RoomCaptureViewController.swift */; };
+		3900C2C2297AB0880001449E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3900C2C1297AB0880001449E /* OnboardingViewController.swift */; };
+		3900C2C7297AB0C40001449E /* UnsupportedDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3900C2C4297AB0C40001449E /* UnsupportedDevice.storyboard */; };
+		3900C2C9297AB0C40001449E /* RoomPlanMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3900C2C6297AB0C40001449E /* RoomPlanMain.storyboard */; };
 		9688F823291400B4006A23D5 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F822291400B4006A23D5 /* DistanceCalculator.swift */; };
 		9688F825291400C7006A23D5 /* HandScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F824291400C7006A23D5 /* HandScanViewController.swift */; };
 		9688F827291400DD006A23D5 /* LengthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688F826291400DD006A23D5 /* LengthModel.swift */; };
@@ -276,6 +280,10 @@
 		2BDF18A6290FA92A0006AFB7 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		2BDF18A7290FA92A0006AFB7 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		2BDF18B0290FAB330006AFB7 /* MasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterController.swift; sourceTree = "<group>"; };
+		3900C2BF297AB0820001449E /* RoomCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCaptureViewController.swift; sourceTree = "<group>"; };
+		3900C2C1297AB0880001449E /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		3900C2C4297AB0C40001449E /* UnsupportedDevice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UnsupportedDevice.storyboard; sourceTree = "<group>"; };
+		3900C2C6297AB0C40001449E /* RoomPlanMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RoomPlanMain.storyboard; sourceTree = "<group>"; };
 		9688F822291400B4006A23D5 /* DistanceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		9688F824291400C7006A23D5 /* HandScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandScanViewController.swift; sourceTree = "<group>"; };
 		9688F826291400DD006A23D5 /* LengthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthModel.swift; sourceTree = "<group>"; };
@@ -321,6 +329,7 @@
 		2BDF174C290FA7140006AFB7 /* ARDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3900C2BE297AB0530001449E /* RoomPlan */,
 				96AEA84429152D3300AC8FCF /* MLModels */,
 				96AEA839291522A900AC8FCF /* ObjectRecognition */,
 				9688F82829140114006A23D5 /* Helpers */,
@@ -767,6 +776,25 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		3900C2BE297AB0530001449E /* RoomPlan */ = {
+			isa = PBXGroup;
+			children = (
+				3900C2C3297AB0B40001449E /* storyboards */,
+				3900C2C1297AB0880001449E /* OnboardingViewController.swift */,
+				3900C2BF297AB0820001449E /* RoomCaptureViewController.swift */,
+			);
+			path = RoomPlan;
+			sourceTree = "<group>";
+		};
+		3900C2C3297AB0B40001449E /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3900C2C6297AB0C40001449E /* RoomPlanMain.storyboard */,
+				3900C2C4297AB0C40001449E /* UnsupportedDevice.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
 		5B7ADB0AA61231FBAC88DCD9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,10 +932,12 @@
 				2BDF187E290FA9070006AFB7 /* singleLeft.scn in Resources */,
 				2BDF1827290FA9070006AFB7 /* ScenePreviewViewController.scn in Resources */,
 				2BDF18AD290FA92A0006AFB7 /* Lato-Bold.ttf in Resources */,
+				3900C2C9297AB0C40001449E /* RoomPlanMain.storyboard in Resources */,
 				2BDF18AF290FA92A0006AFB7 /* Lato-Regular.ttf in Resources */,
 				2BDF1757290FA7160006AFB7 /* Assets.xcassets in Resources */,
 				2BDF1878290FA9070006AFB7 /* localizationAndAccessibility.json in Resources */,
 				2BDF187F290FA9070006AFB7 /* singleRight.scn in Resources */,
+				3900C2C7297AB0C40001449E /* UnsupportedDevice.storyboard in Resources */,
 				2BDF18AC290FA92A0006AFB7 /* Merriweather-Regular.ttf in Resources */,
 				2BDF18AB290FA92A0006AFB7 /* Merriweather-Bold.ttf in Resources */,
 			);
@@ -999,6 +1029,7 @@
 				96AEA84629152D5900AC8FCF /* yolov5s.mlmodel in Sources */,
 				2BDF189B290FA9080006AFB7 /* FlashlightButton.swift in Sources */,
 				2BDF1861290FA9070006AFB7 /* StepTitleDescriptionView.swift in Sources */,
+				3900C2C2297AB0880001449E /* OnboardingViewController.swift in Sources */,
 				2BDF1869290FA9070006AFB7 /* UserDefaults + Extension.swift in Sources */,
 				2BDF1874290FA9070006AFB7 /* VisionPredictionHelper.swift in Sources */,
 				2BDF1888290FA9080006AFB7 /* DetectedPointCloud.swift in Sources */,
@@ -1020,6 +1051,7 @@
 				2BDF187A290FA9070006AFB7 /* LocalizationAndAccessibilityHelper.swift in Sources */,
 				2BDF1875290FA9070006AFB7 /* ConstructSceneHelper.swift in Sources */,
 				2BDF1850290FA9070006AFB7 /* ImageView.swift in Sources */,
+				3900C2C0297AB0820001449E /* RoomCaptureViewController.swift in Sources */,
 				2BDF187C290FA9070006AFB7 /* ThresholdPinchGestureRecognizer.swift in Sources */,
 				2BDF189C290FA9080006AFB7 /* RoundedButton.swift in Sources */,
 				2BDF1843290FA9070006AFB7 /* TraleFadingLoader.swift in Sources */,
@@ -1244,7 +1276,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.innowise-group.ARDemos";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ARInnowiseDemos_Dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Development Wildcard";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
